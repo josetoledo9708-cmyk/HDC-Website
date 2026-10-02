@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HololiveDeckConstructor - PC Client [ALPHA v0.0.28]</title>
+    <meta name="description" content="Solicita acceso a la Alpha Cerrada v0.0.28 de HololiveDeckConstructor para PC: simulador oficial fan traducido a 3 idiomas (JP, EN, ES) para aprender a jugar, construir mazos, compartir códigos y combatir online.">
+    <meta property="og:title" content="HololiveDeckConstructor - PC Client [ALPHA v0.0.28]">
+    <meta property="og:description" content="Simulador de batallas digital no oficial de hololive Official Card Game en 3 idiomas (JP/EN/ES). Aprende a jugar, crea mazos y combate online. Acceso limitado para testers.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="metaoshi-page">
+
+    <!-- NAVBAR HEADER WITH LANGUAGE SELECTOR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="hdc.html" class="logo-link">
+                <div class="logo-placeholder" style="display: flex; align-items: center;">
+                    <img src="images/logo_hdc.png" alt="HDC Logo" class="logo-brand-img" style="height: 40px; width: auto; max-width: 180px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.4));">
+                </div>
+            </a>
+            <nav class="nav-menu">
+                <a href="#inicio" class="nav-item active" data-i18n="game_nav_home">Inicio</a>
+                <a href="#caracteristicas" class="nav-item" data-i18n="game_nav_features">Características</a>
+                <a href="#capturas" class="nav-item" data-i18n="game_nav_gallery">Galería</a>
+                <a href="#roadmap" class="nav-item" data-i18n="game_nav_roadmap">Hoja de Ruta</a>
+                <a href="#actualizacion" class="nav-item" data-i18n="game_nav_latest">v0.0.28</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-selector-wrapper">
+                    <select id="langSelect" class="lang-select-dropdown" aria-label="Language Selector">
+                        <option value="es" selected>🇪🇸 Español</option>
+                        <option value="en">🇺🇸 English</option>
+                        <option value="ja">🇯🇵 日本語</option>
+                    </select>
+                </div>
+                <a href="builder.html" class="btn btn-sm btn-glass" data-i18n="game_btn_builder_web">Deck Builder Web</a>
+                <a href="#solicitar" id="navDownloadBtn" class="btn btn-sm btn-primary" data-i18n="game_nav_request">🔑 Solicitar Acceso</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero-section" style="padding-top: 130px; padding-bottom: 50px;">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-content text-center">
+            
+            <!-- PROMINENT HERO LOGO -->
+            <div class="hero-logo-wrapper" style="margin-bottom: 24px;">
+                <img src="images/logo_hdc.png" alt="HololiveDeckConstructor Logo" class="hero-logo-img" style="max-width: 520px; width: 85%; height: auto; object-fit: contain; filter: drop-shadow(0 0 30px rgba(56, 189, 248, 0.6));">
+            </div>
+
+            <div class="hero-badge badge-alpha" style="display: inline-flex; margin-bottom: 18px;" data-i18n="game_hero_badge">
+                <span class="pulse-dot"></span> Alpha Cerrada v0.0.28 · 100% Proyecto Fan Sin Ánimo de Lucro
+            </div>
+
+            <h1 class="hero-title" style="font-size: 2.8rem; margin-bottom: 16px;">
+                HololiveDeckConstructor <span class="gradient-text">PC Client [ALPHA]</span>
+            </h1>
+            
+            <p class="hero-subtitle" style="max-width: 860px; margin: 0 auto 24px; line-height: 1.6; font-size: 1.1rem;" data-i18n="game_hero_desc">
+                El simulador digital independiente para PC de <strong>hololive Official Card Game</strong>. Diseñado para <strong>aprender a jugar fácilmente</strong> con soporte completo en <strong>3 idiomas (🇯🇵 JP / 🇺🇸 EN / 🇪🇸 ES)</strong>, armar mazos, compartir códigos con amigos en 1-clic y combatir en tiempo real.
+            </p>
+
+            <!-- TRILINGUAL, LEARNING & PLATFORMS HIGHLIGHT BADGES -->
+            <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 28px;">
+                <span class="gallery-tag" style="font-size: 12px; padding: 6px 14px; background: rgba(56, 189, 248, 0.15); border-color: #38bdf8;" data-i18n="game_pill_lang">
+                    🌐 3 Idiomas Soportados: 🇯🇵 日本語 · 🇺🇸 English · 🇪🇸 Español
+                </span>
+                <span class="gallery-tag" style="font-size: 12px; padding: 6px 14px; background: rgba(245, 158, 11, 0.15); border-color: #f59e0b; color: #fbbf24;" data-i18n="game_pill_learn">
+                    📚 Sistema Guiado Ideal para Aprender a Jugar
+                </span>
+                <span class="gallery-tag" style="font-size: 12px; padding: 6px 14px; background: rgba(168, 85, 247, 0.15); border-color: #a855f7; color: #c084fc;" data-i18n="game_pill_plat">
+                    💻 Windows (Actual) · 📱 Android & 🐧 Linux (Próximamente)
+                </span>
+            </div>
+
+            <!-- ALPHA LIMITED ACCESS NOTICE BOX -->
+            <div class="alpha-notice-box" style="max-width: 860px; margin: 0 auto 32px;">
+                <div class="alpha-notice-title">
+                    <span data-i18n="game_notice_title">🔒 ACCESO RESTRINGIDO · ALPHA CERRADA (CUPO LIMITADO)</span>
+                    <span class="badge-beta-soon" style="margin-left: auto;" data-i18n="game_notice_beta">BETA ABIERTA · PRÓXIMAMENTE</span>
+                </div>
+                <p class="alpha-notice-desc" data-i18n="game_notice_desc">
+                    El acceso a la versión Alpha de <strong>HololiveDeckConstructor</strong> no está abierto al público general. Contamos con <strong>cupos limitados para testers</strong> con el fin de evaluar la estabilidad de los servidores. Para solicitar tu clave de acceso al instalador ejecutable, únete a nuestro Discord.
+                </p>
+            </div>
+
+            <!-- CTA ACTION BUTTONS -->
+            <div id="solicitar-top" class="cta-group justify-center" style="gap: 16px;">
+                <a href="#solicitar" class="btn btn-lg btn-primary btn-glow" style="padding: 16px 32px;">
+                    <span class="btn-icon">🔑</span>
+                    <div class="btn-text-group" style="text-align: left;">
+                        <span class="btn-title" data-i18n="game_btn_request_top">Solicitar Acceso a la Alpha v0.0.28</span>
+                        <span class="btn-sub" data-i18n="game_btn_request_sub">Cupos Limitados para Testers en Discord</span>
+                    </div>
+                </a>
+                
+                <a href="builder.html" class="btn btn-lg btn-glass">
+                    <span class="btn-icon">🎴</span> <span data-i18n="game_btn_builder_web">Probador de Mazos Web</span>
+                </a>
+            </div>
+
+            <div class="hero-stats" style="margin-top: 40px;">
+                <div class="stat-card">
+                    <span class="stat-number" data-i18n="game_stat_langs">3 Idiomas</span>
+                    <span class="stat-label" data-i18n="game_stat_langs_sub">🇯🇵 JP · 🇺🇸 EN · 🇪🇸 ES</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <span class="stat-number" data-i18n="game_stat_share">1-Clic</span>
+                    <span class="stat-label" data-i18n="game_stat_share_sub">Compartir Códigos con Amigos</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <span class="stat-number" style="color: #fbbf24;" data-i18n="game_stat_testers">Limitado</span>
+                    <span class="stat-label" data-i18n="game_stat_testers_sub">Cupo de Testers Alpha</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <span class="stat-number" style="color: #c084fc;" data-i18n="game_stat_beta">Próximamente</span>
+                    <span class="stat-label" data-i18n="game_stat_beta_sub">Beta Abierta Global</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MAIN FEATURES PRESENTATION WITH NEW SCREENSHOTS IN EXACT ORDER -->
+    <section id="caracteristicas" class="section features-section" style="padding: 60px 0;">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="badge-tag" data-i18n="game_sec_features_tag">PRESENTACIÓN DEL JUEGO</div>
+                <h2 class="section-title" data-i18n="game_sec_features_title">Descubre HololiveDeckConstructor</h2>
+                <p class="section-description" data-i18n="game_sec_features_desc">
+                    Explora las funciones clave del cliente ejecutable de PC diseñado para aprender, construir y combatir.
+                </p>
+            </div>
+
+            <!-- FEATURE CARDS SHOWCASE IN EXACT ORDER SPECIFIED -->
+            <div class="features-showcase-grid" style="display: flex; flex-direction: column; gap: 40px; margin-top: 30px;">
+                
+                <!-- CARD 1: CREACIÓN DE MAZOS Y COMPARTIR CÓDIGOS -->
+                <div class="feature-showcase-card" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 30px; align-items: center; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 16px; padding: 24px; overflow: hidden;">
+                    <div class="showcase-img-wrapper" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <img src="images/card_deck_builder.png" alt="Creación de Mazos y Selección de Oshi HDC" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                    </div>
+                    <div class="showcase-info">
+                        <span class="gallery-tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; margin-bottom: 10px; display: inline-block;" data-i18n="game_feat_tag_1">1. CREACIÓN & COMPARTIR MAZOS</span>
+                        <h3 style="font-size: 24px; font-weight: 800; color: #ffffff; margin-bottom: 12px;" data-i18n="game_feat_title_1">Creación de Mazos & Compartir Códigos a Amigos</h3>
+                        <p style="font-size: 14px; color: #cbd5e1; line-height: 1.6; margin-bottom: 16px;" data-i18n="game_feat_desc_1">
+                            Selecciona tu Oshi favorita (La+ Darknesss, Sora, Suisei, Marine...), explora la lista completa de cartas oficiales y crea barajas personalizadas de 50 cartas + 20 cheers. Genera tu código <code>HDC1-</code> en 1-clic y compártelo al instante con tus amigos para que jueguen con él en PC o la web.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 2: PARTIDAS CONTRA LA IA Y MULTIJUGADOR ONLINE -->
+                <div class="feature-showcase-card" style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 30px; align-items: center; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 16px; padding: 24px; overflow: hidden;">
+                    <div class="showcase-info">
+                        <span class="gallery-tag" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; margin-bottom: 10px; display: inline-block;" data-i18n="game_feat_tag_2">2. DUELOS EN TIEMPO REAL</span>
+                        <h3 style="font-size: 24px; font-weight: 800; color: #ffffff; margin-bottom: 12px;" data-i18n="game_feat_title_2">Partidas VS la IA Rival & Multijugador Online</h3>
+                        <p style="font-size: 14px; color: #cbd5e1; line-height: 1.6; margin-bottom: 16px;" data-i18n="game_feat_desc_2">
+                            Compite en partidas online en tiempo real contra amigos o practica tus estrategias en solitario contra la IA Rival. Incluye simulador de mano inicial con sistema de Redraw (Mulligan), gestión de Cheer Deck, zonas de Stage y contador de tiempo.
+                        </p>
+                    </div>
+                    <div class="showcase-img-wrapper" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <img src="images/card_online_vs.png" alt="Duelos en Tiempo Real y Mano Inicial HDC" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- CARD 3: MOTOR CON REGLAS OFICIALES & APRENDER A JUGAR -->
+                <div class="feature-showcase-card" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 30px; align-items: center; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 16px; padding: 24px; overflow: hidden;">
+                    <div class="showcase-img-wrapper" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <img src="images/card_rules_engine.png" alt="Motor con Reglas Oficiales y Menú HDC" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                    </div>
+                    <div class="showcase-info">
+                        <span class="gallery-tag" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; margin-bottom: 10px; display: inline-block;" data-i18n="game_feat_tag_3">3. REGLAS OFICIALES & APRENDIZAJE</span>
+                        <h3 style="font-size: 24px; font-weight: 800; color: #ffffff; margin-bottom: 12px;" data-i18n="game_feat_title_3">Motor de Juego Oficial & Ideal para Aprender</h3>
+                        <p style="font-size: 14px; color: #cbd5e1; line-height: 1.6; margin-bottom: 16px;" data-i18n="game_feat_desc_3">
+                            Diseñado siguiendo estrictamente el libro de reglas oficial de hololive Official Card Game. Es la herramienta perfecta para <strong>aprender a jugar paso a paso</strong>: secuencia de turnos, colocación en el escenario, evoluciones Bloom, asignación de Cheer y cálculo de HP.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 4: PERSONALIZACIÓN TOTAL DEL PERFIL -->
+                <div class="feature-showcase-card" style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 30px; align-items: center; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(236, 72, 153, 0.3); border-radius: 16px; padding: 24px; overflow: hidden;">
+                    <div class="showcase-info">
+                        <span class="gallery-tag" style="background: rgba(236, 72, 153, 0.15); color: #f472b6; margin-bottom: 10px; display: inline-block;" data-i18n="game_feat_tag_4">4. PERSONALIZACIÓN DE PERFIL</span>
+                        <h3 style="font-size: 24px; font-weight: 800; color: #ffffff; margin-bottom: 12px;" data-i18n="game_feat_title_4">Personalización Total a Gusto del Jugador</h3>
+                        <p style="font-size: 14px; color: #cbd5e1; line-height: 1.6; margin-bottom: 16px;" data-i18n="game_feat_desc_4">
+                            Configura la apariencia de tu perfil de jugador como prefieras: selecciona tu Oshi miembro de hololive (Moona, Marine, Pekora, Kanata...), elige la imagen de perfil, ajusta el marco ornamental, cambia el fondo de pantalla y revisa tus estadísticas globales.
+                        </p>
+                    </div>
+                    <div class="showcase-img-wrapper" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <img src="images/card_customization.png" alt="Personalización de Perfil de Jugador HDC" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREENSHOTS GALLERY BELOW IN VARIED ORDER -->
+    <section id="capturas" class="section game-showcase-section" style="padding: 60px 0; background: rgba(0, 0, 0, 0.25);">
+        <div class="container text-center">
+            <div class="section-header">
+                <div class="badge-tag" data-i18n="game_sec_gallery_tag">GALERÍA DE CAPTURAS</div>
+                <h2 class="section-title" data-i18n="game_sec_gallery_title">Galería del Cliente Alpha v0.0.28</h2>
+                <p class="section-description" data-i18n="game_sec_gallery_desc">
+                    Imágenes en ejecucion del cliente de PC en versión Alpha.
+                </p>
+            </div>
+
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px;">
+                
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/gal_menu_principal.png" alt="Menú Principal HDC" class="gallery-img">
+                    </div>
+                    <div class="gallery-caption">
+                        <span class="gallery-tag">MENÚ DE INICIO</span>
+                        <h4>Pantalla Principal & Selección de Modos</h4>
+                        <p>Interfaz limpia con acceso a Vs AI, Multiplayer y Deck Builder.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/gal_redraw_duelos.png" alt="Campo de Batalla HDC" class="gallery-img">
+                    </div>
+                    <div class="gallery-caption">
+                        <span class="gallery-tag">CAMPO DE COMBATE</span>
+                        <h4>Redraw & Duelos en Tiempo Real</h4>
+                        <p>Fase de robos iniciales y distribución interactiva en la mesa.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/gal_oshi_favoritas.png" alt="Deck Builder HDC" class="gallery-img">
+                    </div>
+                    <div class="gallery-caption">
+                        <span class="gallery-tag">CREADOR DE MAZOS</span>
+                        <h4>Elección de Oshi & Cartas Favoritas</h4>
+                        <p>Búsqueda rápida por nombre o número con preview traducido.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/gal_tarjeta_jugador.png" alt="Perfil HDC" class="gallery-img">
+                    </div>
+                    <div class="gallery-caption">
+                        <span class="gallery-tag">PERFIL DE ENTRENADOR</span>
+                        <h4>Personalización de Tarjeta de Jugador</h4>
+                        <p>Selección de Oshi, avatar, marquería y fondos temáticos.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/gal_historial_victorias.png" alt="Resultados HDC" class="gallery-img">
+                    </div>
+                    <div class="gallery-caption">
+                        <span class="gallery-tag">RESULTADOS</span>
+                        <h4>Historial de Victorias & Estadísticas</h4>
+                        <p>Resumen final de daño infligido y desempeño del mazo.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/gal_import_export.png" alt="Gestión de Barajas HDC" class="gallery-img">
+                    </div>
+                    <div class="gallery-caption">
+                        <span class="gallery-tag">CÓDIGOS HDC1-</span>
+                        <h4>Importación & Exportación Instantánea</h4>
+                        <p>Comparte tus listas en 1-clic con amigos o en la web.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ROADMAP / HOJA DE RUTA DE ACTUALIZACIONES -->
+    <section id="roadmap" class="section news-section" style="padding: 60px 0;">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="badge-tag badge-alpha" data-i18n="game_sec_roadmap_tag">HOJA DE RUTA</div>
+                <h2 class="section-title" data-i18n="game_sec_roadmap_title">🗺️ Hoja de Ruta de Actualizaciones</h2>
+                <p class="section-description" data-i18n="game_sec_roadmap_desc">
+                    Plan de desarrollo proyectado desde la Alpha Cerrada v0.0.28 hacia el lanzamiento de la Beta Abierta.
+                </p>
+            </div>
+
+            <div class="news-grid">
+                
+                <!-- PHASE 1 -->
+                <article class="news-card" style="border-color: rgba(56, 189, 248, 0.4);">
+                    <div class="news-card-header">
+                        <span class="version-pill current">FASE 1: ALPHA CERRADA v0.0.28 (ACTUAL)</span>
+                    </div>
+                    <h3 class="news-title" data-i18n="game_phase1_title">🧪 Pruebas en Windows PC & Testers</h3>
+                    <ul class="news-list">
+                        <li>🪟 Cliente ejecutable para Windows (64-bit) en versión v0.0.28.</li>
+                        <li>🔒 Cupos limitados de acceso mediante solicitud en Discord.</li>
+                        <li>💬 Feedback directo y corrección continua de bugs in-game.</li>
+                        <li>📚 Soporte de 3 idiomas completos (🇯🇵 JP / 🇺🇸 EN / 🇪🇸 ES).</li>
+                    </ul>
+                </article>
+
+                <!-- PHASE 2 -->
+                <article class="news-card" style="border-color: rgba(245, 158, 11, 0.4);">
+                    <div class="news-card-header">
+                        <span class="version-pill upcoming" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border-color: #f59e0b;">FASE 2: PLATAFORMAS & FUNCIONES</span>
+                        <span class="news-date">Próximamente</span>
+                    </div>
+                    <h3 class="news-title" data-i18n="game_phase2_title">📱 Android, 🐧 Linux & Modo Espectador</h3>
+                    <ul class="news-list">
+                        <li>📱 <strong>Soporte Android:</strong> Cliente móvil en formato <code>.apk</code> para teléfonos y tablets.</li>
+                        <li>🐧 <strong>Soporte Linux:</strong> Compilación nativa ejecutable en paquete <code>.AppImage</code>.</li>
+                        <li>👁️ Modo Espectador en tiempo real para observar partidas de amigos.</li>
+                        <li>📼 Guardado y reproducción de Replays de batallas anteriores.</li>
+                    </ul>
+                </article>
+
+                <!-- PHASE 3 -->
+                <article class="news-card" style="border-color: rgba(168, 85, 247, 0.4);">
+                    <div class="news-card-header">
+                        <span class="version-pill upcoming" style="background: rgba(168, 85, 247, 0.25); color: #c084fc;">FASE 3: BETA ABIERTA GLOBAL</span>
+                        <span class="news-date">Hito Final</span>
+                    </div>
+                    <h3 class="news-title" data-i18n="game_phase3_title">🎉 Lanzamiento Multi-Plataforma</h3>
+                    <ul class="news-list">
+                        <li>🌐 Matchmaking automático público sin necesidad de clave.</li>
+                        <li>🍎 Evaluación de compilación para macOS (Apple Silicon).</li>
+                        <li>📦 Sincronización automática de nuevos Booster Packs lanzados en Japón.</li>
+                    </ul>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NON-PROFIT DISCLAIMER CARD -->
+    <section class="container" style="padding: 10px 0;">
+        <div class="nonprofit-card">
+            <div class="nonprofit-icon">❤️</div>
+            <div class="nonprofit-text">
+                <h4>Proyecto Creado por Fans · 100% Gratuito y Sin Ánimo de Lucro</h4>
+                <p>
+                    <strong>HololiveDeckConstructor</strong> es un simulador independiente desarrollado por la comunidad de hololive Official Card Game. No contiene ni contendrá jamás microtransacciones ni anuncios. No está afiliado, respaldado ni patrocinado por COVER Corp. Todos los personajes, ilustraciones y marcas pertenecen a <strong>COVER Corp.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALPHA ACCESS REQUEST & DISCORD SECTION -->
+    <section id="solicitar" class="section install-section" style="padding: 50px 0;">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="badge-tag badge-alpha" data-i18n="game_sec_request_tag">SOLICITUD DE ACCESO ALPHA</div>
+                <h2 class="section-title" data-i18n="game_sec_request_title">¿Cómo Obtener Acceso a la Alpha v0.0.28?</h2>
+                <p class="section-description" data-i18n="game_sec_request_desc">
+                    El acceso a la Alpha Cerrada se gestiona exclusivamente por Discord para mantener la estabilidad de los servidores. Sigue estos 3 pasos:
+                </p>
+            </div>
+
+            <div class="install-steps-grid" style="margin-bottom: 30px;">
+                <div class="step-card">
+                    <div class="step-badge">Paso 1</div>
+                    <div class="step-icon">💬</div>
+                    <h3 data-i18n="game_step1_title">Únete al Discord Oficial</h3>
+                    <p data-i18n="game_step1_desc">Entra a nuestro servidor comunitario de testers donde coordinamos partidas y lanzamos parches.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-badge">Paso 2</div>
+                    <div class="step-icon">🔑</div>
+                    <h3 data-i18n="game_step2_title">Solicita tu Rol de Tester</h3>
+                    <p data-i18n="game_step2_desc">Escribe en el canal <code>#solicitud-alpha</code> manifestando tu interés en probar el juego y enviar feedback.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-badge">Paso 3</div>
+                    <div class="step-icon">📥</div>
+                    <h3 data-i18n="game_step3_title">Recibe la Clave & Descarga</h3>
+                    <p data-i18n="game_step3_desc">Una vez aprobado tu acceso, obtendrás el enlace directo de descarga del ejecutable Alpha v0.0.28 para Windows.</p>
+                </div>
+            </div>
+
+            <div class="discord-section" id="discord">
+                <div class="discord-flex">
+                    <div class="discord-content">
+                        <div class="discord-badge">
+                            <span data-i18n="game_discord_tag">💬 COMUNIDAD DE TESTERS & SOLICITUD DE ALPHA</span>
+                        </div>
+                        <h2 class="discord-title" data-i18n="game_discord_title">Entra al Discord y Solicita Tu Acceso</h2>
+                        <p class="discord-desc" data-i18n="game_discord_desc">
+                            Forma parte del grupo de testers activos, comparte tus códigos de mazos con otros miembros, organiza salas multijugador y entérate antes que nadie del anuncio de la <strong>Beta Abierta</strong>.
+                        </p>
+                    </div>
+                    <a href="https://discord.gg/holodeck" target="_blank" rel="noopener noreferrer" class="btn-discord">
+                        <span style="font-size: 22px;">👾</span> <span data-i18n="game_btn_discord">Solicitar Acceso en Discord</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LATEST UPDATE DETAILS AT THE VERY BOTTOM (BEFORE FOOTER) -->
+    <section id="actualizacion" class="section news-section" style="padding: 60px 0 80px; background: rgba(0, 0, 0, 0.3); border-top: 1px solid rgba(255, 255, 255, 0.05);">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="badge-tag badge-alpha" data-i18n="game_latest_tag">ÚLTIMA VERSIÓN DISPONIBLE</div>
+                <h2 class="section-title" data-i18n="game_latest_title">🚀 Detalles de la Última Actualización (v0.0.28)</h2>
+                <p class="section-description" data-i18n="game_latest_desc">
+                    Consulta las mejoras e innovaciones implementadas en la versión v0.0.28 de la Alpha Cerrada.
+                </p>
+            </div>
+
+            <div style="max-width: 960px; margin: 0 auto; background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 16px; padding: 32px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);">
+                
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+                    <div>
+                        <span class="version-pill current" style="font-size: 13px; padding: 6px 14px;">VERSIÓN v0.0.28 [ALPHA CERRADA]</span>
+                        <h3 style="font-size: 22px; font-weight: 800; color: #ffffff; margin: 10px 0 4px;">Parche v0.0.28: Soporte Trilingüe, Redraw Inicial & Oshi Selector</h3>
+                    </div>
+                    <span class="news-date" style="font-size: 13px; color: #94a3b8;">Lanzamiento: Octubre 2026</span>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                    <div>
+                        <h4 style="font-size: 15px; font-weight: 700; color: #38bdf8; margin-bottom: 10px;">🌐 Idiomas & Sistema Aprendizaje</h4>
+                        <ul class="news-list">
+                            <li><strong>Soporte Trilingüe Completo:</strong> Selector de idioma en tiempo real entre 🇯🇵 Japonés, 🇺🇸 Inglés y 🇪🇸 Español.</li>
+                            <li><strong>Cartas Traducidas:</strong> Traducciones al español integradas para cartas exclusivas de lanzamientos JP.</li>
+                            <li><strong>Claridad de Reglas:</strong> Indicaciones paso a paso para facilitar el aprendizaje a nuevos jugadores.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 style="font-size: 15px; font-weight: 700; color: #fbbf24; margin-bottom: 10px;">🎴 Deck Builder & Códigos HDC1-</h4>
+                        <ul class="news-list">
+                            <li><strong>Paso 1 Oshi Selector:</strong> Nueva pantalla interactiva de selección de Oshi con pestaña de Favoritas.</li>
+                            <li><strong>Búsqueda Rápida:</strong> Filtrado por nombre, número de carta y conjuntos de cartas oficiales.</li>
+                            <li><strong>Copiar en 1-Clic:</strong> Exportación rápida en código Base64 para enviar a amigos.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 style="font-size: 15px; font-weight: 700; color: #c084fc; margin-bottom: 10px;">⚔️ Duelos & Personalización</h4>
+                        <ul class="news-list">
+                            <li><strong>Mano Inicial Redraw:</strong> Confirmación de mano inicial con opción de Redraw (Keep / Redraw once).</li>
+                            <li><strong>Personalización de Perfil:</strong> Elección de Oshi, avatar, marquería, fondo y estadísticas.</li>
+                            <li><strong>Botonera Report Bugs:</strong> Botón directo para reportar errores in-game durante partidas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo-placeholder logo-sm" style="display: flex; align-items: center; gap: 8px;">
+                    <img src="images/logo_hdc.png" alt="HDC Logo" class="logo-brand-img logo-sm" style="height: 28px; width: auto; max-width: 100px; object-fit: contain;">
+                    <span class="logo-text">Hololive<span class="text-accent">DeckConstructor</span></span>
+                    <span class="logo-badge badge-alpha">ALPHA v0.0.28</span>
+                </div>
+                <p class="footer-tagline">Plataforma Fan No Oficial para hololive Official Card Game.</p>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p>
+                    <strong>Aviso Legal:</strong> HololiveDeckConstructor es un proyecto de fan sin fines de lucro creado para promover la comunidad de hololive Official Card Game. No está afiliado, respaldado ni patrocinado por COVER Corp. Todos los personajes, ilustraciones y marcas registradas de hololive pertenecen a <strong>COVER Corp.</strong>
+                </p>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 HololiveDeckConstructor Community. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="toast hidden">Notificación</div>
+
+    <script src="deckcode.js"></script>
+    <script src="i18n.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

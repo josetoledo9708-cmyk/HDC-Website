@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HololiveDeckConstructor - Juego para PC & Constructor de Mazos | hololive OCG</title>
+    <meta name="description" content="Descarga gratis HololiveDeckConstructor para PC: combate online en multijugador, practica contra la IA rival en solitario y construye tus mazos oficiales.">
+    <meta property="og:title" content="HololiveDeckConstructor - hololive OCG Digital PC Game">
+    <meta property="og:description" content="Juego digital fan oficial para PC de hololive Official Card Game. Practica en solitario, prueba mazos en el tapete interactivo y juega online.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="metaoshi-page">
+
+    <!-- NAVBAR WITH LANGUAGE SELECTOR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <div class="logo-placeholder" style="display: flex; align-items: center;">
+                    <img src="images/logo_hdc.png" alt="HDC Logo" class="logo-brand-img" style="height: 42px; width: auto; max-width: 180px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.4));">
+                </div>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item active">Inicio</a>
+                <a href="hdc.html" class="nav-item nav-highlight">🎮 Juego PC [ALPHA]</a>
+                <a href="builder.html" class="nav-item">Deck Builder</a>
+                <a href="decks.html" class="nav-item">Meta Decks & Rankings</a>
+                <a href="#seccion-packs" class="nav-item">Packs & Expansiones</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-selector-wrapper">
+                    <select id="langSelect" class="lang-select-dropdown" aria-label="Language Selector">
+                        <option value="es" selected>🇪🇸 Español</option>
+                        <option value="en">🇺🇸 English</option>
+                        <option value="ja">🇯🇵 日本語</option>
+                    </select>
+                </div>
+                <a href="hdc.html" id="navDownloadBtn" class="btn btn-sm btn-primary">Descargar Alpha</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO CHANGING BANNER CAROUSEL -->
+    <section class="hero-carousel-section">
+        <div class="carousel-container">
+            <!-- SLIDES TRACK -->
+            <div class="carousel-track" id="heroCarouselTrack">
+                
+                <!-- SLIDE 1: TOP META DECKS & TOURNAMENT WINNERS -->
+                <div class="carousel-slide active" data-slide="0" style="background-image: linear-gradient(to right, rgba(9, 13, 22, 0.95), rgba(9, 13, 22, 0.6)), url('images/banner_decks.jpg');">
+                    <div class="slide-content">
+                        <span class="slide-tag tag-gold" data-i18n="slide1_tag">🏆 OFFICIAL TOURNAMENT RANKINGS</span>
+                        <h2 class="slide-title" data-i18n="slide1_title">Top Tier Meta Decks & Championship Recipes</h2>
+                        <p class="slide-desc" data-i18n="slide1_desc">Browse top-performing tournament winning deck recipes from Bloom Cup and WGP (Kaela Kovalskia G9SME, Moona Hoshinova 1U7LVJ, Todoroki Riona hSD19). Copy 1-click codes for HDC1- / HoloDelta / Bushiroad DeckLog!</p>
+                        <div class="slide-actions">
+                            <a href="#seccion-mazos" class="btn btn-primary btn-glow" data-i18n="slide1_btn">🃏 View Meta Decks & Tops ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2: NEW BOOSTER PACKS & EXPANSIONS -->
+                <div class="carousel-slide" data-slide="1" style="background-image: linear-gradient(to right, rgba(9, 13, 22, 0.95), rgba(9, 13, 22, 0.6)), url('images/banner_packs.jpg');">
+                    <div class="slide-content">
+                        <span class="slide-tag tag-pink" data-i18n="slide2_tag">📦 NEW PACKS & EXPANSIONS</span>
+                        <h2 class="slide-title" data-i18n="slide2_title">Booster Pack 06: Secret Garden & Start Deck 19</h2>
+                        <p class="slide-desc" data-i18n="slide2_desc">Discover 120+ brand new cards, including Todoroki Riona (hSD19), Juufuutei Raden, and new Buzz Holomem cards!</p>
+                        <div class="slide-actions">
+                            <a href="#seccion-packs" class="btn btn-primary btn-glow" data-i18n="slide2_btn">📦 Explore All Packs</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 3: CARD SPOILERS & TRANSLATED JAPANESE CARDS -->
+                <div class="carousel-slide" data-slide="2" style="background-image: linear-gradient(to right, rgba(9, 13, 22, 0.95), rgba(9, 13, 22, 0.6)), url('images/banner_preview.jpg');">
+                    <div class="slide-content">
+                        <span class="slide-tag tag-emerald" data-i18n="slide3_tag">✨ CARD SPOILERS & REVEALS</span>
+                        <h2 class="slide-title" data-i18n="slide3_title">Translated Japanese Card Spoilers & New Rares</h2>
+                        <p class="slide-desc" data-i18n="slide3_desc">Get early translated skill effects and artwork previews for newly revealed Japanese cards from Booster Pack 06, Start Deck 19 and Extra Expansion 01!</p>
+                        <div class="slide-actions">
+                            <a href="#seccion-preview" class="btn btn-primary btn-glow" data-i18n="slide3_btn">🔍 View Card Spoilers & Skill Translations</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 4: DECK BUILDER & SHARE CREATIONS -->
+                <div class="carousel-slide" data-slide="3" style="background-image: linear-gradient(to right, rgba(9, 13, 22, 0.95), rgba(9, 13, 22, 0.6)), url('images/banner_builder.jpg');">
+                    <div class="slide-content">
+                        <span class="slide-tag tag-purple" data-i18n="slide4_tag">🛠️ WEB DECK BUILDER</span>
+                        <h2 class="slide-title" data-i18n="slide4_title">Build, Export HDC1- / HoloDelta & Share Your Creations</h2>
+                        <p class="slide-desc" data-i18n="slide4_desc">Experience our Master Duel 3-column deck builder. Import from Bushiroad DeckLog, export to HoloDelta JSON or HDC1- Base64!</p>
+                        <div class="slide-actions">
+                            <a href="builder.html" class="btn btn-primary btn-glow" data-i18n="slide4_btn">🛠️ Open Deck Builder</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CAROUSEL CONTROLS -->
+            <button class="carousel-btn btn-prev" id="carouselPrevBtn" aria-label="Previous Slide">❮</button>
+            <button class="carousel-btn btn-next" id="carouselNextBtn" aria-label="Next Slide">❯</button>
+
+            <!-- CAROUSEL INDICATOR DOTS -->
+            <div class="carousel-dots" id="carouselDots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- GAME SHOWCASE & DOWNLOAD CENTER SECTION -->
+    <section id="seccion-juego" class="section game-showcase-section">
+        <div class="container text-center">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span> Juego Cliente Digital para PC · 100% Gratuito y Libre
+            </div>
+            <h1 class="hero-title" style="font-size: 38px; margin-top: 10px;">
+                Hololive<span class="gradient-text">DeckConstructor</span>
+            </h1>
+            <p class="hero-subtitle" style="max-width: 840px; margin: 12px auto 28px; font-size: 15px; color: var(--text-secondary); line-height: 1.6;">
+                La aplicación cliente oficial e independiente para PC de <strong>hololive Official Card Game</strong>. Practica tus estrategias contra la IA rival en solitario, combate en multijugador online, prueba tus mazos en el tapete de campo interactivo y gestiona tus reglas en tiempo real.
+            </p>
+
+            <!-- DOWNLOAD CTA BUTTONS -->
+            <div class="cta-group justify-center" style="gap: 16px; margin-bottom: 40px; flex-wrap: wrap; display: flex; justify-content: center;">
+                <a href="https://github.com/holocardgame-meta/HololiveDeckConstructor/releases/latest" id="mainDownloadBtn" class="btn btn-lg btn-primary btn-glow" style="padding: 16px 32px; border-radius: 12px; display: inline-flex; align-items: center; gap: 12px;">
+                    <span class="btn-icon" style="font-size: 28px;">📥</span>
+                    <div class="btn-text-group" style="text-align: left;">
+                        <span class="btn-title" style="font-size: 17px; font-weight: 800; display: block;">Descargar HololiveDeckConstructor para Windows</span>
+                        <span class="btn-sub" id="versionTag" style="font-size: 11px; opacity: 0.9; display: block;">Versión v0.0.25 (Última versión oficial .exe / .zip)</span>
+                    </div>
+                </a>
+                <a href="builder.html" class="btn btn-lg btn-glass" style="padding: 16px 24px; border-radius: 12px; display: inline-flex; align-items: center; gap: 10px;">
+                    <span class="btn-icon" style="font-size: 24px;">🛠️</span>
+                    <div class="btn-text-group" style="text-align: left;">
+                        <span class="btn-title" style="font-size: 15px; font-weight: 700; display: block;">Constructor de Mazos Web</span>
+                        <span class="btn-sub" style="font-size: 11px; opacity: 0.8; display: block;">Diseña y exporta en 3 columnas</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- GAME SCREENSHOTS SHOWCASE -->
+            <div class="game-screenshots-showcase" style="margin-top: 30px;">
+                <div class="badge-tag" style="margin-bottom: 8px;">📷 GALERÍA DE CAPTURAS REALES DEL JUEGO</div>
+                <h3 class="section-title" style="font-size: 24px; margin-bottom: 24px;">Descubre las Pantallas y Modos de HololiveDeckConstructor</h3>
+                
+                <div class="game-gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 22px;">
+                    
+                    <!-- Screen 1: Game Menu -->
+                    <div class="gallery-card">
+                        <img src="images/game_menu.png" alt="Menú Principal y Perfil HololiveDeckConstructor" class="gallery-img">
+                        <div class="gallery-caption">
+                            <span class="gallery-tag">🎮 MENÚ PRINCIPAL</span>
+                            <h4>Perfil de Jugador & Selección de Modos</h4>
+                            <p>Personaliza tu tarjeta de jugador, icono Oshi, subtexto de fan, marco y accede a los modos de combate.</p>
+                        </div>
+                    </div>
+
+                    <!-- Screen 2: Combat Mat -->
+                    <div class="gallery-card">
+                        <img src="images/game_combat.png" alt="Campo de Batalla 3D/2D en Tiempo Real" class="gallery-img">
+                        <div class="gallery-caption">
+                            <span class="gallery-tag">⚔️ CAMPO DE BATALLA</span>
+                            <h4>Combate Interactivo en Tiempo Real</h4>
+                            <p>Tablero oficial con cálculo automático de HP, zonas de Cheer, Collab, Bloom y resolución de Arts.</p>
+                        </div>
+                    </div>
+
+                    <!-- Screen 3: Rival AI CPU -->
+                    <div class="gallery-card">
+                        <img src="images/game_rivales.png" alt="Modo VS Rival IA CPU" class="gallery-img">
+                        <div class="gallery-caption">
+                            <span class="gallery-tag">🤖 MODO SOLITARIO</span>
+                            <h4>Práctica VS Rival IA Bot</h4>
+                            <p>Entrena y pon a prueba tus mazos en solitario contra la CPU sin tiempos de espera ni presión.</p>
+                        </div>
+                    </div>
+
+                    <!-- Screen 4: Playmat Tester -->
+                    <div class="gallery-card">
+                        <img src="images/game_probador.png" alt="Probador de Campo Interactivo" class="gallery-img">
+                        <div class="gallery-caption">
+                            <span class="gallery-tag">🧪 PROBADOR DE CAMPO</span>
+                            <h4>Simulación de Manos & Robos</h4>
+                            <p>Simula tus manos iniciales, robos de turno y secuencias de jugadas en vivo antes de entrar a combatir.</p>
+                        </div>
+                    </div>
+
+                    <!-- Screen 5: Victory Screen -->
+                    <div class="gallery-card">
+                        <img src="images/game_victoria.png" alt="Pantalla de Victoria y Estadísticas" class="gallery-img">
+                        <div class="gallery-caption">
+                            <span class="gallery-tag">🏆 RESULTADOS</span>
+                            <h4>Estadísticas de Victorias & Ranking</h4>
+                            <p>Revisa tu historial completo de partidas, ranking de jugador y racha de victorias.</p>
+                        </div>
+                    </div>
+
+                    <!-- Screen 6: In-Game Deck Management -->
+                    <div class="gallery-card">
+                        <img src="images/game_mazos.png" alt="Gestor de Mazos en el Juego" class="gallery-img">
+                        <div class="gallery-caption">
+                            <span class="gallery-tag">🎴 GESTOR DE MAZOS</span>
+                            <h4>Sincronización de Mazos HDC1-</h4>
+                            <p>Importa y exporta códigos Base64 HDC1- en 1 clic para jugar tus creaciones al instante.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- KEY FEATURES GRID -->
+            <div class="features-grid mt-40" style="text-align: left; margin-top: 40px;">
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper icon-cyan">🤖</div>
+                    <h3>Práctica Solitario VS Bot IA</h3>
+                    <p>Entrena tus jugadas contra bots competitivos sin tiempos de espera, sin lag y con validación de reglas oficiales.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper icon-purple">🌐</div>
+                    <h3>Multijugador Online</h3>
+                    <p>Crea salas privadas con código para combatir con tus amigos o únete a partidas casuales y rankeadas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper icon-pink">🛠️</div>
+                    <h3>Sincronización 1-Clic HDC1-</h3>
+                    <p>Diseña tus mazos en el Constructor Web y cárgalos en el juego cliente sin necesidad de ingresar nada manualmente.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper icon-emerald">🎴</div>
+                    <h3>850+ Cartas Oficiales & JP</h3>
+                    <p>Base de datos completa con cartas en inglés y lanzamientos recientes de Japón traducidos al español.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MAIN PAGE CONTENT -->
+    <main class="container">
+        <!-- SECTION 2: OFFICIAL PRODUCT CATALOG (Packs, Boxes, Start Decks & Supplies) -->
+        <section id="seccion-packs" class="section">
+            <div class="section-header text-center">
+                <div class="badge-tag" data-i18n="packs_badge">🛍️ CATÁLOGO DE PRODUCTOS OFICIALES</div>
+                <h2 class="section-title" data-i18n="packs_title">Tienda Oficial & Guía de Productos Hololive Card Game</h2>
+                <p class="section-description" data-i18n="packs_desc">
+                    Imágenes reales directamente de la tienda oficial (hololive production official shop). Conoce las cajas de sobres, mazos de inicio y accesorios exactos para identificar al comprar.
+                </p>
+            </div>
+
+            <!-- PRODUCT CATEGORY FILTER TABS -->
+            <div class="product-category-tabs mt-15">
+                <button class="prod-tab-btn active" data-prod-cat="all">Todos los Productos</button>
+                <button class="prod-tab-btn" data-prod-cat="boosters">🎴 Booster Packs & Boxes</button>
+                <button class="prod-tab-btn" data-prod-cat="decks">🌟 Start Decks (Mazos)</button>
+                <button class="prod-tab-btn" data-prod-cat="accessories">✨ Sets Especiales & Fundas</button>
+            </div>
+
+            <div class="packs-grid mt-20">
+
+                <!-- ITEM 1: HBP06 SECRET GARDEN (NEWEST 2026) -->
+                <article class="pack-card" data-cat="boosters">
+                    <div class="pack-cover-wrapper">
+                        <span class="cover-badge">📷 FOTO REAL DE TIENDA OFICIAL</span>
+                        <img src="images/pack_hbp06.jpg" alt="Booster Pack 06 Secret Garden Box & Foil Art" class="pack-cover-img real-photo">
+                    </div>
+                    <div class="pack-header">
+                        <div class="pack-icon-wrapper">🌿</div>
+                        <div>
+                            <h3 class="pack-title">Booster Pack Vol. 6: Secret Garden</h3>
+                            <span class="pack-code">Set: hBP06 · 120+ Cards · Release: 2026</span>
+                        </div>
+                    </div>
+                    <p class="event-meta">Edición Oficial Más Reciente (2026) · Cajas y sobres foil con Todoroki Riona, Juufuutei Raden, Suisei y Pekora.</p>
+                    <a href="builder.html" class="btn btn-sm btn-glass">🔍 Explorar Cartas en el Builder</a>
+                </article>
+
+                <!-- ITEM 2: HBP05 ELITE SPARK (2026) -->
+                <article class="pack-card" data-cat="boosters">
+                    <div class="pack-cover-wrapper">
+                        <span class="cover-badge">📷 FOTO REAL DE TIENDA OFICIAL</span>
+                        <img src="images/pack_hbp05.jpg" alt="Booster Pack 05 Elite Spark Box & Foil Art" class="pack-cover-img real-photo">
+                    </div>
+                    <div class="pack-header">
+                        <div class="pack-icon-wrapper">🔥</div>
+                        <div>
+                            <h3 class="pack-title">Booster Pack Vol. 5: Elite Spark</h3>
+                            <span class="pack-code">Set: hBP05 · Expansion · Release: 2026</span>
+                        </div>
+                    </div>
+                    <p class="event-meta">Caja y Sobres Oficiales · Debut de cartas Riona y Raden con sinergia ReDEV.</p>
+                    <a href="builder.html" class="btn btn-sm btn-glass">🔍 Explorar Cartas en el Builder</a>
+                </article>
+
+                <!-- ITEM 3: HSD19 OOZORA SUBARU LIVE START DECK (OCT 2026) -->
+                <article class="pack-card" data-cat="decks">
+                    <div class="pack-cover-wrapper">
+                        <span class="cover-badge badge-starter">📷 MAZO DE INICIO REAL</span>
+                        <img src="images/prod_hololiveofficialcardgame_hsd19.png" alt="Live Start Deck Oozora Subaru Box Packaging" class="pack-cover-img real-photo" onerror="this.src='images/hsd19_real.png'">
+                    </div>
+                    <div class="pack-header">
+                        <div class="pack-icon-wrapper">🦆</div>
+                        <div>
+                            <h3 class="pack-title">Live Start Deck 19: Oozora Subaru (大空スバル)</h3>
+                            <span class="pack-code">Set: hSD19 · 50 Cards + 20 Cheer · Oct 2026</span>
+                        </div>
+                    </div>
+                    <p class="event-meta">Caja de Mazo de Inicio Preconstruido · Incluye mazo de 50 cartas, mazo Cheer, tapete de papel y contadores de daño oficiales.</p>
+                    <a href="builder.html" class="btn btn-sm btn-glass">🔍 Explorar Mazo en el Builder</a>
+                </article>
+
+                <!-- ITEM 4: HSD17 HOSHIMACHI SUISEI LIVE START DECK (OCT 2026) -->
+                <article class="pack-card" data-cat="decks">
+                    <div class="pack-cover-wrapper">
+                        <span class="cover-badge badge-starter">📷 MAZO DE INICIO REAL</span>
+                        <img src="images/prod_hololiveofficialcardgame_hsd17.png" alt="Live Start Deck Hoshimachi Suisei Box Packaging" class="pack-cover-img real-photo" onerror="this.src='images/hsd17_real.png'">
+                    </div>
+                    <div class="pack-header">
+                        <div class="pack-icon-wrapper">☄️</div>
+                        <div>
+                            <h3 class="pack-title">Live Start Deck 17: Hoshimachi Suisei (星街すいせい)</h3>
+                            <span class="pack-code">Set: hSD17 · Blue Synergy · Oct 2026</span>
+                        </div>
+                    </div>
+                    <p class="event-meta">Caja de Mazo de Inicio Azul Monocolor · Estrategia agresiva de daño estelar y motor de robo azul.</p>
+                    <a href="builder.html" class="btn btn-sm btn-glass">🔍 Explorar Mazo en el Builder</a>
+                </article>
+
+                <!-- ITEM 5: HSD16 SAKURA MIKO LIVE START DECK (OCT 2026) -->
+                <article class="pack-card" data-cat="decks">
+                    <div class="pack-cover-wrapper">
+                        <span class="cover-badge badge-starter">📷 MAZO DE INICIO REAL</span>
+                        <img src="images/hsd16_real.png" alt="Live Start Deck Sakura Miko Box Packaging" class="pack-cover-img real-photo">
+                    </div>
+                    <div class="pack-header">
+                        <div class="pack-icon-wrapper">🌸</div>
+                        <div>
+                            <h3 class="pack-title">Live Start Deck 16: Sakura Miko (さくらみこ)</h3>
+                            <span class="pack-code">Set: hSD16 · Red Synergy · Oct 2026</span>
+                        </div>
+                    </div>
+                    <p class="event-meta">Caja de Mazo de Inicio Rojo Monocolor · Sinergia de Miko Miko Shrine Maiden y ataques de área.</p>
+                    <a href="builder.html" class="btn btn-sm btn-glass">🔍 Explorar Mazo en el Builder</a>
+                </article>
+
+                <!-- ITEM 6: HSD15 JUUFUUTEI RADEN LIVE START DECK (OCT 2026) -->
+                <article class="pack-card" data-cat="decks">
+                    <div class="pack-cover-wrapper">
+                        <span class="cover-badge badge-starter">📷 MAZO DE INICIO REAL</span>
+                        <img src="images/hsd15_real.png" alt="Live Start Deck Juufuutei Raden Box Packaging" class="pack-cover-img real-photo">
+                    </div>
+                    <div class="pack-header">
+                        <div class="pack-icon-wrapper">🪭</div>
+                        <div>
+                            <h3 class="pack-title">Live Start Deck 15: Juufuutei Raden (儒烏風亭らでん)</h3>
+                            <span class="pack-code">Set: hSD15 · ReDEV Synergy · Oct 2026</span>
+                        </div>
+                    </div>
+                    <p class="event-meta">Caja de Mazo de Inicio ReDEV · Potente aceleración de Cheer y descartes para incrementar el daño de combate.</p>
+                    <a href="builder.html" class="btn btn-sm btn-glass">🔍 Explorar Mazo en el Builder</a>
+                </article>
+
+                <!-- ITEM 7: HEB01 SUMMER HOLOGRAM (MID 2026) -->
+                <article class="pack-card" data-cat="boosters">
+                    <div class="pack-cover-wrapper">
+                        <span class="cover-badge">📷 FOTO REAL EXTRA EXPANSION</span>
+                        <img src="images/prod_hololiveofficialcardgame_extra_booste.png" alt="Extra Booster Summer Hologram Real Box" class="pack-cover-img real-photo" onerror="this.src='images/heb01_real.png'">
+                    </div>
+                    <div class="pack-header">
+                        <div class="pack-icon-wrapper">✨</div>
+                        <div>
+                            <h3 class="pack-title">Extra Booster: Summer Hologram (hEB01)</h3>
+                            <span class="pack-code">Set: hEB01 · Extra Expansion · Release: 2026</span>
+                        </div>
+                    </div>
+                    <p class="event-meta">Caja Oficial de Expansión Extra · Cartas foil veraniegas, Cheer especiales y artes paralelos alternativos.</p>
+                    <a href="builder.html" class="btn btn-sm btn-glass">🔍 Explorar Cartas en el Builder</a>
+                </article>
+
+                <!-- ITEM 8: OFFICIAL HOLOCARD CASES & SLEEVES (2026) -->
+                <article class="pack-card" data-cat="accessories">
+                    <div class="pack-cover-wrapper">
+                        <span class="cover-badge">📷 ACCESORIOS & FUNDAS REALES</span>
+                        <img src="images/prod_hololiveofficialcardgame_cardsleeve_vol1-3.png" alt="Official holocard Sleeves Vol 1-3" class="pack-cover-img real-photo" onerror="this.src='images/prod_hololiveofficialcardgame_specialcardcase_flowglow.png'">
+                    </div>
+                    <div class="pack-header">
+                        <div class="pack-icon-wrapper">🛡️</div>
+                        <div>
+                            <h3 class="pack-title">Official holocard Sleeves & Deck Cases</h3>
+                            <span class="pack-code">Fundas & Estuches Oficiales (2026)</span>
+                        </div>
+                    </div>
+                    <p class="event-meta">Fundas protectoras oficiales (65 fundas/paquete) y estuches portamazos rígidos de hololive production.</p>
+                    <a href="https://shop.hololivepro.com/en/collections/all" target="_blank" class="btn btn-sm btn-glass">🛒 Ver en Tienda Oficial ↗</a>
+                </article>
+
+                <!-- ITEM 9: 1ST ANNIVERSARY CELEBRATION SET (SEP 2025) -->
+                <article class="pack-card" data-cat="accessories">
+                    <div class="pack-cover-wrapper">
+                        <span class="cover-badge">📷 SET CONMEMORATIVO OFICIAL</span>
+                        <img src="images/prod_hololiveofficialcardgame_1stanniversarycelebrationset.png" alt="1st Anniversary Celebration Set Box" class="pack-cover-img real-photo">
+                    </div>
+                    <div class="pack-header">
+                        <div class="pack-icon-wrapper">🎉</div>
+                        <div>
+                            <h3 class="pack-title">hololive OCG 1st Anniversary Celebration Box</h3>
+                            <span class="pack-code">Special Edition Box Set · Sep 2025</span>
+                        </div>
+                    </div>
+                    <p class="event-meta">Caja Conmemorativa 1.er Aniversario · Incluye tapete de hule exclusivo, dados contadores y cartas promo alt-art.</p>
+                    <a href="https://shop.hololivepro.com/en/collections/all" target="_blank" class="btn btn-sm btn-glass">🛒 Ver en Tienda Oficial ↗</a>
+                </article>
+
+                <!-- ITEM 10: HBP01 BLOOMING RADIANCE (SEP 20, 2024 - FIRST BOOSTER) -->
+                <article class="pack-card" data-cat="boosters">
+                    <div class="pack-cover-wrapper">
+                        <span class="cover-badge">📷 FOTO REAL DE TIENDA OFICIAL</span>
+                        <img src="images/prod_hololiveofficialcardgame_hbp01.png" alt="Booster Pack Vol 1 Blooming Radiance Box & Pack" class="pack-cover-img real-photo" onerror="this.src='images/hbp01_real.png'">
+                    </div>
+                    <div class="pack-header">
+                        <div class="pack-icon-wrapper">🌸</div>
+                        <div>
+                            <h3 class="pack-title">Booster Pack Vol. 1: 咲き誇る輝き (Blooming Radiance)</h3>
+                            <span class="pack-code">Set: hBP01 · 12 Packs/Box · Debut Sep 20, 2024</span>
+                        </div>
+                    </div>
+                    <p class="event-meta">Primer Booster Pack Oficial · Cajas de 12 sobres con 8 cartas por sobre. Incluye cartas raras SEC y OUR de Tokino Sora y Gen 1-4.</p>
+                    <a href="builder.html" class="btn btn-sm btn-glass">🔍 Explorar Cartas en el Builder</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3: TOP META DECKS & COMMUNITY RECIPES -->
+        <section id="seccion-mazos" class="section deck-section">
+            <div class="section-header text-center">
+                <div class="badge-tag" data-i18n="decks_badge">META & COMMUNITY RECIPES</div>
+                <h2 class="section-title" data-i18n="decks_title">Popular & Top Tier Deck Lists</h2>
+                <p class="section-description" data-i18n="decks_desc">
+                    Discover top tournament winning deck recipes from HoloCard Meta. Copy 1-click codes for HDC1-, HoloDelta or Bushiroad DeckLog.
+                </p>
+            </div>
+
+            <!-- SEARCH & FILTERS BAR -->
+            <div id="filtros" class="filter-bar-container">
+                <div class="search-box-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="deckSearchInput" placeholder="Search deck by Oshi, card or code..." class="search-input">
+                </div>
+                
+                <div class="filter-chips-group">
+                    <button class="filter-chip active" data-filter="all">All Decks</button>
+                    <button class="filter-chip" data-filter="kaela">Kaela Kovalskia (G9SME)</button>
+                    <button class="filter-chip" data-filter="moona">Moona Hoshinova (1U7LVJ)</button>
+                    <button class="filter-chip" data-filter="riona">轟リオン / Riona (hSD19)</button>
+                    <button class="filter-chip" data-filter="kanata">天音かなた / Kanata (hBP01)</button>
+                    <button class="filter-chip" data-filter="sora">ときのそら / Sora</button>
+                    <button class="filter-chip" data-filter="pekora">兎田ぺこら / Pekora</button>
+                    <button class="filter-chip chip-jp" data-filter="format-jp">Formato JP</button>
+                    <button class="filter-chip chip-en" data-filter="format-en">Formato EN</button>
+                </div>
+            </div>
+
+            <div class="decks-grid mt-20">
+
+                <!-- DECK CARD 1: KAELA KOVALSKIA (G9SME - 1ST PLACE BLOOM CUP) -->
+                <article class="deck-card-expanded" data-tags="kaela format-jp">
+                    <div class="deck-badge-top format-jp">Formato JP · 🥇 1st Place Bloom Cup</div>
+                    <div class="deck-card-header">
+                        <img src="images/EN_hSD01-001_OSR.png" alt="Kaela Kovalskia Oshi" class="oshi-card-thumb">
+                        <div class="oshi-meta">
+                            <h3 class="oshi-card-title">Kaela Kovalskia (カエラ)</h3>
+                            <span class="oshi-card-subtitle">Bloom Cup Champion Deck · Code: G9SME</span>
+                        </div>
+                    </div>
+
+                    <div class="deck-stats-pills">
+                        <span class="pill">50 Main Cards</span>
+                        <span class="pill pill-cheer">14 Blue · 6 Red Cheer</span>
+                        <span class="pill pill-color">DeckLog: G9SME</span>
+                    </div>
+
+                    <p class="deck-summary">
+                        1st Place winning deck list from Bloom Cup Miyazaki Store tournament. High-speed card draw engine paired with heavy Arts damage.
+                    </p>
+
+                    <div class="deck-actions-group">
+                        <button class="btn btn-sm btn-primary copy-code-btn" data-code="G9SME" data-i18n="btn_copy_code">
+                            📋 Copy DeckLog: G9SME
+                        </button>
+                        <a href="https://decklog-en.bushiroad.com/ja/view/G9SME" target="_blank" class="btn btn-sm btn-glass">
+                            🔗 View in Bushiroad DeckLog ↗
+                        </a>
+                    </div>
+                </article>
+
+                <!-- DECK CARD 2: MOONA HOSHINOVA (1U7LVJ - 2ND PLACE BLOOM CUP) -->
+                <article class="deck-card-expanded" data-tags="moona format-jp">
+                    <div class="deck-badge-top format-jp">Formato JP · 🥈 2nd Place Bloom Cup</div>
+                    <div class="deck-card-header">
+                        <img src="images/EN_hBP01-001_OSR.png" alt="Moona Hoshinova Oshi" class="oshi-card-thumb">
+                        <div class="oshi-meta">
+                            <h3 class="oshi-card-title">Moona Hoshinova (ムーナ)</h3>
+                            <span class="oshi-card-subtitle">Bloom Cup Finalist Deck · Code: 1U7LVJ</span>
+                        </div>
+                    </div>
+
+                    <div class="deck-stats-pills">
+                        <span class="pill">50 Main Cards</span>
+                        <span class="pill pill-cheer">20 Purple Cheer</span>
+                        <span class="pill pill-color">DeckLog: 1U7LVJ</span>
+                    </div>
+
+                    <p class="deck-summary">
+                        2nd Place finalist deck build featuring Moona Hoshinova Debut/1st/2nd and HoloID Generation 1 synergy for sustained board presence.
+                    </p>
+
+                    <div class="deck-actions-group">
+                        <button class="btn btn-sm btn-primary copy-code-btn" data-code="1U7LVJ" data-i18n="btn_copy_code">
+                            📋 Copy DeckLog: 1U7LVJ
+                        </button>
+                        <a href="https://decklog-en.bushiroad.com/ja/view/1U7LVJ" target="_blank" class="btn btn-sm btn-glass">
+                            🔗 View in Bushiroad DeckLog ↗
+                        </a>
+                    </div>
+                </article>
+
+                <!-- DECK CARD 3: TODOROKI RIONA hSD19 -->
+                <article class="deck-card-expanded" data-tags="riona format-jp">
+                    <div class="deck-badge-top format-jp">Formato JP · hSD19 · 1st Place WGP</div>
+                    <div class="deck-card-header">
+                        <img src="images_ja/hSD19-001_OC.png" alt="Todoroki Riona Oshi" class="oshi-card-thumb" onerror="this.onerror=null; this.src='images/EN_hSD01-001_OSR.png'">
+                        <div class="oshi-meta">
+                            <h3 class="oshi-card-title">轟リオン / Todoroki Riona</h3>
+                            <span class="oshi-card-subtitle">Start Deck hSD19 + ReDEV Raden Synergy</span>
+                        </div>
+                    </div>
+
+                    <div class="deck-stats-pills">
+                        <span class="pill">50 Main Cards</span>
+                        <span class="pill pill-cheer">13 White · 7 Yellow Cheer</span>
+                        <span class="pill pill-color">White / Yellow</span>
+                    </div>
+
+                    <p class="deck-summary">
+                        Aggressive strategy centered on Todoroki Riona Debut/1st/2nd supported by Juufuutei Raden and card draw engines like Friendly PC and SorAZ Celebration.
+                    </p>
+
+                    <div class="deck-actions-group">
+                        <button class="btn btn-sm btn-primary copy-code-btn" data-code="HDC-RIONA-HSD19-2026" data-i18n="btn_copy_code">
+                            📋 Copy HDC1- Code
+                        </button>
+                        <button class="btn btn-sm btn-glass open-modal-btn" data-modal="modal-riona" data-i18n="btn_view_detail">
+                            🔍 View Deck Details
+                        </button>
+                    </div>
+                </article>
+
+                <!-- DECK CARD 4: AMANE KANATA hBP01 -->
+                <article class="deck-card-expanded" data-tags="kanata format-en">
+                    <div class="deck-badge-top format-en">Formato EN · hBP01 · Top Tier S</div>
+                    <div class="deck-card-header">
+                        <img src="images/EN_hBP01-001_OSR.png" alt="Amane Kanata Oshi" class="oshi-card-thumb">
+                        <div class="oshi-meta">
+                            <h3 class="oshi-card-title">天音かなた / Amane Kanata</h3>
+                            <span class="oshi-card-subtitle">Competitive Deck hBP01 (PPTenshi Power)</span>
+                        </div>
+                    </div>
+
+                    <div class="deck-stats-pills">
+                        <span class="pill">50 Main Cards</span>
+                        <span class="pill pill-cheer">20 White Cheer</span>
+                        <span class="pill pill-color">White Monocolor</span>
+                    </div>
+
+                    <p class="deck-summary">
+                        High-power deck featuring 10 copies of Kanata Debut, Stone Axe (+20 Arts damage) and Upao mascot for recoil damage during opponent turns.
+                    </p>
+
+                    <div class="deck-actions-group">
+                        <button class="btn btn-sm btn-primary copy-code-btn" data-code="HDC-KANATA-HBP01-2026" data-i18n="btn_copy_code">
+                            📋 Copy HDC1- Code
+                        </button>
+                        <button class="btn btn-sm btn-glass open-modal-btn" data-modal="modal-kanata" data-i18n="btn_view_detail">
+                            🔍 View Deck Details
+                        </button>
+                    </div>
+                </article>
+
+                <!-- DECK CARD 5: TOKINO SORA hSD01 -->
+                <article class="deck-card-expanded" data-tags="sora format-en">
+                    <div class="deck-badge-top format-en">Formato EN · hSD01</div>
+                    <div class="deck-card-header">
+                        <img src="images/EN_hSD01-001_OSR.png" alt="Tokino Sora Oshi" class="oshi-card-thumb">
+                        <div class="oshi-meta">
+                            <h3 class="oshi-card-title">ときのそら / Tokino Sora</h3>
+                            <span class="oshi-card-subtitle">Official Start Deck hSD01 + Support Enhancements</span>
+                        </div>
+                    </div>
+
+                    <div class="deck-stats-pills">
+                        <span class="pill">50 Main Cards</span>
+                        <span class="pill pill-cheer">20 White Cheer</span>
+                        <span class="pill pill-color">White Monocolor</span>
+                    </div>
+
+                    <p class="deck-summary">
+                        Balanced control deck built around Tokino Sora's life recovery and high damage Arts. Easy to pilot and highly reliable in tournaments.
+                    </p>
+
+                    <div class="deck-actions-group">
+                        <button class="btn btn-sm btn-primary copy-code-btn" data-code="HDC-SORA-HSD01-OFFICIAL" data-i18n="btn_copy_code">
+                            📋 Copy HDC1- Code
+                        </button>
+                        <button class="btn btn-sm btn-glass open-modal-btn" data-modal="modal-sora" data-i18n="btn_view_detail">
+                            🔍 View Deck Details
+                        </button>
+                    </div>
+                </article>
+
+                <!-- DECK CARD 6: USADA PEKORA hBP01 -->
+                <article class="deck-card-expanded" data-tags="pekora format-en">
+                    <div class="deck-badge-top format-en">Formato EN · hBP01</div>
+                    <div class="deck-card-header">
+                        <img src="images/EN_hBP01-002_OSR.png" alt="Usada Pekora Oshi" class="oshi-card-thumb">
+                        <div class="oshi-meta">
+                            <h3 class="oshi-card-title">兎田ぺこら / Usada Pekora</h3>
+                            <span class="oshi-card-subtitle">Green Aggro hBP01 (Nousagi Swarm)</span>
+                        </div>
+                    </div>
+
+                    <div class="deck-stats-pills">
+                        <span class="pill">50 Main Cards</span>
+                        <span class="pill pill-cheer">20 Green Cheer</span>
+                        <span class="pill pill-color">Green Monocolor</span>
+                    </div>
+
+                    <p class="deck-summary">
+                        Fast-paced green deck utilizing Pekora's SP Oshi Skill to search key holomem cards and swarm the battlefield for quick momentum.
+                    </p>
+
+                    <div class="deck-actions-group">
+                        <button class="btn btn-sm btn-primary copy-code-btn" data-code="HDC-PEKORA-HBP01-OFFICIAL" data-i18n="btn_copy_code">
+                            📋 Copy HDC1- Code
+                        </button>
+                        <button class="btn btn-sm btn-glass open-modal-btn" data-modal="modal-pekora" data-i18n="btn_view_detail">
+                            🔍 View Deck Details
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 4: OFFICIAL LIVE STREAMS & BROADCASTS -->
+        <section id="seccion-transmisiones" class="section">
+            <div class="section-header text-center">
+                <div class="badge-tag tag-pink">🔴 LIVE BROADCASTS & OFFICIAL VIDEOS</div>
+                <h2 class="section-title">Official Live Streams & Tournament Coverage</h2>
+                <p class="section-description">
+                    Watch official hololive Official Card Game tournament broadcasts, booster pack reveals, and beginner how-to-play guides.
+                </p>
+            </div>
+
+            <div class="streams-grid">
+                <!-- STREAM 1 -->
+                <article class="stream-card">
+                    <div class="stream-video-wrapper">
+                        <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PL1neGseTQlph41T0H2N2Z1d29vXj0b3c2" title="WGP Championship Live Coverage" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="stream-card-body">
+                        <span class="stream-badge badge-live">🔴 OFFICIAL LIVE BROADCAST</span>
+                        <h3 class="stream-title">WGP Championship 2026 Tokyo Grand Finals</h3>
+                        <p class="stream-desc">Full live match commentary and grand finals broadcast for the World Grand Prix Championship Tokio.</p>
+                        <a href="https://www.youtube.com/@hololivecardgame" target="_blank" class="btn btn-sm btn-glass">📺 Watch on YouTube ↗</a>
+                    </div>
+                </article>
+
+                <!-- STREAM 2 -->
+                <article class="stream-card">
+                    <div class="stream-video-wrapper">
+                        <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PL1neGseTQlpg8vHkO6a9V-0W8c3_001" title="Booster Pack Reveal Broadcast" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="stream-card-body">
+                        <span class="stream-badge tag-gold">✨ BOOSTER PACK SHOWCASE</span>
+                        <h3 class="stream-title">Booster Pack 06 Secret Garden Reveal Show</h3>
+                        <p class="stream-desc">Official card reveal live stream featuring Todoroki Riona, Juufuutei Raden, and new alternate art cards.</p>
+                        <a href="https://www.youtube.com/@hololivecardgame" target="_blank" class="btn btn-sm btn-glass">📺 Watch Channel ↗</a>
+                    </div>
+                </article>
+
+                <!-- STREAM 3 -->
+                <article class="stream-card">
+                    <div class="stream-video-wrapper">
+                        <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PL1neGseTQlpj5_9vX8b31_001" title="How to Play Official Guide" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="stream-card-body">
+                        <span class="stream-badge tag-blue">📖 BEGINNER TUTORIAL</span>
+                        <h3 class="stream-title">Official How-To-Play & Rules Overview</h3>
+                        <p class="stream-desc">Official step-by-step video guide explaining holomem bloom, cheer deck mechanics, and victory conditions.</p>
+                        <a href="https://hololive-official-cardgame.com/beginners/" target="_blank" class="btn btn-sm btn-glass">📖 Rulebook & FAQ ↗</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 4: JAPANESE CARD SPOILERS & TRANSLATED REVEALS -->
+        <section id="seccion-preview" class="section">
+            <div class="section-header text-center">
+                <div class="badge-tag tag-emerald" data-i18n="previews_badge">✨ JAPANESE SPOILERS & REVEALS</div>
+                <h2 class="section-title" data-i18n="previews_title">New Japanese Card Announcements & Skill Translations</h2>
+                <p class="section-description" data-i18n="previews_desc">
+                    Get an early look at newly announced Japanese cards from upcoming Booster Packs (hBP06, hEB01, hSD19) with translated skill effects and visual translated card overlays in English and Spanish.
+                </p>
+            </div>
+
+            <!-- GLOBAL CARD IMAGE LANGUAGE TOGGLE BAR -->
+            <div class="global-card-lang-bar">
+                <span class="global-lang-label">🌐 Visualizar imágenes de cartas en:</span>
+                <div class="global-lang-buttons">
+                    <button class="global-card-btn active" data-card-lang="es">🇪🇸 Traducidas (Español)</button>
+                    <button class="global-card-btn" data-card-lang="en">🇬🇧 English (Translated)</button>
+                    <button class="global-card-btn" data-card-lang="jp">🇯🇵 日本語 (JP Original)</button>
+                </div>
+            </div>
+
+            <div class="spoilers-grid">
+                <!-- SPOILER 1: TODOROKI RIONA hSD19 -->
+                <article class="spoiler-card" data-card-id="hSD19-001">
+                    <!-- CARD LANGUAGE TOOLBAR -->
+                    <div class="card-lang-toolbar">
+                        <button class="card-lang-btn active" data-lang="es">🇪🇸 ES</button>
+                        <button class="card-lang-btn" data-lang="en">🇬🇧 EN</button>
+                        <button class="card-lang-btn" data-lang="jp">🇯🇵 JP</button>
+                    </div>
+
+                    <div class="spoiler-thumb-wrapper">
+                        <img src="images_ja/hSD19-001_OC.png" alt="Todoroki Riona Oshi" class="spoiler-img card-img-target" onerror="this.src='images/EN_hSD01-001_OSR.png'">
+                        <!-- VISUAL TRANSLATED OVERLAY FRAME -->
+                        <div class="card-visual-overlay active-overlay-es">
+                            <span class="overlay-badge">ES TRADUCIDA</span>
+                            <div class="overlay-card-title">轟リオン / Todoroki Riona</div>
+                            <div class="overlay-skill-snippet"><strong>[SP Oshi]:</strong> Busca 1 ReDEV en mazo + mano. +50 Daño de Arts si Raden está en juego.</div>
+                        </div>
+                    </div>
+
+                    <div class="spoiler-card-info">
+                        <h3 class="spoiler-card-title">轟リオン / Todoroki Riona</h3>
+                        <span class="spoiler-card-code">Set: hSD19-001 · OSR Rarity (JP Reveal)</span>
+                        
+                        <div class="translated-skill-box mt-10">
+                            <span class="skill-tag skill-lang-es">🇪🇸 TRADUCCIÓN AL ESPAÑOL</span>
+                            <span class="skill-tag skill-lang-en hidden">🇬🇧 ENGLISH TRANSLATION</span>
+                            <span class="skill-tag skill-lang-jp hidden">🇯🇵 日本語 (TEXTO ORIGINAL)</span>
+
+                            <p class="skill-desc skill-text-es">
+                                <strong>[Habilidad Oshi SP]:</strong> Busca 1 carta Holomem con atributo ReDEV en tu mazo y añádela a tu mano. Si tienes a Juufuutei Raden en el escenario, aumenta el daño de Arts en +50 durante este turno.
+                            </p>
+                            <p class="skill-desc skill-text-en hidden">
+                                <strong>[SP Oshi Skill]:</strong> Search your deck for 1 Holomem card with ReDEV trait and add it to your hand. If Juufuutei Raden is on stage, gain +50 Arts damage this turn.
+                            </p>
+                            <p class="skill-desc skill-text-jp hidden">
+                                <strong>[SP推しスキル]:</strong> 自分の山札からReDEV特徴を持つホロメンカードを1枚探し、手札に加える。ステージに儒烏風亭らでんがいる場合、このターン中アーツダメージ+50。
+                            </p>
+                        </div>
+
+                        <button class="btn btn-sm btn-glass btn-card-zoom mt-10" 
+                            data-title="轟リオン / Todoroki Riona"
+                            data-code="hSD19-001 OSR"
+                            data-img-jp="images_ja/hSD19-001_OC.png"
+                            data-img-en="images/EN_hSD01-001_OSR.png"
+                            data-text-es="[Habilidad Oshi SP]: Busca 1 carta Holomem con atributo ReDEV en tu mazo y añádela a tu mano. Si tienes a Juufuutei Raden en el escenario, aumenta el daño de Arts en +50 durante este turno."
+                            data-text-en="[SP Oshi Skill]: Search your deck for 1 Holomem card with ReDEV trait and add it to your hand. If Juufuutei Raden is on stage, gain +50 Arts damage this turn."
+                            data-text-jp="[SP推しスキル]: 自分の山札からReDEV特徴を持つホロメンカードを1枚探し、手札に加える。ステージに儒烏風亭らでんがいる場合、このターン中アーツダメージ+50。">
+                            🔍 Ampliar e Inspeccionar Carta
+                        </button>
+                    </div>
+                </article>
+
+                <!-- SPOILER 2: JUUFUUTEI RADEN hBP06 -->
+                <article class="spoiler-card" data-card-id="hBP06-005">
+                    <div class="card-lang-toolbar">
+                        <button class="card-lang-btn active" data-lang="es">🇪🇸 ES</button>
+                        <button class="card-lang-btn" data-lang="en">🇬🇧 EN</button>
+                        <button class="card-lang-btn" data-lang="jp">🇯🇵 JP</button>
+                    </div>
+
+                    <div class="spoiler-thumb-wrapper">
+                        <img src="images/EN_hBP01-001_OSR.png" alt="Juufuutei Raden Oshi" class="spoiler-img card-img-target">
+                        <div class="card-visual-overlay active-overlay-es">
+                            <span class="overlay-badge">ES TRADUCIDA</span>
+                            <div class="overlay-card-title">儒烏風亭らでん / Raden</div>
+                            <div class="overlay-skill-snippet"><strong>[Bloom 1st]:</strong> Roba 2 cartas. Descarta 1 Cheer para +30 de daño de Arts en combate.</div>
+                        </div>
+                    </div>
+
+                    <div class="spoiler-card-info">
+                        <h3 class="spoiler-card-title">儒烏風亭らでん / Juufuutei Raden</h3>
+                        <span class="spoiler-card-code">Set: hBP06-005 · UR Rarity (JP Reveal)</span>
+
+                        <div class="translated-skill-box mt-10">
+                            <span class="skill-tag skill-lang-es">🇪🇸 TRADUCCIÓN AL ESPAÑOL</span>
+                            <span class="skill-tag skill-lang-en hidden">🇬🇧 ENGLISH TRANSLATION</span>
+                            <span class="skill-tag skill-lang-jp hidden">🇯🇵 日本語 (TEXTO ORIGINAL)</span>
+
+                            <p class="skill-desc skill-text-es">
+                                <strong>[Bloom Nivel 1]:</strong> Roba 2 cartas de tu mazo. Puedes descartar 1 carta de Cheer para otorgar +30 de daño de Arts adicional a tu Holomem activa durante la fase de combate.
+                            </p>
+                            <p class="skill-desc skill-text-en hidden">
+                                <strong>[Bloom 1st]:</strong> Draw 2 cards from deck. You may discard 1 Cheer card to grant +30 Arts damage to your active Holomem during combat phase.
+                            </p>
+                            <p class="skill-desc skill-text-jp hidden">
+                                <strong>[Bloom 1st]:</strong> 自分の山札からカードを2枚引く。エールカードを1枚捨てることで、戦闘フェイズ中アクティブなホロメンのアーツダメージ+30。
+                            </p>
+                        </div>
+
+                        <button class="btn btn-sm btn-glass btn-card-zoom mt-10" 
+                            data-title="儒烏風亭らでん / Juufuutei Raden"
+                            data-code="hBP06-005 UR"
+                            data-img-jp="images_ja/hBP01-001_OSR.png"
+                            data-img-en="images/EN_hBP01-001_OSR.png"
+                            data-text-es="[Bloom Nivel 1]: Roba 2 cartas de tu mazo. Puedes descartar 1 carta de Cheer para otorgar +30 de daño de Arts adicional a tu Holomem activa durante la fase de combate."
+                            data-text-en="[Bloom 1st]: Draw 2 cards from deck. You may discard 1 Cheer card to grant +30 Arts damage to your active Holomem during combat phase."
+                            data-text-jp="[Bloom 1st]: 自分の山札からカードを2枚引く。エールカードを1枚捨てることで、戦闘フェイズ中アクティブなホロメンのアーツダメージ+30。">
+                            🔍 Ampliar e Inspeccionar Carta
+                        </button>
+                    </div>
+                </article>
+
+                <!-- SPOILER 3: AMANE KANATA hBP01 -->
+                <article class="spoiler-card" data-card-id="hBP01-001">
+                    <div class="card-lang-toolbar">
+                        <button class="card-lang-btn active" data-lang="es">🇪🇸 ES</button>
+                        <button class="card-lang-btn" data-lang="en">🇬🇧 EN</button>
+                        <button class="card-lang-btn" data-lang="jp">🇯🇵 JP</button>
+                    </div>
+
+                    <div class="spoiler-thumb-wrapper">
+                        <img src="images/EN_hBP01-001_OSR.png" alt="Amane Kanata Oshi" class="spoiler-img card-img-target">
+                        <div class="card-visual-overlay active-overlay-es">
+                            <span class="overlay-badge">ES TRADUCIDA</span>
+                            <div class="overlay-card-title">天音かなた / Amane Kanata</div>
+                            <div class="overlay-skill-snippet"><strong>[SP Oshi]:</strong> Une 2 Cheer Blancas del mazo Cheer. Otorga contraataque con +20 daño en turno enemigo.</div>
+                        </div>
+                    </div>
+
+                    <div class="spoiler-card-info">
+                        <h3 class="spoiler-card-title">天音かなた / Amane Kanata</h3>
+                        <span class="spoiler-card-code">Set: hBP01-001 · OSR Rarity</span>
+
+                        <div class="translated-skill-box mt-10">
+                            <span class="skill-tag skill-lang-es">🇪🇸 TRADUCCIÓN AL ESPAÑOL</span>
+                            <span class="skill-tag skill-lang-en hidden">🇬🇧 ENGLISH TRANSLATION</span>
+                            <span class="skill-tag skill-lang-jp hidden">🇯🇵 日本語 (TEXTO ORIGINAL)</span>
+
+                            <p class="skill-desc skill-text-es">
+                                <strong>[Habilidad Oshi SP]:</strong> Une 2 Cheer Blancas del mazo Cheer a Kanata. Otorga contraataque automático con +20 de daño de contraataque durante el turno del oponente.
+                            </p>
+                            <p class="skill-desc skill-text-en hidden">
+                                <strong>[SP Oshi Skill]:</strong> Attach 2 White Cheer from Cheer deck to Kanata. Gain automatic counterattack with +20 damage during opponent's turn.
+                            </p>
+                            <p class="skill-desc skill-text-jp hidden">
+                                <strong>[SP推しスキル]:</strong> エールデッキから白エールを2枚かなたに付ける。相手のターン中、+20カウンターダメージを得る。
+                            </p>
+                        </div>
+
+                        <button class="btn btn-sm btn-glass btn-card-zoom mt-10" 
+                            data-title="天音かなた / Amane Kanata"
+                            data-code="hBP01-001 OSR"
+                            data-img-jp="images_ja/hBP01-001_OSR.png"
+                            data-img-en="images/EN_hBP01-001_OSR.png"
+                            data-text-es="[Habilidad Oshi SP]: Une 2 Cheer Blancas del mazo Cheer a Kanata. Otorga contraataque automático con +20 de daño de contraataque durante el turno del oponente."
+                            data-text-en="[SP Oshi Skill]: Attach 2 White Cheer from Cheer deck to Kanata. Gain automatic counterattack with +20 damage during opponent's turn."
+                            data-text-jp="[SP推しスキル]: エールデッキから白エールを2枚かなたに付ける。相手のターン中、+20カウンターダメージを得る。">
+                            🔍 Ampliar e Inspeccionar Carta
+                        </button>
+                    </div>
+                </article>
+
+                <!-- SPOILER 4: TOKINO SORA hSD01 -->
+                <article class="spoiler-card" data-card-id="hSD01-001">
+                    <div class="card-lang-toolbar">
+                        <button class="card-lang-btn active" data-lang="es">🇪🇸 ES</button>
+                        <button class="card-lang-btn" data-lang="en">🇬🇧 EN</button>
+                        <button class="card-lang-btn" data-lang="jp">🇯🇵 JP</button>
+                    </div>
+
+                    <div class="spoiler-thumb-wrapper">
+                        <img src="images/EN_hSD01-001_OSR.png" alt="Tokino Sora Oshi" class="spoiler-img card-img-target">
+                        <div class="card-visual-overlay active-overlay-es">
+                            <span class="overlay-badge">ES TRADUCIDA</span>
+                            <div class="overlay-card-title">ときのそら / Tokino Sora</div>
+                            <div class="overlay-skill-snippet"><strong>[SP Oshi]:</strong> Recupera 1 Vida de reserva Cheer e incrementa HP máximos en +50.</div>
+                        </div>
+                    </div>
+
+                    <div class="spoiler-card-info">
+                        <h3 class="spoiler-card-title">ときのそら / Tokino Sora</h3>
+                        <span class="spoiler-card-code">Set: hSD01-001 · OSR Rarity</span>
+
+                        <div class="translated-skill-box mt-10">
+                            <span class="skill-tag skill-lang-es">🇪🇸 TRADUCCIÓN AL ESPAÑOL</span>
+                            <span class="skill-tag skill-lang-en hidden">🇬🇧 ENGLISH TRANSLATION</span>
+                            <span class="skill-tag skill-lang-jp hidden">🇯🇵 日本語 (TEXTO ORIGINAL)</span>
+
+                            <p class="skill-desc skill-text-es">
+                                <strong>[Habilidad Oshi SP]:</strong> Recupera 1 punto de Vida de la reserva Cheer e incrementa los HP máximos de tu Holomem activa en +50.
+                            </p>
+                            <p class="skill-desc skill-text-en hidden">
+                                <strong>[SP Oshi Skill]:</strong> Recover 1 Life point from Cheer area and increase active Holomem max HP by +50.
+                            </p>
+                            <p class="skill-desc skill-text-jp hidden">
+                                <strong>[SP推しスキル]:</strong> エールエリアからライフを1回復し、アクティブなホロメンの最大HPを+50する。
+                            </p>
+                        </div>
+
+                        <button class="btn btn-sm btn-glass btn-card-zoom mt-10" 
+                            data-title="ときのそら / Tokino Sora"
+                            data-code="hSD01-001 OSR"
+                            data-img-jp="images_ja/hSD01-001_OSR.png"
+                            data-img-en="images/EN_hSD01-001_OSR.png"
+                            data-text-es="[Habilidad Oshi SP]: Recupera 1 punto de Vida de la reserva Cheer e incrementa los HP máximos de tu Holomem activa en +50."
+                            data-text-en="[SP Oshi Skill]: Recover 1 Life point from Cheer area and increase active Holomem max HP by +50."
+                            data-text-jp="[SP推しスキル]: エールエリアからライフを1回復し、アクティブなホロメンの最大HPを+50する。">
+                            🔍 Ampliar e Inspeccionar Carta
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 5: DECK BUILDER SPOTLIGHT & SHARE CREATIONS BANNER -->
+        <section id="seccion-builder-promo" class="section">
+            <div class="builder-cta-banner">
+                <span class="slide-tag tag-purple">🛠️ INTERACTIVE WEB TOOL</span>
+                <h2 class="builder-cta-title" data-i18n="builder_title">Meet the Web Deck Builder & Share Your Creations</h2>
+                <p class="builder-cta-desc" data-i18n="builder_desc">
+                    Build decks in a Yu-Gi-Oh! Master Duel style layout. Import from Bushiroad DeckLog, export to HoloDelta JSON or HDC1- Base64, and share your deck codes with the global community!
+                </p>
+                <a href="builder.html" class="btn btn-lg btn-primary btn-glow" data-i18n="builder_btn">
+                    🛠️ Open Web Deck Builder
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODALS FOR DECK DETAILS -->
+    <div id="modal-riona" class="modal-backdrop hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div>
+                    <h2>轟リオン / Todoroki Riona (hSD19)</h2>
+                    <span class="badge-tag format-jp">Formato JP · hSD19</span>
+                </div>
+                <button class="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="deck-detail-summary">
+                    <p><strong>Oshi:</strong> Todoroki Riona (<code>hSD19-001</code>)</p>
+                    <p><strong>Composition:</strong> 50 Main Cards · 13 White / 7 Yellow Cheer</p>
+                </div>
+                <div class="modal-cards-visual-list">
+                    <div class="modal-card-item">
+                        <img src="images_ja/hSD19-001_OC.png" alt="Todoroki Riona Oshi" class="modal-thumb" onerror="this.src='images/EN_hSD01-001_OSR.png'">
+                        <div class="card-item-info">Todoroki Riona Oshi Card</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary copy-code-btn" data-code="HDC-RIONA-HSD19-2026" data-i18n="btn_copy_code">
+                    📋 Copy HDC1- Code
+                </button>
+                <button class="btn btn-glass close-modal-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-kanata" class="modal-backdrop hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div>
+                    <h2>天音かなた / Amane Kanata (hBP01)</h2>
+                    <span class="badge-tag format-en">Formato EN · hBP01</span>
+                </div>
+                <button class="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="deck-detail-summary">
+                    <p><strong>Oshi:</strong> Amane Kanata (<code>hBP01-001</code>)</p>
+                    <p><strong>Composition:</strong> 50 Main Cards · 20 White Cheer</p>
+                </div>
+                <div class="modal-cards-visual-list">
+                    <div class="modal-card-item">
+                        <img src="images/EN_hBP01-001_OSR.png" alt="Kanata Oshi" class="modal-thumb">
+                        <div class="card-item-info">Amane Kanata Oshi Card</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary copy-code-btn" data-code="HDC-KANATA-HBP01-2026" data-i18n="btn_copy_code">
+                    📋 Copy HDC1- Code
+                </button>
+                <button class="btn btn-glass close-modal-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- HIGH-RES CARD VIEWER MODAL WITH TRANSLATION SWITCHER -->
+    <div id="modal-card-viewer" class="modal-backdrop hidden">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-header">
+                <div>
+                    <h2 id="cardZoomTitle">Nombre de Carta / Card Name</h2>
+                    <span id="cardZoomCode" class="badge-tag tag-emerald">Set Code</span>
+                </div>
+                <button class="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body modal-card-zoom-body">
+                <div class="zoom-image-col">
+                    <img id="cardZoomImg" src="images/EN_hBP01-001_OSR.png" alt="Card Full View" class="zoom-card-img">
+                    <div class="zoom-lang-toggle">
+                        <button class="zoom-lang-btn active" data-zoom-lang="es">🇪🇸 ES Traducida</button>
+                        <button class="zoom-lang-btn" data-zoom-lang="en">🇬🇧 EN Translated</button>
+                        <button class="zoom-lang-btn" data-zoom-lang="jp">🇯🇵 JP Original</button>
+                    </div>
+                </div>
+                <div class="zoom-details-col">
+                    <h3 class="zoom-section-header">📜 Efecto & Traducción Completa</h3>
+                    
+                    <div id="zoomTextEs" class="zoom-text-box">
+                        <span class="skill-tag">🇪🇸 ESPAÑOL (TRADUCCIÓN FAN):</span>
+                        <p id="zoomDescEs" class="zoom-desc">Cargando traducción al español...</p>
+                    </div>
+
+                    <div id="zoomTextEn" class="zoom-text-box hidden">
+                        <span class="skill-tag tag-blue">🇬🇧 ENGLISH TRANSLATION:</span>
+                        <p id="zoomDescEn" class="zoom-desc">Loading English translation...</p>
+                    </div>
+
+                    <div id="zoomTextJp" class="zoom-text-box hidden">
+                        <span class="skill-tag tag-pink">🇯🇵 日本語 (TEXTO ORIGINAL):</span>
+                        <p id="zoomDescJp" class="zoom-desc">日本語テキストを読み込み中...</p>
+                    </div>
+
+                    <div class="zoom-meta-table mt-15">
+                        <div class="meta-row"><span>Idioma / Language:</span><strong id="zoomMetaLang">Español & English</strong></div>
+                        <div class="meta-row"><span>Rereza / Rarity:</span><strong>OSR / UR / SEC</strong></div>
+                        <div class="meta-row"><span>Estado / Status:</span><strong class="text-accent">Oficial Revelado en Japón</strong></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-glass close-modal-btn">Cerrar / Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer mt-20">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo-placeholder logo-sm">
+                    <span class="logo-icon">🎴</span>
+                    <span class="logo-text">Meta<span class="text-accent">Oshi</span></span>
+                </div>
+                <p class="footer-tagline">MetaOshi Hub · Unofficial Fan Platform for hololive Official Card Game.</p>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p>
+                    <strong>Disclaimer:</strong> MetaOshi Hub is a non-profit fan project created for the hololive Official Card Game community. It is not affiliated with, endorsed by, or sponsored by COVER Corp. All character names and artwork belong to <strong>COVER Corp.</strong>
+                </p>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 MetaOshi Community. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="toast hidden">Deck Code Copied to Clipboard!</div>
+
+    <script src="i18n.js"></script>
+    <script src="deckcode.js"></script>
+    <script src="app.js"></script>
+    <script src="metaoshi.js"></script>
+</body>
+</html>

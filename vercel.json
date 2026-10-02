@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/hdc.html" },
+    { "source": "/game", "destination": "/hdc.html" },
+    { "source": "/hdc", "destination": "/hdc.html" },
+    { "source": "/oshilive", "destination": "/hdc.html" },
+    { "source": "/builder", "destination": "/builder.html" },
+    { "source": "/decks", "destination": "/decks.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+      ]
+    }
+  ]
+}

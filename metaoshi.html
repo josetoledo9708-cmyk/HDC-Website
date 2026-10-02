@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaOshi Hub - Recetas de Mazos de hololive OCG | OshiLive</title>
+    <meta name="description" content="Explora, filtra y copia recetas de mazos competitivos de hololive Official Card Game. Mazos oficiales de Riona hSD19, Kanata hBP01, Sora, Suisei y más.">
+    <meta property="og:title" content="MetaOshi Hub - Mazos Competitivos de hololive OCG">
+    <meta property="og:description" content="Recetas de mazos oficiales y comunitarios con botón de copiado directo a OshiLive.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="metaoshi-page">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <div class="logo-placeholder">
+                    <span class="logo-icon">🎴</span>
+                    <span class="logo-text">Hololive<span class="text-accent">DeckConstructor</span></span>
+                    <span class="logo-badge badge-meta">HDC HUB</span>
+                </div>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item">Landing Principal</a>
+                <a href="metaoshi.html" class="nav-item active">MetaOshi Hub</a>
+                <a href="builder.html" class="nav-item">Constructor de Mazos</a>
+                <a href="#lanzamientos" class="nav-item">Nuevos Lanzamientos</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="index.html#descargar" id="navDownloadBtn" class="btn btn-sm btn-primary">Descargar App</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- METAOSHI HERO BANNER -->
+    <section class="metaoshi-hero">
+        <div class="hero-bg-glow glow-meta"></div>
+        <div class="container hero-content text-center">
+            <div class="hero-badge badge-gold">
+                ✨ Hub de Mazos Competitivos · Actualizado a versión 0.1.21
+            </div>
+            <h1 class="hero-title">
+                Explora las Mejores Recetas de <span class="gradient-text-alt">MetaOshi</span>
+            </h1>
+            <p class="hero-subtitle">
+                Recetas oficiales y de la comunidad para hololive Official Card Game. Copia cualquier código en 1-clic e impórtalo directo en OshiLive para probarlo contra el Bot Rival o en multijugador online.
+            </p>
+
+            <!-- SEARCH & FILTERS BAR -->
+            <div id="filtros" class="filter-bar-container">
+                <div class="search-box-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="deckSearchInput" placeholder="Buscar mazo por Oshi, carta o código..." class="search-input">
+                </div>
+                
+                <div class="filter-chips-group">
+                    <button class="filter-chip active" data-filter="all">Todos los Mazos</button>
+                    <button class="filter-chip" data-filter="riona">轟リオン / Riona (hSD19)</button>
+                    <button class="filter-chip" data-filter="kanata">天音かなた / Kanata (hBP01)</button>
+                    <button class="filter-chip" data-filter="sora">ときのそら / Sora</button>
+                    <button class="filter-chip" data-filter="suisei">星街すいせい / Suisei</button>
+                    <button class="filter-chip" data-filter="pekora">兎田ぺこら / Pekora</button>
+                    <button class="filter-chip chip-jp" data-filter="format-jp">Formato JP</button>
+                    <button class="filter-chip chip-en" data-filter="format-en">Formato EN</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED DECK LAUNCH SECTION -->
+    <section id="lanzamientos" class="section deck-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge-tag">LANZAMIENTOS DE MAZOS OFICIALES</div>
+                <h2 class="section-title">Mazos Nuevos de la Comunidad</h2>
+                <p class="section-description">
+                    Recetas listas para copiar y usar en OshiLive. Haz clic en "Ver Detalle del Mazo" para consultar la lista completa de las 50 cartas principales y 20 cheers.
+                </p>
+            </div>
+
+            <div class="decks-grid">
+                
+                <!-- DECK CARD 1: TODOROKI RIONA hSD19 -->
+                <article class="deck-card-expanded" data-tags="riona format-jp">
+                    <div class="deck-badge-top format-jp">Formato JP · hSD19</div>
+                    <div class="deck-card-header">
+                        <div class="oshi-avatar avatar-yellow">
+                            <span class="avatar-icon">🎴</span>
+                        </div>
+                        <div class="oshi-meta">
+                            <h3 class="oshi-card-title">轟リオン / Todoroki Riona</h3>
+                            <span class="oshi-card-subtitle">Mazo de Inicio hSD19 + Sinergia ReDEV WITH Raden</span>
+                        </div>
+                    </div>
+
+                    <div class="deck-stats-pills">
+                        <span class="pill">50 Cartas Principales</span>
+                        <span class="pill pill-cheer">13 White · 7 Yellow Cheer</span>
+                        <span class="pill pill-color">Blanco / Amarillo</span>
+                    </div>
+
+                    <p class="deck-summary">
+                        Estrategia agresiva centrada en Todoroki Riona Debut/1st/2nd apoyada por Raden y aceleradores de mano como Friendly PC y SorAZ Celebration.
+                    </p>
+
+                    <div class="deck-actions-group">
+                        <button class="btn btn-sm btn-primary copy-code-btn" data-code="HDC-RIONA-HSD19-2026">
+                            📋 Copiar Código (1-Clic)
+                        </button>
+                        <button class="btn btn-sm btn-glass open-modal-btn" data-modal="modal-riona">
+                            🔍 Ver Detalle del Mazo
+                        </button>
+                    </div>
+                </article>
+
+                <!-- DECK CARD 2: AMANE KANATA hBP01 -->
+                <article class="deck-card-expanded" data-tags="kanata format-en">
+                    <div class="deck-badge-top format-en">Formato EN · hBP01</div>
+                    <div class="deck-card-header">
+                        <div class="oshi-avatar avatar-white">
+                            <span class="avatar-icon">💫</span>
+                        </div>
+                        <div class="oshi-meta">
+                            <h3 class="oshi-card-title">天音かなた / Amane Kanata</h3>
+                            <span class="oshi-card-subtitle">Mazo Competitivo hBP01 (PPTenshi Power)</span>
+                        </div>
+                    </div>
+
+                    <div class="deck-stats-pills">
+                        <span class="pill">50 Cartas Principales</span>
+                        <span class="pill pill-cheer">20 White Cheer</span>
+                        <span class="pill pill-color">Blanco Monocolor</span>
+                    </div>
+
+                    <p class="deck-summary">
+                        Mazo de gran potencia con 10 copias de Kanata Debut, Stone Axe (+20 Arts) y la mascota Upao para infligir daño de respuesta durante el turno rival.
+                    </p>
+
+                    <div class="deck-actions-group">
+                        <button class="btn btn-sm btn-primary copy-code-btn" data-code="HDC-KANATA-HBP01-2026">
+                            📋 Copiar Código (1-Clic)
+                        </button>
+                        <button class="btn btn-sm btn-glass open-modal-btn" data-modal="modal-kanata">
+                            🔍 Ver Detalle del Mazo
+                        </button>
+                    </div>
+                </article>
+
+                <!-- DECK CARD 3: TOKINO SORA hSD01 -->
+                <article class="deck-card-expanded" data-tags="sora format-en">
+                    <div class="deck-badge-top format-en">Formato EN · hSD01</div>
+                    <div class="deck-card-header">
+                        <div class="oshi-avatar avatar-blue">
+                            <span class="avatar-icon">🐻</span>
+                        </div>
+                        <div class="oshi-meta">
+                            <h3 class="oshi-card-title">ときのそら / Tokino Sora</h3>
+                            <span class="oshi-card-subtitle">Mazo de Inicio Oficial hSD01</span>
+                        </div>
+                    </div>
+
+                    <div class="deck-stats-pills">
+                        <span class="pill">50 Cartas Principales</span>
+                        <span class="pill pill-cheer">20 White Cheer</span>
+                        <span class="pill pill-color">Blanco Equilibrado</span>
+                    </div>
+
+                    <p class="deck-summary">
+                        Mazo ideal para iniciarse en el juego. Gran constancia de robo con Nodoka, Manager-chan y Ankimo Mascot.
+                    </p>
+
+                    <div class="deck-actions-group">
+                        <button class="btn btn-sm btn-primary copy-code-btn" data-code="HDC-SORA-HSD01-OFFICIAL">
+                            📋 Copiar Código (1-Clic)
+                        </button>
+                        <button class="btn btn-sm btn-glass open-modal-btn" data-modal="modal-sora">
+                            🔍 Ver Detalle del Mazo
+                        </button>
+                    </div>
+                </article>
+
+                <!-- DECK CARD 4: USADA PEKORA hBP01 -->
+                <article class="deck-card-expanded" data-tags="pekora format-en">
+                    <div class="deck-badge-top format-en">Formato EN · hBP01</div>
+                    <div class="deck-card-header">
+                        <div class="oshi-avatar avatar-green">
+                            <span class="avatar-icon">👯‍♀️</span>
+                        </div>
+                        <div class="oshi-meta">
+                            <h3 class="oshi-card-title">兎田ぺこら / Usada Pekora</h3>
+                            <span class="oshi-card-subtitle">Mazo Verde de Control & Daño Directo</span>
+                        </div>
+                    </div>
+
+                    <div class="deck-stats-pills">
+                        <span class="pill">50 Cartas Principales</span>
+                        <span class="pill pill-cheer">20 Green Cheer</span>
+                        <span class="pill pill-color">Verde Control</span>
+                    </div>
+
+                    <p class="deck-summary">
+                        Estrategia centrada en daño directo al escenario rival mediante habilidades de Oshi y cartas de Soporte de evento.
+                    </p>
+
+                    <div class="deck-actions-group">
+                        <button class="btn btn-sm btn-primary copy-code-btn" data-code="HDC-PEKORA-HBP01-OFFICIAL">
+                            📋 Copiar Código (1-Clic)
+                        </button>
+                        <button class="btn btn-sm btn-glass open-modal-btn" data-modal="modal-pekora">
+                            🔍 Ver Detalle del Mazo
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DETALLE MAZO RIONA hSD19 -->
+    <div id="modal-riona" class="modal-backdrop hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div>
+                    <h2>轟リオン / Todoroki Riona (hSD19)</h2>
+                    <span class="badge-tag">Receta Oficial Registrada</span>
+                </div>
+                <button class="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="deck-detail-summary">
+                    <p><strong>Oshi:</strong> Todoroki Riona (<code>hSD19-001</code>) / 轟リオン</p>
+                    <p><strong>Formato:</strong> JP (hSD19) · <strong>Cheers:</strong> 13 White Cheer / 7 Yellow Cheer</p>
+                </div>
+
+                <div class="deck-list-tables">
+                    <h3>🃏 Mazo Principal (50 Cartas)</h3>
+                    <ul class="card-qty-list">
+                        <li><span class="qty">6x</span> Todoroki Riona Debut (<code>hSD19-002</code>)</li>
+                        <li><span class="qty">4x</span> Todoroki Riona 1st (<code>hSD19-006</code>)</li>
+                        <li><span class="qty">1x</span> Todoroki Riona 1st (<code>hSD19-007</code>)</li>
+                        <li><span class="qty">4x</span> Todoroki Riona 1st (<code>hSD19-005</code>)</li>
+                        <li><span class="qty">4x</span> Todoroki Riona 1st (<code>hSD19-004</code>)</li>
+                        <li><span class="qty">4x</span> Todoroki Riona 2nd (<code>hSD19-009</code>)</li>
+                        <li><span class="qty">3x</span> Juufuutei Raden Debut (<code>hSD19-003</code>)</li>
+                        <li><span class="qty">3x</span> Juufuutei Raden 1st (<code>hSD19-008</code>)</li>
+                        <li><span class="qty">3x</span> Juufuutei Raden 2nd (<code>hSD19-010</code>)</li>
+                        <li><span class="qty">3x</span> Harusaki Nodoka (<code>hSD01-016</code>)</li>
+                        <li><span class="qty">2x</span> Retro PC (<code>hSD01-018</code>)</li>
+                        <li><span class="qty">4x</span> Friendly PC (<code>hBP05-074</code>)</li>
+                        <li><span class="qty">1x</span> So, That Makes You My Enemy (<code>hBP01-108</code>)</li>
+                        <li><span class="qty">3x</span> Miko, I'm Ashamed (<code>hBP02-085</code>)</li>
+                        <li><span class="qty">3x</span> SorAZ Celebration (<code>hSD01-015</code>)</li>
+                        <li><span class="qty">1x</span> WHAT'S UP!!!!! KEEEEP GROWING!!!!! (<code>hBP06-093</code>)</li>
+                        <li><span class="qty">1x</span> Fudetarou (<code>hSD19-014</code>)</li>
+                    </ul>
+
+                    <h3 class="mt-20">✨ Mazo de Cheers (20 Cheers)</h3>
+                    <ul class="card-qty-list">
+                        <li><span class="qty">13x</span> White Cheer</li>
+                        <li><span class="qty">7x</span> Yellow Cheer</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary copy-code-btn" data-code="HDC-RIONA-HSD19-2026">
+                    📋 Copiar Código de Mazo
+                </button>
+                <button class="btn btn-glass close-modal-btn">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DETALLE MAZO KANATA hBP01 -->
+    <div id="modal-kanata" class="modal-backdrop hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div>
+                    <h2>天音かなた / Amane Kanata (hBP01)</h2>
+                    <span class="badge-tag">Receta Competitiva Registrada</span>
+                </div>
+                <button class="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="deck-detail-summary">
+                    <p><strong>Oshi:</strong> Amane Kanata (<code>hBP01-001</code> / SP)</p>
+                    <p><strong>Formato:</strong> EN (hBP01) · <strong>Cheers:</strong> 20 White Cheer</p>
+                </div>
+
+                <div class="deck-list-tables">
+                    <h3>🃏 Mazo Principal (50 Cartas)</h3>
+                    <ul class="card-qty-list">
+                        <li><span class="qty">10x</span> Amane Kanata Debut (<code>hBP01-037</code>)</li>
+                        <li><span class="qty">2x</span> Amane Kanata Debut (<code>hBP01-038</code>)</li>
+                        <li><span class="qty">1x</span> Amane Kanata 1st (<code>hBP01-041</code>)</li>
+                        <li><span class="qty">4x</span> Amane Kanata 1st (<code>hBP01-042</code>)</li>
+                        <li><span class="qty">4x</span> Amane Kanata 1st (<code>hBP01-043</code>)</li>
+                        <li><span class="qty">4x</span> Amane Kanata 2nd (<code>hBP01-044</code>)</li>
+                        <li><span class="qty">4x</span> Harusaki Nodoka (<code>hSD01-016</code>)</li>
+                        <li><span class="qty">4x</span> Manager-chan (<code>hSD01-017</code>)</li>
+                        <li><span class="qty">3x</span> Normal PC (<code>hBP01-104</code>)</li>
+                        <li><span class="qty">2x</span> Friendly PC (<code>hBP05-074</code>)</li>
+                        <li><span class="qty">1x</span> So, That Makes You My Enemy (<code>hBP01-108</code>)</li>
+                        <li><span class="qty">2x</span> Explosion Magic (<code>hBP02-079</code>)</li>
+                        <li><span class="qty">1x</span> Miko, I'm Ashamed (<code>hBP02-085</code>)</li>
+                        <li><span class="qty">1x</span> Workout (<code>hBP02-084</code>)</li>
+                        <li><span class="qty">4x</span> Stone Axe (<code>hBP01-114</code>)</li>
+                        <li><span class="qty">3x</span> Upao Mascot (<code>hBP01-116</code>)</li>
+                    </ul>
+
+                    <h3 class="mt-20">✨ Mazo de Cheers (20 Cheers)</h3>
+                    <ul class="card-qty-list">
+                        <li><span class="qty">20x</span> White Cheer</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary copy-code-btn" data-code="HDC-KANATA-HBP01-2026">
+                    📋 Copiar Código de Mazo
+                </button>
+                <button class="btn btn-glass close-modal-btn">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DETALLE MAZO SORA hSD01 -->
+    <div id="modal-sora" class="modal-backdrop hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div>
+                    <h2>ときのそら / Tokino Sora (hSD01)</h2>
+                    <span class="badge-tag">Receta Oficial hSD01</span>
+                </div>
+                <button class="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="deck-detail-summary">
+                    <p><strong>Oshi:</strong> Tokino Sora (<code>hSD01-001</code>)</p>
+                    <p><strong>Formato:</strong> EN (hSD01) · <strong>Cheers:</strong> 20 White Cheer</p>
+                </div>
+                <div class="deck-list-tables">
+                    <h3>🃏 Mazo Principal (50 Cartas)</h3>
+                    <p class="text-muted">Mazo oficial Tokino Sora & AZKi Start Deck hSD01 listo para iniciarse.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary copy-code-btn" data-code="HDC-SORA-HSD01-OFFICIAL">
+                    📋 Copiar Código de Mazo
+                </button>
+                <button class="btn btn-glass close-modal-btn">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DETALLE MAZO PEKORA hBP01 -->
+    <div id="modal-pekora" class="modal-backdrop hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div>
+                    <h2>兎田ぺこら / Usada Pekora (hBP01)</h2>
+                    <span class="badge-tag">Receta Oficial hBP01</span>
+                </div>
+                <button class="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="deck-detail-summary">
+                    <p><strong>Oshi:</strong> Usada Pekora (<code>hBP01-002</code>)</p>
+                    <p><strong>Formato:</strong> EN (hBP01) · <strong>Cheers:</strong> 20 Green Cheer</p>
+                </div>
+                <div class="deck-list-tables">
+                    <h3>🃏 Mazo Principal (50 Cartas)</h3>
+                    <p class="text-muted">Estrategia verde con control de escenario y daño en área.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary copy-code-btn" data-code="HDC-PEKORA-HBP01-OFFICIAL">
+                    📋 Copiar Código de Mazo
+                </button>
+                <button class="btn btn-glass close-modal-btn">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo-placeholder logo-sm">
+                    <span class="logo-icon">🎴</span>
+                    <span class="logo-text">Oshi<span class="text-accent">Live</span></span>
+                </div>
+                <p class="footer-tagline">MetaOshi Hub · Plataforma Fan No Oficial para hololive Official Card Game.</p>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p>
+                    <strong>Aviso Legal:</strong> OshiLive y MetaOshi son proyectos de fans sin fines de lucro creados para la comunidad de hololive Official Card Game. No están afiliados, respaldados ni patrocinados por COVER Corp. Todos los personajes e ilustraciones pertenecen a <strong>COVER Corp.</strong>
+                </p>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 OshiLive Community. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="toast hidden">Código de mazo copiado al portapapeles!</div>
+
+    <script src="deckcode.js"></script>
+    <script src="app.js"></script>
+    <script src="metaoshi.js"></script>
+</body>
+</html>

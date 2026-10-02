@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Decks & Tier List Rankings | HololiveDeckConstructor</title>
+    <meta name="description" content="Explora los rankings competitivos del meta para hololive Official Card Game. Copia recetas WGP e impórtalas en HololiveDeckConstructor.">
+    <meta property="og:title" content="Meta Decks & Rankings - HololiveDeckConstructor">
+    <meta property="og:description" content="Rankings de mazos meta, win rates y recetas oficiales para HololiveDeckConstructor.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="metaoshi-page">
+
+    <!-- NAVBAR WITH LANGUAGE SELECTOR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <div class="logo-placeholder" style="display: flex; align-items: center; gap: 10px;">
+                    <img src="images/logo_hdc.png" alt="HDC Logo" class="logo-brand-img" style="height: 36px; width: auto; max-width: 140px; object-fit: contain;">
+                    <span class="logo-text">Hololive<span class="text-accent">DeckConstructor</span></span>
+                    <span class="logo-badge badge-meta">HDC RANKINGS</span>
+                </div>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item">Inicio</a>
+                <a href="hdc.html" class="nav-item nav-highlight">🎮 Juego PC [ALPHA]</a>
+                <a href="builder.html" class="nav-item">Deck Builder</a>
+                <a href="decks.html" class="nav-item active">Meta Decks & Rankings</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="lang-selector-wrapper">
+                    <select id="langSelect" class="lang-select-dropdown" aria-label="Language Selector">
+                        <option value="es" selected>🇪🇸 Español</option>
+                        <option value="en">🇺🇸 English</option>
+                        <option value="ja">🇯🇵 日本語</option>
+                    </select>
+                </div>
+                <a href="hdc.html" id="navDownloadBtn" class="btn btn-sm btn-primary" data-i18n="nav_download">Descargar Alpha</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- FEATURED DECKS BANNER CAROUSEL -->
+    <section class="hero-carousel-section">
+        <div class="carousel-container">
+            <div class="carousel-track" id="heroCarouselTrack">
+                
+                <!-- SLIDE 1: RECENT TOURNAMENT WINNER DECK -->
+                <div class="carousel-slide active" data-slide="0" style="background-image: linear-gradient(to right, rgba(9, 13, 22, 0.95), rgba(9, 13, 22, 0.6)), url('images/banner_decks.jpg');">
+                    <div class="slide-content">
+                        <span class="slide-tag tag-gold">🏆 MAZO GANADOR DE COMPETENCIA MÁS RECIENTE</span>
+                        <h2 class="slide-title">轟リオン / Todoroki Riona (hSD19 + ReDEV Raden)</h2>
+                        <p class="slide-desc">1.er Lugar en el World Grand Prix Championship (WGP Tokyo). Estrategia de alto tempo con aceleración de Cheer, daño de combate elevado y motor de robo azul.</p>
+                        <div class="slide-actions">
+                            <a href="builder.html?code=riona" class="btn btn-primary btn-glow">🛠️ Abrir Receta en Deck Builder ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2: MOST POPULAR META DECK -->
+                <div class="carousel-slide" data-slide="1" style="background-image: linear-gradient(to right, rgba(9, 13, 22, 0.95), rgba(9, 13, 22, 0.6)), url('images/banner_packs.jpg');">
+                    <div class="slide-content">
+                        <span class="slide-tag tag-pink">🔥 #1 MAZO MÁS POPULAR DE LA COMUNIDAD</span>
+                        <h2 class="slide-title">Kaela Kovalskia (G9SME) — Bloom Cup Champion</h2>
+                        <p class="slide-desc">El mazo más jugado en torneos competitivos mundiales. Motor de robo ultra veloz combinado con ataques de daño continuo de 100+ HP.</p>
+                        <div class="slide-actions">
+                            <a href="builder.html?code=kaela" class="btn btn-primary btn-glow">🛠️ Abrir Receta en Deck Builder ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 3: FUN & CASUAL FAVORITE DECK -->
+                <div class="carousel-slide" data-slide="2" style="background-image: linear-gradient(to right, rgba(9, 13, 22, 0.95), rgba(9, 13, 22, 0.6)), url('images/banner_builder.jpg');">
+                    <div class="slide-content">
+                        <span class="slide-tag tag-purple">🎨 MAZO DIVERTIDO FAVORITO</span>
+                        <h2 class="slide-title">Moona Hoshinova (1U7LVJ) — HoloID Purple Swarm</h2>
+                        <p class="slide-desc">Mazo creativo y sumamente divertido basado en Cheer Púrpura y la generación 1 de HoloID para sostener el escenario con habilidades únicas.</p>
+                        <div class="slide-actions">
+                            <a href="builder.html?code=moona" class="btn btn-primary btn-glow">🛠️ Abrir Receta en Deck Builder ↗</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CAROUSEL CONTROLS -->
+            <button class="carousel-btn btn-prev" id="carouselPrevBtn" aria-label="Previous Slide">❮</button>
+            <button class="carousel-btn btn-next" id="carouselNextBtn" aria-label="Next Slide">❯</button>
+
+            <!-- CAROUSEL INDICATOR DOTS -->
+            <div class="carousel-dots" id="carouselDots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN TIER LIST CONTENT -->
+    <main class="container">
+        
+        <section class="section">
+            <div class="section-header text-center">
+                <div class="badge-tag">📊 TIERLIST OFICIAL & CLASIFICACIÓN COMPETITIVA</div>
+                <h2 class="section-title">Clasificación de Mazos Meta (Tier 0 a Tier 4)</h2>
+                <p class="section-description">
+                    Haz clic en la imagen de cualquier carta para abrir y cargar su receta completa directamente en el Deck Builder.
+                </p>
+
+                <!-- FORMAT SWITCHER BUTTONS -->
+                <div class="tierlist-format-bar mt-20">
+                    <span class="global-lang-label">🎮 Seleccionar Formato:</span>
+                    <div class="cta-group format-btn-group">
+                        <button class="btn btn-sm btn-primary tier-format-btn active" data-format="all">🌐 Todos los Formatos</button>
+                        <button class="btn btn-sm btn-glass tier-format-btn" data-format="jp">🇯🇵 Formato JP (Japón)</button>
+                        <button class="btn btn-sm btn-glass tier-format-btn" data-format="en">🇬🇧 Formato EN (Global)</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TIER LIST TABLES -->
+            <div class="tierlist-wrapper">
+
+                <!-- TIER 0 BLOCK -->
+                <div class="tier-block tier-0">
+                    <div class="tier-header-badge tier-badge-0">
+                        <span class="tier-rank">TIER 0</span>
+                        <span class="tier-label">Supreme Meta / Dominante Apex (Win Rate: 65% - 70%)</span>
+                    </div>
+
+                    <table class="tier-table">
+                        <thead>
+                            <tr>
+                                <th>Carta Oshi</th>
+                                <th>Nombre del Mazo & Estrategia</th>
+                                <th>Win Rate</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- TIER 0 ITEM 1: TODOROKI RIONA -->
+                            <tr class="tier-row" data-format="jp">
+                                <td class="td-card">
+                                    <a href="builder.html?code=riona" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
+                                        <img src="images_ja/hSD19-001_OC.png" alt="Todoroki Riona Oshi" class="table-card-img" onerror="this.src='images/EN_hSD01-001_OSR.png'">
+                                    </a>
+                                </td>
+                                <td class="td-info">
+                                    <div class="table-deck-title">
+                                        轟リオン / Todoroki Riona (hSD19)
+                                        <span class="format-badge format-jp">Formato JP</span>
+                                    </div>
+                                    <div class="table-deck-subtitle">WGP Tokio Champion · ReDEV Synergy & Fast Cheer Acceleration</div>
+                                    <div class="deck-stats-pills compact">
+                                        <span class="pill">50 Main</span>
+                                        <span class="pill pill-cheer">13 White · 7 Yellow</span>
+                                        <span class="pill pill-color">Code: riona</span>
+                                    </div>
+                                </td>
+                                <td class="td-winrate">
+                                    <span class="winrate-badge winrate-god">🔥 68% WR</span>
+                                </td>
+                                <td class="td-actions">
+                                    <div class="table-actions-group">
+                                        <a href="builder.html?code=riona" class="btn btn-sm btn-primary">
+                                            🛠️ Cargar Mazo ↗
+                                        </a>
+                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="riona" title="Generar y copiar código HDC1- al portapapeles">
+                                            📋 Generar Código
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- TIER 0 ITEM 2: KAELA KOVALSKIA -->
+                            <tr class="tier-row" data-format="jp">
+                                <td class="td-card">
+                                    <a href="builder.html?code=kaela" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
+                                        <img src="images/EN_hSD01-001_OSR.png" alt="Kaela Kovalskia Oshi" class="table-card-img">
+                                    </a>
+                                </td>
+                                <td class="td-info">
+                                    <div class="table-deck-title">
+                                        Kaela Kovalskia (G9SME)
+                                        <span class="format-badge format-jp">Formato JP</span>
+                                    </div>
+                                    <div class="table-deck-subtitle">1st Place Bloom Cup Winner · High-speed Draw & Massive Damage</div>
+                                    <div class="deck-stats-pills compact">
+                                        <span class="pill">50 Main</span>
+                                        <span class="pill pill-cheer">14 Blue · 6 Red</span>
+                                        <span class="pill pill-color">Code: kaela</span>
+                                    </div>
+                                </td>
+                                <td class="td-winrate">
+                                    <span class="winrate-badge winrate-god">🔥 66% WR</span>
+                                </td>
+                                <td class="td-actions">
+                                    <div class="table-actions-group">
+                                        <a href="builder.html?code=kaela" class="btn btn-sm btn-primary">
+                                            🛠️ Cargar Mazo ↗
+                                        </a>
+                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="kaela" title="Generar y copiar código HDC1- al portapapeles">
+                                            📋 Generar Código
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- TIER 1 BLOCK -->
+                <div class="tier-block tier-1 mt-30">
+                    <div class="tier-header-badge tier-badge-1">
+                        <span class="tier-rank">TIER 1</span>
+                        <span class="tier-label">Meta Competitivo Dominante (Win Rate: 60% - 64%)</span>
+                    </div>
+
+                    <table class="tier-table">
+                        <thead>
+                            <tr>
+                                <th>Carta Oshi</th>
+                                <th>Nombre del Mazo & Estrategia</th>
+                                <th>Win Rate</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- TIER 1 ITEM 1: MOONA HOSHINOVA -->
+                            <tr class="tier-row" data-format="jp">
+                                <td class="td-card">
+                                    <a href="builder.html?code=moona" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
+                                        <img src="images/EN_hBP01-001_OSR.png" alt="Moona Hoshinova Oshi" class="table-card-img">
+                                    </a>
+                                </td>
+                                <td class="td-info">
+                                    <div class="table-deck-title">
+                                        Moona Hoshinova (1U7LVJ)
+                                        <span class="format-badge format-jp">Formato JP</span>
+                                    </div>
+                                    <div class="table-deck-subtitle">Bloom Cup Finalist · HoloID Gen 1 Purple Control</div>
+                                    <div class="deck-stats-pills compact">
+                                        <span class="pill">50 Main</span>
+                                        <span class="pill pill-cheer">20 Purple</span>
+                                        <span class="pill pill-color">Code: moona</span>
+                                    </div>
+                                </td>
+                                <td class="td-winrate">
+                                    <span class="winrate-badge winrate-top">⚡ 63% WR</span>
+                                </td>
+                                <td class="td-actions">
+                                    <div class="table-actions-group">
+                                        <a href="builder.html?code=moona" class="btn btn-sm btn-primary">
+                                            🛠️ Cargar Mazo ↗
+                                        </a>
+                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="moona" title="Generar y copiar código HDC1- al portapapeles">
+                                            📋 Generar Código
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- TIER 1 ITEM 2: AMANE KANATA -->
+                            <tr class="tier-row" data-format="en">
+                                <td class="td-card">
+                                    <a href="builder.html?code=kanata" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
+                                        <img src="images/EN_hBP01-001_OSR.png" alt="Amane Kanata Oshi" class="table-card-img">
+                                    </a>
+                                </td>
+                                <td class="td-info">
+                                    <div class="table-deck-title">
+                                        Amane Kanata (PPTenshi Aggro)
+                                        <span class="format-badge format-en">Formato EN</span>
+                                    </div>
+                                    <div class="table-deck-subtitle">Competitive Monocolor White · 10 Debut Kanata & Stone Axe Recoil</div>
+                                    <div class="deck-stats-pills compact">
+                                        <span class="pill">50 Main</span>
+                                        <span class="pill pill-cheer">20 White</span>
+                                        <span class="pill pill-color">Code: kanata</span>
+                                    </div>
+                                </td>
+                                <td class="td-winrate">
+                                    <span class="winrate-badge winrate-top">⚡ 61% WR</span>
+                                </td>
+                                <td class="td-actions">
+                                    <div class="table-actions-group">
+                                        <a href="builder.html?code=kanata" class="btn btn-sm btn-primary">
+                                            🛠️ Cargar Mazo ↗
+                                        </a>
+                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="kanata" title="Generar y copiar código HDC1- al portapapeles">
+                                            📋 Generar Código
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- TIER 2 BLOCK -->
+                <div class="tier-block tier-2 mt-30">
+                    <div class="tier-header-badge tier-badge-2">
+                        <span class="tier-rank">TIER 2</span>
+                        <span class="tier-label">Decks Competitivos Fuertes (Win Rate: 55% - 59%)</span>
+                    </div>
+
+                    <table class="tier-table">
+                        <thead>
+                            <tr>
+                                <th>Carta Oshi</th>
+                                <th>Nombre del Mazo & Estrategia</th>
+                                <th>Win Rate</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- TIER 2 ITEM 1: USADA PEKORA -->
+                            <tr class="tier-row" data-format="en">
+                                <td class="td-card">
+                                    <a href="builder.html?code=pekora" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
+                                        <img src="images/EN_hBP01-002_OSR.png" alt="Usada Pekora Oshi" class="table-card-img">
+                                    </a>
+                                </td>
+                                <td class="td-info">
+                                    <div class="table-deck-title">
+                                        Usada Pekora (Nousagi Swarm)
+                                        <span class="format-badge format-en">Formato EN</span>
+                                    </div>
+                                    <div class="table-deck-subtitle">Green Aggro Swarm · SP Oshi Search Engine & Rapid Momentum</div>
+                                    <div class="deck-stats-pills compact">
+                                        <span class="pill">50 Main</span>
+                                        <span class="pill pill-cheer">20 Green</span>
+                                        <span class="pill pill-color">Code: pekora</span>
+                                    </div>
+                                </td>
+                                <td class="td-winrate">
+                                    <span class="winrate-badge winrate-mid">✨ 58% WR</span>
+                                </td>
+                                <td class="td-actions">
+                                    <div class="table-actions-group">
+                                        <a href="builder.html?code=pekora" class="btn btn-sm btn-primary">
+                                            🛠️ Cargar Mazo ↗
+                                        </a>
+                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="pekora" title="Generar y copiar código HDC1- al portapapeles">
+                                            📋 Generar Código
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- TIER 2 ITEM 2: TOKINO SORA -->
+                            <tr class="tier-row" data-format="en">
+                                <td class="td-card">
+                                    <a href="builder.html?code=sora" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
+                                        <img src="images/EN_hSD01-001_OSR.png" alt="Tokino Sora Oshi" class="table-card-img">
+                                    </a>
+                                </td>
+                                <td class="td-info">
+                                    <div class="table-deck-title">
+                                        Tokino Sora (SorAZ Control)
+                                        <span class="format-badge format-en">Formato EN</span>
+                                    </div>
+                                    <div class="table-deck-subtitle">Balanced Midrange Control · Cheer Life Healing & Solid Arts Damage</div>
+                                    <div class="deck-stats-pills compact">
+                                        <span class="pill">50 Main</span>
+                                        <span class="pill pill-cheer">20 White</span>
+                                        <span class="pill pill-color">Code: sora</span>
+                                    </div>
+                                </td>
+                                <td class="td-winrate">
+                                    <span class="winrate-badge winrate-mid">✨ 55% WR</span>
+                                </td>
+                                <td class="td-actions">
+                                    <div class="table-actions-group">
+                                        <a href="builder.html?code=sora" class="btn btn-sm btn-primary">
+                                            🛠️ Cargar Mazo ↗
+                                        </a>
+                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="sora" title="Generar y copiar código HDC1- al portapapeles">
+                                            📋 Generar Código
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- TIER 3 BLOCK -->
+                <div class="tier-block tier-3 mt-30">
+                    <div class="tier-header-badge tier-badge-3">
+                        <span class="tier-rank">TIER 3</span>
+                        <span class="tier-label">Decks Situacionales / Rogue (Win Rate: 50% - 54%)</span>
+                    </div>
+
+                    <table class="tier-table">
+                        <thead>
+                            <tr>
+                                <th>Carta Oshi</th>
+                                <th>Nombre del Mazo & Estrategia</th>
+                                <th>Win Rate</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- TIER 3 ITEM 1: SHIRAKAMI FUBUKI -->
+                            <tr class="tier-row" data-format="jp">
+                                <td class="td-card">
+                                    <a href="builder.html?code=fubuki" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
+                                        <img src="images_ja/hSD19-001_OC.png" alt="Shirakami Fubuki Oshi" class="table-card-img" onerror="this.src='images/EN_hSD01-001_OSR.png'">
+                                    </a>
+                                </td>
+                                <td class="td-info">
+                                    <div class="table-deck-title">
+                                        Shirakami Fubuki (FBK Fox Blitz)
+                                        <span class="format-badge format-jp">Formato JP</span>
+                                    </div>
+                                    <div class="table-deck-subtitle">Speed Draw & Flash Attacks · Bloom 2 Fubuki & Mio Synergy</div>
+                                    <div class="deck-stats-pills compact">
+                                        <span class="pill">50 Main</span>
+                                        <span class="pill pill-cheer">15 White · 5 Yellow</span>
+                                        <span class="pill pill-color">Code: fubuki</span>
+                                    </div>
+                                </td>
+                                <td class="td-winrate">
+                                    <span class="winrate-badge winrate-rogue">🎯 53% WR</span>
+                                </td>
+                                <td class="td-actions">
+                                    <div class="table-actions-group">
+                                        <a href="builder.html?code=fubuki" class="btn btn-sm btn-primary">
+                                            🛠️ Cargar Mazo ↗
+                                        </a>
+                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="fubuki" title="Generar y copiar código HDC1- al portapapeles">
+                                            📋 Generar Código
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- TIER 3 ITEM 2: SAKURA MIKO -->
+                            <tr class="tier-row" data-format="jp">
+                                <td class="td-card">
+                                    <a href="builder.html?code=miko" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
+                                        <img src="images/EN_hBP01-001_OSR.png" alt="Sakura Miko Oshi" class="table-card-img">
+                                    </a>
+                                </td>
+                                <td class="td-info">
+                                    <div class="table-deck-title">
+                                        Sakura Miko (Miko Shrine Maiden)
+                                        <span class="format-badge format-jp">Formato JP</span>
+                                    </div>
+                                    <div class="table-deck-subtitle">Red Area Damage · Shrine Maiden Trait & Backstage Pressure</div>
+                                    <div class="deck-stats-pills compact">
+                                        <span class="pill">50 Main</span>
+                                        <span class="pill pill-cheer">20 Red</span>
+                                        <span class="pill pill-color">Code: miko</span>
+                                    </div>
+                                </td>
+                                <td class="td-winrate">
+                                    <span class="winrate-badge winrate-rogue">🎯 51% WR</span>
+                                </td>
+                                <td class="td-actions">
+                                    <div class="table-actions-group">
+                                        <a href="builder.html?code=miko" class="btn btn-sm btn-primary">
+                                            🛠️ Cargar Mazo ↗
+                                        </a>
+                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="miko" title="Generar y copiar código HDC1- al portapapeles">
+                                            📋 Generar Código
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- TIER 4 BLOCK (CASUAL & FUN) -->
+                <div class="tier-block tier-4 mt-30">
+                    <div class="tier-header-badge tier-badge-4">
+                        <span class="tier-rank">TIER 4</span>
+                        <span class="tier-label">Decks Divertidos / Casuales (Sin Starter Decks Genéricos, Win Rate: < 50%)</span>
+                    </div>
+
+                    <table class="tier-table">
+                        <thead>
+                            <tr>
+                                <th>Carta Oshi</th>
+                                <th>Nombre del Mazo & Estrategia</th>
+                                <th>Win Rate</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- TIER 4 ITEM 1: JUUFUUTEI RADEN -->
+                            <tr class="tier-row" data-format="jp">
+                                <td class="td-card">
+                                    <a href="builder.html?code=raden" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
+                                        <img src="images/EN_hBP01-001_OSR.png" alt="Juufuutei Raden Oshi" class="table-card-img">
+                                    </a>
+                                </td>
+                                <td class="td-info">
+                                    <div class="table-deck-title">
+                                        Juufuutei Raden (Art Gallery Swarm)
+                                        <span class="format-badge format-jp">Formato JP</span>
+                                    </div>
+                                    <div class="table-deck-subtitle">Fun ReDEV Build · Interactive Discard Effects & Custom Combos</div>
+                                    <div class="deck-stats-pills compact">
+                                        <span class="pill">50 Main</span>
+                                        <span class="pill pill-cheer">12 Green · 8 Yellow</span>
+                                        <span class="pill pill-color">Code: raden</span>
+                                    </div>
+                                </td>
+                                <td class="td-winrate">
+                                    <span class="winrate-badge winrate-casual">🎨 48% (Fun)</span>
+                                </td>
+                                <td class="td-actions">
+                                    <div class="table-actions-group">
+                                        <a href="builder.html?code=raden" class="btn btn-sm btn-primary">
+                                            🛠️ Cargar Mazo ↗
+                                        </a>
+                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="raden" title="Generar y copiar código HDC1- al portapapeles">
+                                            📋 Generar Código
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- TIER 4 ITEM 2: MORI CALLIOPE -->
+                            <tr class="tier-row" data-format="jp">
+                                <td class="td-card">
+                                    <a href="builder.html?code=calliope" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
+                                        <img src="images/EN_hSD01-001_OSR.png" alt="Mori Calliope Oshi" class="table-card-img">
+                                    </a>
+                                </td>
+                                <td class="td-info">
+                                    <div class="table-deck-title">
+                                        Mori Calliope (Reaper Beats)
+                                        <span class="format-badge format-jp">Formato JP</span>
+                                    </div>
+                                    <div class="table-deck-subtitle">Fun Purple Build · High Critical Finishers for Friendly Games</div>
+                                    <div class="deck-stats-pills compact">
+                                        <span class="pill">50 Main</span>
+                                        <span class="pill pill-cheer">20 Purple</span>
+                                        <span class="pill pill-color">Code: calliope</span>
+                                    </div>
+                                </td>
+                                <td class="td-winrate">
+                                    <span class="winrate-badge winrate-casual">🎨 46% (Fun)</span>
+                                </td>
+                                <td class="td-actions">
+                                    <div class="table-actions-group">
+                                        <a href="builder.html?code=calliope" class="btn btn-sm btn-primary">
+                                            🛠️ Cargar Mazo ↗
+                                        </a>
+                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="calliope" title="Generar y copiar código HDC1- al portapapeles">
+                                            📋 Generar Código
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer mt-20">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo-placeholder logo-sm">
+                    <span class="logo-icon">🎴</span>
+                    <span class="logo-text">Meta<span class="text-accent">Oshi</span></span>
+                </div>
+                <p class="footer-tagline">MetaOshi Hub · Unofficial Fan Platform for hololive Official Card Game.</p>
+            </div>
+
+            <div class="footer-disclaimer">
+                <p>
+                    <strong>Disclaimer:</strong> MetaOshi Hub is a non-profit fan project created for the hololive Official Card Game community. It is not affiliated with, endorsed by, or sponsored by COVER Corp. All character names and artwork belong to <strong>COVER Corp.</strong>
+                </p>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 MetaOshi Community. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="toast hidden">Deck Code Copied to Clipboard!</div>
+
+    <script src="i18n.js"></script>
+    <script src="deckcode.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // TIER LIST FORMAT FILTERING SCRIPT
+        document.addEventListener('DOMContentLoaded', () => {
+            const formatBtns = document.querySelectorAll('.tier-format-btn');
+            const tierRows = document.querySelectorAll('.tier-row');
+
+            formatBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const fmt = e.currentTarget.getAttribute('data-format');
+                    
+                    formatBtns.forEach(b => {
+                        b.classList.remove('active', 'btn-primary');
+                        b.classList.add('btn-glass');
+                    });
+                    
+                    e.currentTarget.classList.remove('btn-glass');
+                    e.currentTarget.classList.add('active', 'btn-primary');
+
+                    tierRows.forEach(row => {
+                        const rowFmt = row.getAttribute('data-format');
+                        if (fmt === 'all' || rowFmt === fmt) {
+                            row.style.display = 'table-row';
+                        } else {
+                            row.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

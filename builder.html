@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor de Mazos Web | HololiveDeckConstructor</title>
+    <meta name="description" content="Constructor de mazos interactivo para hololive Official Card Game. Arma, valida, guarda y exporta códigos HDC1- 100% compatibles con HololiveDeckConstructor.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="builder.css?v=2">
+</head>
+<body class="builder-page">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <div class="logo-placeholder" style="display: flex; align-items: center; gap: 10px;">
+                    <img src="images/logo_hdc.png" alt="HDC Logo" class="logo-brand-img" style="height: 36px; width: auto; max-width: 140px; object-fit: contain;">
+                    <span class="logo-text">Hololive<span class="text-accent">DeckConstructor</span></span>
+                    <span class="logo-badge badge-meta">DECK BUILDER</span>
+                </div>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item">Inicio</a>
+                <a href="hdc.html" class="nav-item nav-highlight">🎮 Juego PC [ALPHA]</a>
+                <a href="builder.html" class="nav-item active">Constructor de Mazos</a>
+                <a href="decks.html" class="nav-item">Meta Decks & Rankings</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="hdc.html" id="navDownloadBtn" class="btn btn-sm btn-primary">Descargar Alpha</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- BUILDER MAIN CONTAINER -->
+    <main class="builder-main container-fluid">
+        
+        <!-- TOP CONTROL & DECK STATUS BAR -->
+        <div class="builder-top-bar">
+            <div class="deck-title-wrapper">
+                <span class="title-icon">✏️</span>
+                <input type="text" id="deckNameInput" value="Mi Mazo Personalizado" class="deck-name-field" placeholder="Nombre del mazo...">
+                <span class="deck-status-tag invalid" id="deckStatusTag">Incompleto (Falta Oshi y cartas)</span>
+            </div>
+
+            <div class="deck-counters-group">
+                <div class="counter-box">
+                    <span class="counter-label">Mazo Principal</span>
+                    <span class="counter-val"><strong id="mainCount">0</strong> / 50</span>
+                </div>
+                <div class="counter-box">
+                    <span class="counter-label">Mazo Cheers</span>
+                    <span class="counter-val"><strong id="cheerCount">0</strong> / 20</span>
+                </div>
+            </div>
+
+            <div class="builder-actions-group">
+                <button class="btn btn-sm btn-glass" id="openImportBtn" title="Importar desde código HDC1-">📥 Importar HDC1-</button>
+                <button class="btn btn-sm btn-glass" id="openImageImportBtn" title="Importar mazo leyendo una foto o captura de pantalla">🖼️ Desde Imagen</button>
+                <button class="btn btn-sm btn-primary btn-glow" id="exportCodeBtn" title="Copiar código HDC1- al portapapeles">📋 Exportar HDC1-</button>
+                <button class="btn btn-sm btn-glass" id="saveLocalBtn" title="Guardar mazo en el navegador">💾 Guardar Local</button>
+                <button class="btn btn-sm btn-glass danger-hover" id="clearDeckBtn" title="Vaciar mazo actual">🗑️ Vaciar</button>
+            </div>
+        </div>
+
+        <!-- 3-COLUMN MASTER DUEL LAYOUT -->
+        <div class="builder-3col-layout">
+            
+            <!-- LEFT COLUMN: CARD DETAIL VIEW (2 BOXES LAYOUT) -->
+            <aside class="col-detail-view">
+                <div class="detail-card-panel">
+                    
+                    <!-- CARD DETAIL CONTENT (MATCHES GAME REFERENCE) -->
+                    <div id="detailContent" class="detail-content">
+                        
+                        <!-- BOX 1: CARD ART PREVIEW ONLY -->
+                        <div class="card-box-art">
+                            <div class="detail-art-wrapper">
+                                <img id="detailCardArt" src="" alt="Card Art" class="detail-card-img">
+                                <button id="zoomCardBtn" class="btn-zoom-overlay" title="Ampliar imagen">🔍 Ampliar</button>
+                            </div>
+                        </div>
+
+                        <!-- BOX 2: CARD TEXT, STATS & DETAILS BOX (MATCHES REFERENCE SCREENSHOT) -->
+                        <div class="card-box-text">
+                            <!-- LINE 1: NAME, CODE, RARITY -->
+                            <div class="card-title-header">
+                                <h3 id="detailCardName" class="detail-card-title">Card Name</h3>
+                                <span id="detailCardNumber" class="text-code">hBP06-049</span>
+                                <span id="detailRarity" class="text-rarity">OSR</span>
+                            </div>
+
+                            <!-- LINE 2: TYPE | COLOR | EXTRA -->
+                            <div class="card-type-line">
+                                <span id="detailTypeAndBloom">holomem Debut</span> | <span id="detailColor" class="color-text color-blue">Blue</span>
+                                <span id="detailExtraBadge" class="badge-tag tag-extra hidden">⭐ EXTRA</span>
+                            </div>
+
+                            <!-- LINE 3: STATS (HP, BATON, LIFE) & COPIES -->
+                            <div class="card-stats-line">
+                                <span id="detailHp">HP 110</span>
+                                <span id="detailBaton">Baton pass 0</span>
+                                <span id="detailLife">Life 5</span>
+                                <span id="detailCopiesRow" class="copies-bullet">· Copias: <strong id="detailCopiesCount">0 / 4</strong></span>
+                            </div>
+
+                            <!-- SKILLS, ARTS, TAGS & EXTRA TEXT -->
+                            <div id="detailTextContent" class="card-body-text">
+                                <!-- Filled dynamically -->
+                            </div>
+                        </div>
+
+                        <!-- CONTROLS & ACTIONS AREA BELOW BOX 2 -->
+                        <div class="card-controls-area">
+                            <!-- ART VARIANT STEPPER -->
+                            <div id="artStepperRow" class="art-stepper-row">
+                                <button id="artPrevBtn" class="btn-step">&lt;</button>
+                                <span id="artLabelText">Arte 1 / 1</span>
+                                <button id="artNextBtn" class="btn-step">&gt;</button>
+                            </div>
+
+                            <!-- ADD / REMOVE BUTTONS (+1 / -1) -->
+                            <div class="add-remove-row">
+                                <button id="detailAddBtn" class="btn-game-add">+1</button>
+                                <button id="detailRemoveBtn" class="btn-game-remove">-1</button>
+                            </div>
+
+                            <!-- FAVORITES & VIEW DECKS BUTTONS -->
+                            <button id="detailFavBtn" class="btn-game-fav">Añadir a Favoritas ⭐</button>
+                            <button id="viewDecksWithCardBtn" class="btn-game-view-decks">🎴 Ver Mazos con esta Carta</button>
+
+                            <!-- SETS OFICIALES VÍNCULOS -->
+                            <div id="detailSetsContent" class="detail-sets-box">
+                                <!-- Official links -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </aside>
+
+            <!-- MIDDLE COLUMN: CURRENT DECK THUMBS & OVERVIEW -->
+            <section class="col-deck-thumbs">
+                <div class="deck-thumbs-panel">
+                    
+                    <!-- UPPER SPLIT ROW: LARGE OSHI DISPLAY (LEFT) + MAIN DECK GRID (RIGHT) -->
+                    <div class="deck-upper-split">
+                        
+                        <!-- LEFT HALF: LARGE OSHI CARD DISPLAY -->
+                        <div class="oshi-large-container">
+                            <div class="section-title-sm">
+                                <span>👑 Carta Oshi Elección</span>
+                                <button id="changeOshiBtn" class="btn-text-action">Cambiar Oshi</button>
+                            </div>
+                            <div id="oshiCardSlot" class="oshi-card-slot-large empty">
+                                <div class="oshi-placeholder-content-large">
+                                    <span class="oshi-slot-icon-large">🌟</span>
+                                    <div class="oshi-placeholder-text">
+                                        <h5>No has elegido carta Oshi</h5>
+                                        <p>Selecciona una carta Oshi en el catálogo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT HALF: MAIN DECK SECTION (50 CARDS) -->
+                        <div class="deck-grid-section main-section">
+                            <div class="section-title-sm">
+                                <span>🃏 Mazo Principal</span>
+                                <span class="count-tag"><strong id="mainDeckCountDisplay">0</strong> / 50</span>
+                            </div>
+                            <div id="mainDeckGrid" class="thumbs-cards-grid">
+                                <div class="empty-deck-notice">El mazo principal está vacío. Añade cartas desde el catálogo.</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- LOWER ROW: CHEER DECK SECTION (20 CHEERS) -->
+                    <div class="deck-grid-section cheer-section">
+                        <div class="section-title-sm">
+                            <span>✨ Mazo de Cheers</span>
+                            <span class="count-tag"><strong id="cheerDeckCountDisplay">0</strong> / 20</span>
+                        </div>
+                        <div id="cheerDeckGrid" class="thumbs-cards-grid">
+                            <div class="empty-deck-notice">El mazo de cheers está vacío. Añade 20 cartas de Cheer.</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- RIGHT COLUMN: CARD CATALOG & ADVANCED FILTERS (MASTER DUEL STYLE) -->
+            <aside class="col-catalog">
+                <div class="catalog-panel">
+                    
+                    <!-- MASTER DUEL TOP BUTTONS ROW: OSHI, CARD LIST, CHEERS -->
+                    <div class="md-top-tabs">
+                        <button class="md-tab-btn active" id="btnTabOshi" data-md-tab="oshi">👑 Oshi</button>
+                        <button class="md-tab-btn" id="btnTabList" data-md-tab="list">📋 Card List</button>
+                        <button class="md-tab-btn" id="btnTabCheers" data-md-tab="cheers">✨ Cheers</button>
+                    </div>
+
+                    <!-- SEARCH BAR -->
+                    <div class="md-search-row">
+                        <div class="search-box-wrapper width-100">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" id="catalogSearchInput" placeholder="Buscar por nombre, número o efecto..." class="search-input">
+                        </div>
+                    </div>
+
+                    <!-- TOOLBAR BUTTONS ROW: FILTERS MODAL, SORT DROPDOWN, CLEAR -->
+                    <div class="md-toolbar-row">
+                        <button class="btn-md-tool" id="openFilterModalBtn">🔍 Filters</button>
+                        <div class="md-sort-wrapper">
+                            <span class="sort-icon">🔃</span>
+                            <select id="sortSelect" class="md-sort-select">
+                                <option value="number">Set: Número de Carta</option>
+                                <option value="name">Nombre: A-Z</option>
+                                <option value="color">Color: Agrupado</option>
+                                <option value="rarity">Rareza: OSR-&gt;C</option>
+                                <option value="hp">HP: Mayor a Menor</option>
+                            </select>
+                        </div>
+                        <button class="btn-md-tool danger-hover" id="resetFiltersBtn" title="Resetear todos los filtros">🗑️ Clear</button>
+                    </div>
+
+                    <!-- CATALOG CARDS GRID -->
+                    <div id="catalogGrid" class="catalog-tiles-grid">
+                        <div class="loading-state">Cargando base de datos de cartas (+2,000)...</div>
+                    </div>
+
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- FILTER MENU MODAL (YU-GI-OH MASTER DUEL STYLE) -->
+    <div id="filterModal" class="modal-backdrop hidden">
+        <div class="modal-dialog modal-filter-dialog">
+            <div class="modal-header">
+                <h2>🔍 Filter Menu</h2>
+                <button class="close-modal-btn" id="closeFilterModalBtn">&times;</button>
+            </div>
+            <div class="modal-body filter-modal-body">
+                
+                <!-- FILTER GROUP: CARD TYPE -->
+                <div class="filter-modal-section">
+                    <div class="filter-section-title">🃏 Tipo de Carta (Card Type)</div>
+                    <div class="filter-buttons-grid" id="modalTypeGroup">
+                        <button class="filter-btn active" data-type="all">Todos</button>
+                        <button class="filter-btn" data-type="Oshi">Oshi</button>
+                        <button class="filter-btn" data-type="Holomem">Holomem</button>
+                        <button class="filter-btn" data-type="Support">Support</button>
+                        <button class="filter-btn" data-type="Cheer">Cheer</button>
+                    </div>
+                </div>
+
+                <!-- FILTER GROUP: COLOR -->
+                <div class="filter-modal-section">
+                    <div class="filter-section-title">🎨 Color</div>
+                    <div class="filter-buttons-grid" id="modalColorGroup">
+                        <button class="filter-btn active" data-color="all">Todos</button>
+                        <button class="filter-btn color-btn-white" data-color="White">Blanco</button>
+                        <button class="filter-btn color-btn-green" data-color="Green">Verde</button>
+                        <button class="filter-btn color-btn-red" data-color="Red">Rojo</button>
+                        <button class="filter-btn color-btn-blue" data-color="Blue">Azul</button>
+                        <button class="filter-btn color-btn-purple" data-color="Purple">Púrpura</button>
+                        <button class="filter-btn color-btn-yellow" data-color="Yellow">Amarillo</button>
+                    </div>
+                </div>
+
+                <!-- FILTER GROUP: BLOOM LEVEL / EXTRA -->
+                <div class="filter-modal-section">
+                    <div class="filter-section-title">⭐ Nivel / Recuadro EXTRA</div>
+                    <div class="filter-buttons-grid" id="modalBloomGroup">
+                        <button class="filter-btn active" data-bloom="all">Todos</button>
+                        <button class="filter-btn" data-bloom="Debut">Debut</button>
+                        <button class="filter-btn" data-bloom="1st">1st</button>
+                        <button class="filter-btn" data-bloom="2nd">2nd</button>
+                        <button class="filter-btn" data-bloom="Spot">Spot</button>
+                        <button class="filter-btn extra-btn" id="modalExtraBtn" data-extra="true">⭐ Recuadro EXTRA</button>
+                    </div>
+                </div>
+
+                <!-- FILTER GROUP: RARITY -->
+                <div class="filter-modal-section">
+                    <div class="filter-section-title">💎 Rareza (Rarity)</div>
+                    <div class="filter-buttons-grid" id="modalRarityGroup">
+                        <button class="filter-btn active" data-rarity="all">Todas</button>
+                        <button class="filter-btn" data-rarity="OSR">OSR</button>
+                        <button class="filter-btn" data-rarity="UR">UR</button>
+                        <button class="filter-btn" data-rarity="SR">SR</button>
+                        <button class="filter-btn" data-rarity="R">R</button>
+                        <button class="filter-btn" data-rarity="U">U</button>
+                        <button class="filter-btn" data-rarity="C">C</button>
+                        <button class="filter-btn" data-rarity="P">P</button>
+                    </div>
+                </div>
+
+                <!-- FILTER GROUP: SET / EXPANSION -->
+                <div class="filter-modal-section">
+                    <div class="filter-section-title">📦 Set / Expansión</div>
+                    <select id="modalSetSelect" class="filter-modal-select">
+                        <option value="all">Todos los Sets (hSD01..hSD19, hBP01..hBP06)</option>
+                        <option value="hSD19">hSD19 (Todoroki Riona Start Deck)</option>
+                        <option value="hSD01">hSD01 (Tokino Sora Start Deck)</option>
+                        <option value="hBP01">hBP01 (Booster Pack 01)</option>
+                        <option value="hBP02">hBP02 (Booster Pack 02)</option>
+                        <option value="hBP05">hBP05 (Booster Pack 05)</option>
+                        <option value="hEB01">hEB01 (Extra Expansion 01)</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer filter-modal-footer">
+                <button class="btn btn-glass" id="modalClearBtn">🗑️ Vaciar Filtros</button>
+                <button class="btn btn-glass" id="modalCancelBtn">CANCEL</button>
+                <button class="btn btn-primary" id="modalApplyBtn">OK / Aplicar</button>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </main>
+
+    <!-- MODAL IMPORTAR MAZO MULTI-FUENTE -->
+    <div id="importModal" class="modal-backdrop hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h2>📥 Importar Mazo (Multi-Fuente)</h2>
+                <button class="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p style="font-size: 11.5px; color: var(--text-muted); margin-bottom: 8px;">
+                    Soporta: <strong>HololiveDeckConstructor (HDC1-...)</strong>, <strong>HoloDelta (.json)</strong>, <strong>Bushiroad DeckLog (Código ej: GB1VW o URL)</strong> y <strong>Listas de Texto</strong>.
+                </p>
+                <textarea id="importCodeInput" rows="5" class="code-textarea" placeholder="Pega aquí un código HDC1-..., un enlace/código de Bushiroad (ej: GB1VW o https://holocardgame-meta.github.io/en/#tdeck/decklog-GB1VW), o JSON de HoloDelta..."></textarea>
+                
+                <div class="file-import-row" style="margin-top: 8px; display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 11px; color: var(--text-muted);">O carga un archivo JSON:</span>
+                    <input type="file" id="importJsonFileInput" accept=".json,.txt" style="font-size: 11px; color: #cbd5e1;">
+                </div>
+
+                <!-- ZERO-FRICTION AUTOMATIC IMAGE SCANNER -->
+                <div class="image-import-box" style="margin-top: 12px; padding: 14px; border: 1.5px dashed var(--primary); border-radius: 10px; background: rgba(56, 189, 248, 0.05); text-align: center;">
+                    <div style="font-size: 13px; font-weight: 800; color: #ffffff; margin-bottom: 4px;">
+                        🖼️ Escanear Mazo desde Foto o Captura (100% Automático)
+                    </div>
+                    <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 10px; line-height: 1.4;">
+                        Sube una foto o pega con <strong>Ctrl + V</strong> (DeckLog, Twitter, HoloDelta, capturas con proxies). Reconoce cartas y cantidades sin configurar nada.
+                    </div>
+                    <div style="display: flex; justify-content: center; gap: 10px; align-items: center; flex-wrap: wrap;">
+                        <input type="file" id="importImageFileInput" accept="image/*" style="display: none;">
+                        <button type="button" class="btn btn-sm btn-primary btn-glow" id="triggerImageFileBtn">📂 Seleccionar Foto o Captura</button>
+                        <span style="font-size: 11px; color: var(--text-muted);">o pega directamente con <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; color: #fff;">Ctrl + V</kbd></span>
+                    </div>
+                    <div id="imageScanStatus" class="image-scan-status hidden">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                            <span id="imageScanStatusText" style="font-size: 11px; font-weight: 700; color: #38bdf8;">
+                                ⏳ Escaneando mazo e identificando cartas...
+                            </span>
+                            <span id="imageScanPercent" style="font-size: 11px; font-weight: 800; color: var(--accent-gold);">
+                                0%
+                            </span>
+                        </div>
+                        <div class="progress-bar-track">
+                            <div id="imageScanProgressBar" class="progress-bar-fill" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="importErrorMsg" class="error-msg hidden"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="confirmImportBtn">📥 Importar Mazo</button>
+                <button class="btn btn-glass close-modal-btn">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL EXPORTAR MAZO MULTI-FORMATO -->
+    <div id="exportModal" class="modal-backdrop hidden">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <h2>📋 Exportar Mazo Multi-Formato</h2>
+                <button class="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="export-tabs-row" style="display: flex; gap: 6px; margin-bottom: 12px;">
+                    <button class="md-tab-btn active" id="exportTabOshilive" data-export-format="oshilive">🎮 HololiveDeckConstructor (HDC1-)</button>
+                    <button class="md-tab-btn" id="exportTabHolodelta" data-export-format="holodelta">🌀 HoloDelta (JSON)</button>
+                    <button class="md-tab-btn" id="exportTabBushiroad" data-export-format="bushiroad">📋 Bushiroad / Texto</button>
+                </div>
+
+                <div id="exportFormatInfo" style="font-size: 11px; color: var(--text-muted); margin-bottom: 6px;">
+                    Código compatible con la app principal HololiveDeckConstructor (formato Base64 HDC1-).
+                </div>
+
+                <textarea id="exportOutputTextarea" rows="6" class="code-textarea" readonly></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="copyExportBtn">📋 Copiar al Portapapeles</button>
+                <button class="btn btn-glass hidden" id="downloadExportJsonBtn">💾 Descargar .json</button>
+                <button class="btn btn-glass close-modal-btn">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL ZOOM IMAGEN & INSPECTOR VISTA AMPLIADA (ESTILO JUEGO) -->
+    <div id="zoomModal" class="modal-backdrop hidden">
+        <div class="modal-dialog modal-zoom-game-dialog">
+            <button class="close-modal-btn close-zoom-top">Close</button>
+            
+            <div class="zoom-left-col">
+                <img id="zoomModalImg" src="" alt="Carta Ampliada" class="zoom-img-full">
+            </div>
+            
+            <div class="zoom-right-col">
+                <div class="zoom-header">
+                    <h3 id="zoomCardName" class="zoom-card-name">Tokino Sora</h3>
+                    <span id="zoomCardCode" class="zoom-card-code">hSD01-001</span>
+                    <span id="zoomCardRarity" class="zoom-card-rarity">OSR</span>
+                </div>
+                
+                <div id="zoomCardMeta" class="zoom-card-meta">
+                    Oshi holomem | White · Life 5
+                </div>
+                
+                <div id="zoomTextContent" class="zoom-body-text">
+                    <!-- Skills, Arts, and QA details -->
+                </div>
+
+                <!-- ACTIONS & CONTROLS IN ZOOM MODAL -->
+                <div class="zoom-actions-area">
+                    <div class="add-remove-row">
+                        <button id="zoomAddBtn" class="btn-game-add">+1 Añadir al Mazo</button>
+                        <button id="zoomRemoveBtn" class="btn-game-remove">-1 Quitar del Mazo</button>
+                    </div>
+
+                    <!-- BUTTON TO VIEW DECKS FEATURING THIS CARD -->
+                    <button id="zoomViewDecksBtn" class="btn-game-view-decks">🎴 Ver Mazos con esta Carta</button>
+
+                    <!-- OFFICIAL SET LINKS BOX -->
+                    <div id="zoomSetsContent" class="detail-sets-box">
+                        <!-- Filled dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <script src="data/cards.js"></script>
+    <script src="deckcode.js"></script>
+    <script src="builder.js"></script>
+</body>
+</html>
