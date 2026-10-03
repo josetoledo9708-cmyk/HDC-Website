@@ -22,8 +22,11 @@ function getWebhookUrl() {
     if (process.env.DISCORD_WEBHOOK_URL) return process.env.DISCORD_WEBHOOK_URL.trim();
 
     if (fs.existsSync(CONFIG_FILE)) {
-        const fileUrl = fs.readFileSync(CONFIG_FILE, 'utf8').trim();
-        if (fileUrl.startsWith('http')) return fileUrl;
+        const lines = fs.readFileSync(CONFIG_FILE, 'utf8').split(/\r?\n/);
+        for (let line of lines) {
+            line = line.trim();
+            if (line.startsWith('http')) return line;
+        }
     }
 
     return null;
