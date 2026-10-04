@@ -1,16 +1,6 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/", "destination": "/hdc.html" },
-    { "source": "/index", "destination": "/hdc.html" },
-    { "source": "/index.html", "destination": "/hdc.html" },
-    { "source": "/game", "destination": "/hdc.html" },
-    { "source": "/hdc", "destination": "/hdc.html" },
-    { "source": "/oshilive", "destination": "/hdc.html" },
-    { "source": "/builder", "destination": "/hdc.html" },
-    { "source": "/decks", "destination": "/hdc.html" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
