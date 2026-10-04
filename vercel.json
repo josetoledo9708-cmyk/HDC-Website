@@ -3,17 +3,20 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/", "destination": "/hdc.html" },
+    { "source": "/index", "destination": "/hdc.html" },
+    { "source": "/index.html", "destination": "/hdc.html" },
     { "source": "/game", "destination": "/hdc.html" },
     { "source": "/hdc", "destination": "/hdc.html" },
     { "source": "/oshilive", "destination": "/hdc.html" },
-    { "source": "/builder", "destination": "/builder.html" },
-    { "source": "/decks", "destination": "/decks.html" }
+    { "source": "/builder", "destination": "/hdc.html" },
+    { "source": "/decks", "destination": "/hdc.html" }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
       ]

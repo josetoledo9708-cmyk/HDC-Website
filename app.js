@@ -1,4 +1,10 @@
 // OSHILIVE WEBSITE APP SCRIPT & MULTI-LANGUAGE / CAROUSEL ENGINE
+if (window.location.pathname === '/' || window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('/index')) {
+    if (!window.location.hash || window.location.hash === '#') {
+        window.location.replace('/hdc#inicio');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const WORKER_MANIFEST_URL = 'https://tcgholo-gate.josetoledo9708.workers.dev/v1/manifest';
     const FALLBACK_DOWNLOAD_URL = 'https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-Setup-0.1.21.exe';

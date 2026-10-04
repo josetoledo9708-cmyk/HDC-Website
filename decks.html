@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script>
+        if (window.location.pathname !== '/hdc') {
+            window.location.replace('/hdc');
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta Decks & Tier List Rankings | HololiveDeckConstructor</title>
-    <meta name="description" content="Explora los rankings competitivos del meta para hololive Official Card Game. Copia recetas WGP e impórtalas en HololiveDeckConstructor.">
-    <meta property="og:title" content="Meta Decks & Rankings - HololiveDeckConstructor">
-    <meta property="og:description" content="Rankings de mazos meta, win rates y recetas oficiales para HololiveDeckConstructor.">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>HololiveDeckConstructor - PC Client [ALPHA v0.0.30]</title>
+    <meta name="description" content="Solicita acceso a la Alpha Cerrada v0.0.30 de HololiveDeckConstructor para PC: simulador digital no oficial en 3 idiomas (JP, EN, ES) para aprender a jugar, construir mazos y combatir online.">
+    <meta property="og:title" content="HololiveDeckConstructor - PC Client [ALPHA v0.0.30]">
+    <meta property="og:description" content="Simulador de batallas digital independiente de hololive Official Card Game en 3 idiomas (JP/EN/ES). Aprende a jugar, crea mazos y combate online.">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=0.0.30">
 </head>
 <body class="metaoshi-page">
 
-    <!-- NAVBAR WITH LANGUAGE SELECTOR -->
+    <!-- NAVBAR HEADER WITH LANGUAGE SELECTOR -->
     <header class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo-link">
-                <div class="logo-placeholder" style="display: flex; align-items: center; gap: 10px;">
-                    <img src="images/logo_hdc.png" alt="HDC Logo" class="logo-brand-img" style="height: 36px; width: auto; max-width: 140px; object-fit: contain;">
-                    <span class="logo-text">Hololive<span class="text-accent">DeckConstructor</span></span>
-                    <span class="logo-badge badge-meta">HDC RANKINGS</span>
+            <a href="hdc.html" class="logo-link">
+                <div class="logo-placeholder" style="display: flex; align-items: center;">
+                    <img src="images/logo_hdc.png" alt="HDC Logo" class="logo-brand-img" style="height: 42px; width: auto; max-width: 180px; object-fit: contain; filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.4));">
                 </div>
             </a>
             <nav class="nav-menu">
-                <a href="index.html" class="nav-item">Inicio</a>
-                <a href="hdc.html" class="nav-item nav-highlight">🎮 Juego PC [ALPHA]</a>
-                <a href="builder.html" class="nav-item">Deck Builder</a>
-                <a href="decks.html" class="nav-item active">Meta Decks & Rankings</a>
+                <a href="#inicio" class="nav-item active" data-i18n="game_nav_home">Home</a>
+                <a href="#caracteristicas" class="nav-item" data-i18n="game_nav_features">Features</a>
+                <a href="#capturas" class="nav-item" data-i18n="game_nav_gallery">Gallery</a>
+                <a href="#roadmap" class="nav-item" data-i18n="game_nav_roadmap">Roadmap</a>
+                <a href="#actualizacion" class="nav-item" data-i18n="game_nav_latest">v0.0.30</a>
+                <a href="https://discord.gg/5kYCm94rXc" target="_blank" rel="noopener noreferrer" class="nav-item" style="color: #5865F2; font-weight: 700;">💬 Discord</a>
             </nav>
             <div class="nav-actions">
                 <div class="lang-selector-wrapper">
@@ -39,595 +47,354 @@
                         <option value="ja">🇯🇵 日本語</option>
                     </select>
                 </div>
-                <a href="hdc.html" id="navDownloadBtn" class="btn btn-sm btn-primary" data-i18n="nav_download">Descargar Alpha</a>
+                <a href="https://discord.gg/5kYCm94rXc" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="background: #5865F2; color: #ffffff; border: none; padding: 8px 14px; border-radius: 8px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; text-decoration: none;">
+                    <span>👾</span> Discord
+                </a>
+                <a href="#solicitar" id="navDownloadBtn" class="btn btn-sm btn-primary" data-i18n="game_nav_request">🔑 Request Access</a>
             </div>
         </div>
     </header>
 
-    <!-- FEATURED DECKS BANNER CAROUSEL -->
-    <section class="hero-carousel-section">
-        <div class="carousel-container">
-            <div class="carousel-track" id="heroCarouselTrack">
-                
-                <!-- SLIDE 1: RECENT TOURNAMENT WINNER DECK -->
-                <div class="carousel-slide active" data-slide="0" style="background-image: linear-gradient(to right, rgba(9, 13, 22, 0.95), rgba(9, 13, 22, 0.6)), url('images/banner_decks.jpg');">
-                    <div class="slide-content">
-                        <span class="slide-tag tag-gold">🏆 MAZO GANADOR DE COMPETENCIA MÁS RECIENTE</span>
-                        <h2 class="slide-title">轟リオン / Todoroki Riona (hSD19 + ReDEV Raden)</h2>
-                        <p class="slide-desc">1.er Lugar en el World Grand Prix Championship (WGP Tokyo). Estrategia de alto tempo con aceleración de Cheer, daño de combate elevado y motor de robo azul.</p>
-                        <div class="slide-actions">
-                            <a href="builder.html?code=riona" class="btn btn-primary btn-glow">🛠️ Abrir Receta en Deck Builder ↗</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SLIDE 2: MOST POPULAR META DECK -->
-                <div class="carousel-slide" data-slide="1" style="background-image: linear-gradient(to right, rgba(9, 13, 22, 0.95), rgba(9, 13, 22, 0.6)), url('images/banner_packs.jpg');">
-                    <div class="slide-content">
-                        <span class="slide-tag tag-pink">🔥 #1 MAZO MÁS POPULAR DE LA COMUNIDAD</span>
-                        <h2 class="slide-title">Kaela Kovalskia (G9SME) — Bloom Cup Champion</h2>
-                        <p class="slide-desc">El mazo más jugado en torneos competitivos mundiales. Motor de robo ultra veloz combinado con ataques de daño continuo de 100+ HP.</p>
-                        <div class="slide-actions">
-                            <a href="builder.html?code=kaela" class="btn btn-primary btn-glow">🛠️ Abrir Receta en Deck Builder ↗</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SLIDE 3: FUN & CASUAL FAVORITE DECK -->
-                <div class="carousel-slide" data-slide="2" style="background-image: linear-gradient(to right, rgba(9, 13, 22, 0.95), rgba(9, 13, 22, 0.6)), url('images/banner_builder.jpg');">
-                    <div class="slide-content">
-                        <span class="slide-tag tag-purple">🎨 MAZO DIVERTIDO FAVORITO</span>
-                        <h2 class="slide-title">Moona Hoshinova (1U7LVJ) — HoloID Purple Swarm</h2>
-                        <p class="slide-desc">Mazo creativo y sumamente divertido basado en Cheer Púrpura y la generación 1 de HoloID para sostener el escenario con habilidades únicas.</p>
-                        <div class="slide-actions">
-                            <a href="builder.html?code=moona" class="btn btn-primary btn-glow">🛠️ Abrir Receta en Deck Builder ↗</a>
-                        </div>
-                    </div>
-                </div>
-
+    <!-- HERO & DOWNLOAD PRESENTATION SECTION -->
+    <section id="inicio" class="hero-section" style="padding-top: 130px; padding-bottom: 50px;">
+        <div class="hero-bg-glow"></div>
+        <div class="container hero-content text-center">
+            
+            <!-- PROMINENT HERO LOGO -->
+            <div class="hero-logo-wrapper" style="margin-bottom: 24px;">
+                <img src="images/logo_hdc.png" alt="HololiveDeckConstructor Logo" class="hero-logo-img" style="max-width: 520px; width: 85%; height: auto; object-fit: contain; filter: drop-shadow(0 0 30px rgba(56, 189, 248, 0.6));">
             </div>
 
-            <!-- CAROUSEL CONTROLS -->
-            <button class="carousel-btn btn-prev" id="carouselPrevBtn" aria-label="Previous Slide">❮</button>
-            <button class="carousel-btn btn-next" id="carouselNextBtn" aria-label="Next Slide">❯</button>
+            <div class="hero-badge badge-alpha" style="display: inline-flex; margin-bottom: 18px;" data-i18n="game_hero_badge">
+                <span class="pulse-dot"></span> Closed Alpha v0.0.30 · 100% Non-Profit Fan Project
+            </div>
 
-            <!-- CAROUSEL INDICATOR DOTS -->
-            <div class="carousel-dots" id="carouselDots">
-                <span class="dot active" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
+            <h1 class="hero-title" style="font-size: 2.8rem; margin-bottom: 16px;">
+                HololiveDeckConstructor <span class="gradient-text">PC Client [ALPHA]</span>
+            </h1>
+            
+            <p class="hero-subtitle" style="max-width: 860px; margin: 0 auto 24px; line-height: 1.6; font-size: 1.1rem;" data-i18n="game_hero_desc">
+                The standalone PC digital simulator for hololive Official Card Game. Built for easy learning with 3 languages (JP / EN / ES), deck building, 1-click code sharing with friends, and real-time battles.
+            </p>
+
+            <!-- TRILINGUAL, LEARNING & PLATFORMS HIGHLIGHT BADGES -->
+            <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 28px;">
+                <span class="gallery-tag" style="font-size: 12px; padding: 6px 14px; background: rgba(56, 189, 248, 0.15); border-color: #38bdf8;" data-i18n="game_pill_lang">
+                    🌐 3 Languages Supported: 🇯🇵 日本語 · 🇺🇸 English · 🇪🇸 Español
+                </span>
+                <span class="gallery-tag" style="font-size: 12px; padding: 6px 14px; background: rgba(245, 158, 11, 0.15); border-color: #f59e0b; color: #fbbf24;" data-i18n="game_pill_learn">
+                    📚 Guided Rulebook Engine Ideal for Learning to Play
+                </span>
+                <span class="gallery-tag" style="font-size: 12px; padding: 6px 14px; background: rgba(168, 85, 247, 0.15); border-color: #a855f7; color: #c084fc;" data-i18n="game_pill_plat">
+                    💻 Windows (Current) · 📱 Android & 🐧 Linux (Coming Soon)
+                </span>
+            </div>
+
+            <!-- ALPHA LIMITED ACCESS NOTICE BOX -->
+            <div class="alpha-notice-box" style="max-width: 860px; margin: 0 auto 32px;">
+                <div class="alpha-notice-title">
+                    <span data-i18n="game_notice_title">🔒 RESTRICTED ACCESS · CLOSED ALPHA (LIMITED SLOTS)</span>
+                    <span class="badge-beta-soon" style="margin-left: auto;" data-i18n="game_notice_beta">OPEN BETA · COMING SOON</span>
+                </div>
+                <p class="alpha-notice-desc" data-i18n="game_notice_desc">
+                    Access to the Alpha version of HololiveDeckConstructor is not public for everyone at this time. We have limited slots for testers to evaluate server stability. Join our Discord to request your access key.
+                </p>
+            </div>
+
+            <!-- CTA ACTION BUTTONS -->
+            <div id="solicitar-top" class="cta-group justify-center" style="gap: 16px; display: flex; justify-content: center; flex-wrap: wrap;">
+                <a href="https://discord.gg/5kYCm94rXc" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-primary btn-glow" style="padding: 16px 32px; background: #38bdf8; border-color: #38bdf8; color: #090d16; font-weight: 800;">
+                    <span class="btn-icon">🔑</span>
+                    <div class="btn-text-group" style="text-align: left;">
+                        <span class="btn-title" data-i18n="game_btn_request_top">Request Alpha v0.0.30 Access</span>
+                        <span class="btn-sub" data-i18n="game_btn_request_sub">Limited Tester Slots in Discord</span>
+                    </div>
+                </a>
+                <a href="https://github.com/holocardgame-meta/HololiveDeckConstructor/releases/latest" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-glass" style="padding: 16px 28px;">
+                    <span class="btn-icon">📥</span>
+                    <div class="btn-text-group" style="text-align: left;">
+                        <span class="btn-title">Descargar Cliente PC Windows</span>
+                        <span class="btn-sub">Ejecutable Oficial Alpha v0.0.30</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="hero-stats" style="margin-top: 40px;">
+                <div class="stat-card">
+                    <span class="stat-number" data-i18n="game_stat_langs">3 Languages</span>
+                    <span class="stat-label" data-i18n="game_stat_langs_sub">🇯🇵 JP · 🇺🇸 EN · 🇪🇸 ES</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <span class="stat-number" data-i18n="game_stat_share">1-Click</span>
+                    <span class="stat-label" data-i18n="game_stat_share_sub">Share Deck Codes with Friends</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <span class="stat-number" style="color: #fbbf24;" data-i18n="game_stat_testers">Limited</span>
+                    <span class="stat-label" data-i18n="game_stat_testers_sub">Alpha Tester Slots</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <span class="stat-number" style="color: #c084fc;" data-i18n="game_stat_beta">Coming Soon</span>
+                    <span class="stat-label" data-i18n="game_stat_beta_sub">Global Open Beta</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MAIN FEATURES PRESENTATION WITH SCREENSHOTS -->
+    <section id="caracteristicas" class="section features-section" style="padding: 60px 0;">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="badge-tag" data-i18n="game_sec_features_tag">GAME SHOWCASE</div>
+                <h2 class="section-title" data-i18n="game_sec_features_title">Discover HololiveDeckConstructor</h2>
+                <p class="section-description" data-i18n="game_sec_features_desc">
+                    Explore core features of the executable PC client designed for learning, building, and battling.
+                </p>
+            </div>
+
+            <!-- FEATURE CARDS SHOWCASE GRID -->
+            <div class="features-showcase-grid" style="display: flex; flex-direction: column; gap: 40px; margin-top: 30px;">
+                
+                <!-- CARD 1: CREACIÓN DE MAZOS Y COMPARTIR CÓDIGOS -->
+                <div class="feature-showcase-card" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 30px; align-items: center; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 16px; padding: 24px; overflow: hidden;">
+                    <div class="showcase-img-wrapper" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <img src="images/card_deck_builder.png" alt="Creación de Mazos y Selección de Oshi HDC" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                    </div>
+                    <div class="showcase-info">
+                        <span class="gallery-tag" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; margin-bottom: 10px; display: inline-block;" data-i18n="game_feat_tag_1">1. DECK BUILDING & SHARING</span>
+                        <h3 style="font-size: 24px; font-weight: 800; color: #ffffff; margin-bottom: 12px;" data-i18n="game_feat_title_1">Deck Creation & 1-Click Code Sharing</h3>
+                        <p style="font-size: 14px; color: #cbd5e1; line-height: 1.6; margin-bottom: 16px;" data-i18n="game_feat_desc_1">
+                            Choose your favorite Oshi (La+ Darknesss, Sora, Suisei, Marine...), explore the full card database, and create 50-main + 20-cheer decks. Generate your HDC1- code in 1 click to share instantly with friends.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 2: PARTIDAS CONTRA LA IA Y MULTIJUGADOR ONLINE -->
+                <div class="feature-showcase-card" style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 30px; align-items: center; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 16px; padding: 24px; overflow: hidden;">
+                    <div class="showcase-info">
+                        <span class="gallery-tag" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; margin-bottom: 10px; display: inline-block;" data-i18n="game_feat_tag_2">2. REAL-TIME DUELS</span>
+                        <h3 style="font-size: 24px; font-weight: 800; color: #ffffff; margin-bottom: 12px;" data-i18n="game_feat_title_2">Matches VS Rival AI & Online Multiplayer</h3>
+                        <p style="font-size: 14px; color: #cbd5e1; line-height: 1.6; margin-bottom: 16px;" data-i18n="game_feat_desc_2">
+                            Compete online against friends in real-time or practice solo against the Rival AI. Includes initial hand Redraw (Mulligan) system, Cheer Deck management, Stage zones, and turn timers.
+                        </p>
+                    </div>
+                    <div class="showcase-img-wrapper" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <img src="images/card_online_vs.png" alt="Duelos en Tiempo Real y Mano Inicial HDC" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                    </div>
+                </div>
+
+                <!-- CARD 3: MOTOR CON REGLAS OFICIALES & APRENDER A JUGAR -->
+                <div class="feature-showcase-card" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 30px; align-items: center; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 16px; padding: 24px; overflow: hidden;">
+                    <div class="showcase-img-wrapper" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <img src="images/card_rules_engine.png" alt="Motor con Reglas Oficiales y Menú HDC" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                    </div>
+                    <div class="showcase-info">
+                        <span class="gallery-tag" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; margin-bottom: 10px; display: inline-block;" data-i18n="game_feat_tag_3">3. OFFICIAL RULES & LEARNING</span>
+                        <h3 style="font-size: 24px; font-weight: 800; color: #ffffff; margin-bottom: 12px;" data-i18n="game_feat_title_3">Official Game Engine & Ideal for Beginners</h3>
+                        <p style="font-size: 14px; color: #cbd5e1; line-height: 1.6; margin-bottom: 16px;" data-i18n="game_feat_desc_3">
+                            Strictly follows the official hololive Official Card Game rulebook. Perfect for learning step-by-step: turn phases, stage placement, Bloom evolutions, Cheer assignment, and HP calculation.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 4: PERSONALIZACIÓN TOTAL DEL PERFIL -->
+                <div class="feature-showcase-card" style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 30px; align-items: center; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(236, 72, 153, 0.3); border-radius: 16px; padding: 24px; overflow: hidden;">
+                    <div class="showcase-info">
+                        <span class="gallery-tag" style="background: rgba(236, 72, 153, 0.15); color: #f472b6; margin-bottom: 10px; display: inline-block;" data-i18n="game_feat_tag_4">4. PROFILE CUSTOMIZATION</span>
+                        <h3 style="font-size: 24px; font-weight: 800; color: #ffffff; margin-bottom: 12px;" data-i18n="game_feat_title_4">Full Player Profile Customization</h3>
+                        <p style="font-size: 14px; color: #cbd5e1; line-height: 1.6; margin-bottom: 16px;" data-i18n="game_feat_desc_4">
+                            Customize your player profile to your style: choose your favorite Hololive Oshi, profile picture, ornamental frame, background wallpaper, and view global stats.
+                        </p>
+                    </div>
+                    <div class="showcase-img-wrapper" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <img src="images/card_customization.png" alt="Personalización de Perfil de Jugador HDC" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- MAIN TIER LIST CONTENT -->
-    <main class="container">
-        
-        <section class="section">
-            <div class="section-header text-center">
-                <div class="badge-tag">📊 TIERLIST OFICIAL & CLASIFICACIÓN COMPETITIVA</div>
-                <h2 class="section-title">Clasificación de Mazos Meta (Tier 0 a Tier 4)</h2>
-                <p class="section-description">
-                    Haz clic en la imagen de cualquier carta para abrir y cargar su receta completa directamente en el Deck Builder.
+    <!-- SCREENSHOTS GALLERY -->
+    <section id="capturas" class="section game-showcase-section" style="padding: 60px 0; background: rgba(0, 0, 0, 0.25);">
+        <div class="container text-center">
+            <div class="section-header">
+                <div class="badge-tag" data-i18n="game_sec_gallery_tag">SCREENSHOT GALLERY</div>
+                <h2 class="section-title" data-i18n="game_sec_gallery_title">Alpha v0.0.30 Client Gallery</h2>
+                <p class="section-description" data-i18n="game_sec_gallery_desc">
+                    In-game screenshots from the PC client Alpha build.
                 </p>
-
-                <!-- FORMAT SWITCHER BUTTONS -->
-                <div class="tierlist-format-bar mt-20">
-                    <span class="global-lang-label">🎮 Seleccionar Formato:</span>
-                    <div class="cta-group format-btn-group">
-                        <button class="btn btn-sm btn-primary tier-format-btn active" data-format="all">🌐 Todos los Formatos</button>
-                        <button class="btn btn-sm btn-glass tier-format-btn" data-format="jp">🇯🇵 Formato JP (Japón)</button>
-                        <button class="btn btn-sm btn-glass tier-format-btn" data-format="en">🇬🇧 Formato EN (Global)</button>
-                    </div>
-                </div>
             </div>
 
-            <!-- TIER LIST TABLES -->
-            <div class="tierlist-wrapper">
-
-                <!-- TIER 0 BLOCK -->
-                <div class="tier-block tier-0">
-                    <div class="tier-header-badge tier-badge-0">
-                        <span class="tier-rank">TIER 0</span>
-                        <span class="tier-label">Supreme Meta / Dominante Apex (Win Rate: 65% - 70%)</span>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px;">
+                
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/gal_menu_principal.png" alt="Menú Principal HDC" class="gallery-img">
                     </div>
-
-                    <table class="tier-table">
-                        <thead>
-                            <tr>
-                                <th>Carta Oshi</th>
-                                <th>Nombre del Mazo & Estrategia</th>
-                                <th>Win Rate</th>
-                                <th>Acción</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- TIER 0 ITEM 1: TODOROKI RIONA -->
-                            <tr class="tier-row" data-format="jp">
-                                <td class="td-card">
-                                    <a href="builder.html?code=riona" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
-                                        <img src="images_ja/hSD19-001_OC.png" alt="Todoroki Riona Oshi" class="table-card-img" onerror="this.src='images/EN_hSD01-001_OSR.png'">
-                                    </a>
-                                </td>
-                                <td class="td-info">
-                                    <div class="table-deck-title">
-                                        轟リオン / Todoroki Riona (hSD19)
-                                        <span class="format-badge format-jp">Formato JP</span>
-                                    </div>
-                                    <div class="table-deck-subtitle">WGP Tokio Champion · ReDEV Synergy & Fast Cheer Acceleration</div>
-                                    <div class="deck-stats-pills compact">
-                                        <span class="pill">50 Main</span>
-                                        <span class="pill pill-cheer">13 White · 7 Yellow</span>
-                                        <span class="pill pill-color">Code: riona</span>
-                                    </div>
-                                </td>
-                                <td class="td-winrate">
-                                    <span class="winrate-badge winrate-god">🔥 68% WR</span>
-                                </td>
-                                <td class="td-actions">
-                                    <div class="table-actions-group">
-                                        <a href="builder.html?code=riona" class="btn btn-sm btn-primary">
-                                            🛠️ Cargar Mazo ↗
-                                        </a>
-                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="riona" title="Generar y copiar código HDC1- al portapapeles">
-                                            📋 Generar Código
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- TIER 0 ITEM 2: KAELA KOVALSKIA -->
-                            <tr class="tier-row" data-format="jp">
-                                <td class="td-card">
-                                    <a href="builder.html?code=kaela" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
-                                        <img src="images/EN_hSD01-001_OSR.png" alt="Kaela Kovalskia Oshi" class="table-card-img">
-                                    </a>
-                                </td>
-                                <td class="td-info">
-                                    <div class="table-deck-title">
-                                        Kaela Kovalskia (G9SME)
-                                        <span class="format-badge format-jp">Formato JP</span>
-                                    </div>
-                                    <div class="table-deck-subtitle">1st Place Bloom Cup Winner · High-speed Draw & Massive Damage</div>
-                                    <div class="deck-stats-pills compact">
-                                        <span class="pill">50 Main</span>
-                                        <span class="pill pill-cheer">14 Blue · 6 Red</span>
-                                        <span class="pill pill-color">Code: kaela</span>
-                                    </div>
-                                </td>
-                                <td class="td-winrate">
-                                    <span class="winrate-badge winrate-god">🔥 66% WR</span>
-                                </td>
-                                <td class="td-actions">
-                                    <div class="table-actions-group">
-                                        <a href="builder.html?code=kaela" class="btn btn-sm btn-primary">
-                                            🛠️ Cargar Mazo ↗
-                                        </a>
-                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="kaela" title="Generar y copiar código HDC1- al portapapeles">
-                                            📋 Generar Código
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="gallery-caption">
+                        <span class="gallery-tag">MAIN MENU</span>
+                        <h4>Main Screen & Mode Selection</h4>
+                        <p>Clean UI with direct access to VS AI, Multiplayer, and Deck Builder.</p>
+                    </div>
                 </div>
 
-                <!-- TIER 1 BLOCK -->
-                <div class="tier-block tier-1 mt-30">
-                    <div class="tier-header-badge tier-badge-1">
-                        <span class="tier-rank">TIER 1</span>
-                        <span class="tier-label">Meta Competitivo Dominante (Win Rate: 60% - 64%)</span>
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/gal_redraw_duelos.png" alt="Campo de Batalla HDC" class="gallery-img">
                     </div>
-
-                    <table class="tier-table">
-                        <thead>
-                            <tr>
-                                <th>Carta Oshi</th>
-                                <th>Nombre del Mazo & Estrategia</th>
-                                <th>Win Rate</th>
-                                <th>Acción</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- TIER 1 ITEM 1: MOONA HOSHINOVA -->
-                            <tr class="tier-row" data-format="jp">
-                                <td class="td-card">
-                                    <a href="builder.html?code=moona" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
-                                        <img src="images/EN_hBP01-001_OSR.png" alt="Moona Hoshinova Oshi" class="table-card-img">
-                                    </a>
-                                </td>
-                                <td class="td-info">
-                                    <div class="table-deck-title">
-                                        Moona Hoshinova (1U7LVJ)
-                                        <span class="format-badge format-jp">Formato JP</span>
-                                    </div>
-                                    <div class="table-deck-subtitle">Bloom Cup Finalist · HoloID Gen 1 Purple Control</div>
-                                    <div class="deck-stats-pills compact">
-                                        <span class="pill">50 Main</span>
-                                        <span class="pill pill-cheer">20 Purple</span>
-                                        <span class="pill pill-color">Code: moona</span>
-                                    </div>
-                                </td>
-                                <td class="td-winrate">
-                                    <span class="winrate-badge winrate-top">⚡ 63% WR</span>
-                                </td>
-                                <td class="td-actions">
-                                    <div class="table-actions-group">
-                                        <a href="builder.html?code=moona" class="btn btn-sm btn-primary">
-                                            🛠️ Cargar Mazo ↗
-                                        </a>
-                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="moona" title="Generar y copiar código HDC1- al portapapeles">
-                                            📋 Generar Código
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- TIER 1 ITEM 2: AMANE KANATA -->
-                            <tr class="tier-row" data-format="en">
-                                <td class="td-card">
-                                    <a href="builder.html?code=kanata" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
-                                        <img src="images/EN_hBP01-001_OSR.png" alt="Amane Kanata Oshi" class="table-card-img">
-                                    </a>
-                                </td>
-                                <td class="td-info">
-                                    <div class="table-deck-title">
-                                        Amane Kanata (PPTenshi Aggro)
-                                        <span class="format-badge format-en">Formato EN</span>
-                                    </div>
-                                    <div class="table-deck-subtitle">Competitive Monocolor White · 10 Debut Kanata & Stone Axe Recoil</div>
-                                    <div class="deck-stats-pills compact">
-                                        <span class="pill">50 Main</span>
-                                        <span class="pill pill-cheer">20 White</span>
-                                        <span class="pill pill-color">Code: kanata</span>
-                                    </div>
-                                </td>
-                                <td class="td-winrate">
-                                    <span class="winrate-badge winrate-top">⚡ 61% WR</span>
-                                </td>
-                                <td class="td-actions">
-                                    <div class="table-actions-group">
-                                        <a href="builder.html?code=kanata" class="btn btn-sm btn-primary">
-                                            🛠️ Cargar Mazo ↗
-                                        </a>
-                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="kanata" title="Generar y copiar código HDC1- al portapapeles">
-                                            📋 Generar Código
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="gallery-caption">
+                        <span class="gallery-tag">BATTLEFIELD</span>
+                        <h4>Redraw & Real-Time Duels</h4>
+                        <p>Initial hand redraw mulligan phase and interactive stage board.</p>
+                    </div>
                 </div>
 
-                <!-- TIER 2 BLOCK -->
-                <div class="tier-block tier-2 mt-30">
-                    <div class="tier-header-badge tier-badge-2">
-                        <span class="tier-rank">TIER 2</span>
-                        <span class="tier-label">Decks Competitivos Fuertes (Win Rate: 55% - 59%)</span>
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/gal_oshi_favoritas.png" alt="Deck Builder HDC" class="gallery-img">
                     </div>
-
-                    <table class="tier-table">
-                        <thead>
-                            <tr>
-                                <th>Carta Oshi</th>
-                                <th>Nombre del Mazo & Estrategia</th>
-                                <th>Win Rate</th>
-                                <th>Acción</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- TIER 2 ITEM 1: USADA PEKORA -->
-                            <tr class="tier-row" data-format="en">
-                                <td class="td-card">
-                                    <a href="builder.html?code=pekora" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
-                                        <img src="images/EN_hBP01-002_OSR.png" alt="Usada Pekora Oshi" class="table-card-img">
-                                    </a>
-                                </td>
-                                <td class="td-info">
-                                    <div class="table-deck-title">
-                                        Usada Pekora (Nousagi Swarm)
-                                        <span class="format-badge format-en">Formato EN</span>
-                                    </div>
-                                    <div class="table-deck-subtitle">Green Aggro Swarm · SP Oshi Search Engine & Rapid Momentum</div>
-                                    <div class="deck-stats-pills compact">
-                                        <span class="pill">50 Main</span>
-                                        <span class="pill pill-cheer">20 Green</span>
-                                        <span class="pill pill-color">Code: pekora</span>
-                                    </div>
-                                </td>
-                                <td class="td-winrate">
-                                    <span class="winrate-badge winrate-mid">✨ 58% WR</span>
-                                </td>
-                                <td class="td-actions">
-                                    <div class="table-actions-group">
-                                        <a href="builder.html?code=pekora" class="btn btn-sm btn-primary">
-                                            🛠️ Cargar Mazo ↗
-                                        </a>
-                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="pekora" title="Generar y copiar código HDC1- al portapapeles">
-                                            📋 Generar Código
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- TIER 2 ITEM 2: TOKINO SORA -->
-                            <tr class="tier-row" data-format="en">
-                                <td class="td-card">
-                                    <a href="builder.html?code=sora" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
-                                        <img src="images/EN_hSD01-001_OSR.png" alt="Tokino Sora Oshi" class="table-card-img">
-                                    </a>
-                                </td>
-                                <td class="td-info">
-                                    <div class="table-deck-title">
-                                        Tokino Sora (SorAZ Control)
-                                        <span class="format-badge format-en">Formato EN</span>
-                                    </div>
-                                    <div class="table-deck-subtitle">Balanced Midrange Control · Cheer Life Healing & Solid Arts Damage</div>
-                                    <div class="deck-stats-pills compact">
-                                        <span class="pill">50 Main</span>
-                                        <span class="pill pill-cheer">20 White</span>
-                                        <span class="pill pill-color">Code: sora</span>
-                                    </div>
-                                </td>
-                                <td class="td-winrate">
-                                    <span class="winrate-badge winrate-mid">✨ 55% WR</span>
-                                </td>
-                                <td class="td-actions">
-                                    <div class="table-actions-group">
-                                        <a href="builder.html?code=sora" class="btn btn-sm btn-primary">
-                                            🛠️ Cargar Mazo ↗
-                                        </a>
-                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="sora" title="Generar y copiar código HDC1- al portapapeles">
-                                            📋 Generar Código
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="gallery-caption">
+                        <span class="gallery-tag">DECK BUILDER</span>
+                        <h4>Oshi Choice & Favorite Cards</h4>
+                        <p>Fast search by name or set code with translated card previews.</p>
+                    </div>
                 </div>
 
-                <!-- TIER 3 BLOCK -->
-                <div class="tier-block tier-3 mt-30">
-                    <div class="tier-header-badge tier-badge-3">
-                        <span class="tier-rank">TIER 3</span>
-                        <span class="tier-label">Decks Situacionales / Rogue (Win Rate: 50% - 54%)</span>
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/gal_tarjeta_jugador.png" alt="Perfil HDC" class="gallery-img">
                     </div>
-
-                    <table class="tier-table">
-                        <thead>
-                            <tr>
-                                <th>Carta Oshi</th>
-                                <th>Nombre del Mazo & Estrategia</th>
-                                <th>Win Rate</th>
-                                <th>Acción</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- TIER 3 ITEM 1: SHIRAKAMI FUBUKI -->
-                            <tr class="tier-row" data-format="jp">
-                                <td class="td-card">
-                                    <a href="builder.html?code=fubuki" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
-                                        <img src="images_ja/hSD19-001_OC.png" alt="Shirakami Fubuki Oshi" class="table-card-img" onerror="this.src='images/EN_hSD01-001_OSR.png'">
-                                    </a>
-                                </td>
-                                <td class="td-info">
-                                    <div class="table-deck-title">
-                                        Shirakami Fubuki (FBK Fox Blitz)
-                                        <span class="format-badge format-jp">Formato JP</span>
-                                    </div>
-                                    <div class="table-deck-subtitle">Speed Draw & Flash Attacks · Bloom 2 Fubuki & Mio Synergy</div>
-                                    <div class="deck-stats-pills compact">
-                                        <span class="pill">50 Main</span>
-                                        <span class="pill pill-cheer">15 White · 5 Yellow</span>
-                                        <span class="pill pill-color">Code: fubuki</span>
-                                    </div>
-                                </td>
-                                <td class="td-winrate">
-                                    <span class="winrate-badge winrate-rogue">🎯 53% WR</span>
-                                </td>
-                                <td class="td-actions">
-                                    <div class="table-actions-group">
-                                        <a href="builder.html?code=fubuki" class="btn btn-sm btn-primary">
-                                            🛠️ Cargar Mazo ↗
-                                        </a>
-                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="fubuki" title="Generar y copiar código HDC1- al portapapeles">
-                                            📋 Generar Código
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- TIER 3 ITEM 2: SAKURA MIKO -->
-                            <tr class="tier-row" data-format="jp">
-                                <td class="td-card">
-                                    <a href="builder.html?code=miko" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
-                                        <img src="images/EN_hBP01-001_OSR.png" alt="Sakura Miko Oshi" class="table-card-img">
-                                    </a>
-                                </td>
-                                <td class="td-info">
-                                    <div class="table-deck-title">
-                                        Sakura Miko (Miko Shrine Maiden)
-                                        <span class="format-badge format-jp">Formato JP</span>
-                                    </div>
-                                    <div class="table-deck-subtitle">Red Area Damage · Shrine Maiden Trait & Backstage Pressure</div>
-                                    <div class="deck-stats-pills compact">
-                                        <span class="pill">50 Main</span>
-                                        <span class="pill pill-cheer">20 Red</span>
-                                        <span class="pill pill-color">Code: miko</span>
-                                    </div>
-                                </td>
-                                <td class="td-winrate">
-                                    <span class="winrate-badge winrate-rogue">🎯 51% WR</span>
-                                </td>
-                                <td class="td-actions">
-                                    <div class="table-actions-group">
-                                        <a href="builder.html?code=miko" class="btn btn-sm btn-primary">
-                                            🛠️ Cargar Mazo ↗
-                                        </a>
-                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="miko" title="Generar y copiar código HDC1- al portapapeles">
-                                            📋 Generar Código
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="gallery-caption">
+                        <span class="gallery-tag">PLAYER PROFILE</span>
+                        <h4>Card Profile & Oshi Customization</h4>
+                        <p>Choose your Oshi avatar, decorative frames, and view win stats.</p>
+                    </div>
                 </div>
 
-                <!-- TIER 4 BLOCK (CASUAL & FUN) -->
-                <div class="tier-block tier-4 mt-30">
-                    <div class="tier-header-badge tier-badge-4">
-                        <span class="tier-rank">TIER 4</span>
-                        <span class="tier-label">Decks Divertidos / Casuales (Sin Starter Decks Genéricos, Win Rate: < 50%)</span>
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/gal_historial_victorias.png" alt="Historial HDC" class="gallery-img">
                     </div>
+                    <div class="gallery-caption">
+                        <span class="gallery-tag">STATISTICS</span>
+                        <h4>Match History & Win Rates</h4>
+                        <p>Complete record of won games, global rank, and performance.</p>
+                    </div>
+                </div>
 
-                    <table class="tier-table">
-                        <thead>
-                            <tr>
-                                <th>Carta Oshi</th>
-                                <th>Nombre del Mazo & Estrategia</th>
-                                <th>Win Rate</th>
-                                <th>Acción</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- TIER 4 ITEM 1: JUUFUUTEI RADEN -->
-                            <tr class="tier-row" data-format="jp">
-                                <td class="td-card">
-                                    <a href="builder.html?code=raden" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
-                                        <img src="images/EN_hBP01-001_OSR.png" alt="Juufuutei Raden Oshi" class="table-card-img">
-                                    </a>
-                                </td>
-                                <td class="td-info">
-                                    <div class="table-deck-title">
-                                        Juufuutei Raden (Art Gallery Swarm)
-                                        <span class="format-badge format-jp">Formato JP</span>
-                                    </div>
-                                    <div class="table-deck-subtitle">Fun ReDEV Build · Interactive Discard Effects & Custom Combos</div>
-                                    <div class="deck-stats-pills compact">
-                                        <span class="pill">50 Main</span>
-                                        <span class="pill pill-cheer">12 Green · 8 Yellow</span>
-                                        <span class="pill pill-color">Code: raden</span>
-                                    </div>
-                                </td>
-                                <td class="td-winrate">
-                                    <span class="winrate-badge winrate-casual">🎨 48% (Fun)</span>
-                                </td>
-                                <td class="td-actions">
-                                    <div class="table-actions-group">
-                                        <a href="builder.html?code=raden" class="btn btn-sm btn-primary">
-                                            🛠️ Cargar Mazo ↗
-                                        </a>
-                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="raden" title="Generar y copiar código HDC1- al portapapeles">
-                                            📋 Generar Código
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-
-                            <!-- TIER 4 ITEM 2: MORI CALLIOPE -->
-                            <tr class="tier-row" data-format="jp">
-                                <td class="td-card">
-                                    <a href="builder.html?code=calliope" class="table-card-link" title="Clic para cargar mazo en Deck Builder">
-                                        <img src="images/EN_hSD01-001_OSR.png" alt="Mori Calliope Oshi" class="table-card-img">
-                                    </a>
-                                </td>
-                                <td class="td-info">
-                                    <div class="table-deck-title">
-                                        Mori Calliope (Reaper Beats)
-                                        <span class="format-badge format-jp">Formato JP</span>
-                                    </div>
-                                    <div class="table-deck-subtitle">Fun Purple Build · High Critical Finishers for Friendly Games</div>
-                                    <div class="deck-stats-pills compact">
-                                        <span class="pill">50 Main</span>
-                                        <span class="pill pill-cheer">20 Purple</span>
-                                        <span class="pill pill-color">Code: calliope</span>
-                                    </div>
-                                </td>
-                                <td class="td-winrate">
-                                    <span class="winrate-badge winrate-casual">🎨 46% (Fun)</span>
-                                </td>
-                                <td class="td-actions">
-                                    <div class="table-actions-group">
-                                        <a href="builder.html?code=calliope" class="btn btn-sm btn-primary">
-                                            🛠️ Cargar Mazo ↗
-                                        </a>
-                                        <button class="btn btn-sm btn-glass copy-code-btn" data-code="calliope" title="Generar y copiar código HDC1- al portapapeles">
-                                            📋 Generar Código
-                                        </button>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/gal_import_export.png" alt="Import Export HDC" class="gallery-img">
+                    </div>
+                    <div class="gallery-caption">
+                        <span class="gallery-tag">SYNCHRONIZATION</span>
+                        <h4>Import & Export HDC1- Codes</h4>
+                        <p>Load decks with Base64 code or export to the web in 1 click.</p>
+                    </div>
                 </div>
 
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- LATEST RELEASE v0.0.30 DETAILS -->
+    <section id="actualizacion" class="section" style="padding: 60px 0;">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="badge-tag" data-i18n="game_latest_tag">LATEST RELEASE</div>
+                <h2 class="section-title" data-i18n="game_latest_title">🚀 Latest Update Details (v0.0.30)</h2>
+                <p class="section-description" data-i18n="game_latest_desc">
+                    Check out the newest improvements implemented in Closed Alpha v0.0.30.
+                </p>
+            </div>
+
+            <div class="changelog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                <div class="changelog-card" style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 12px; padding: 20px;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">🌐</div>
+                    <h4 style="color: #fff; font-size: 16px; margin-bottom: 8px;">Full Trilingual Support</h4>
+                    <p style="color: #94a3b8; font-size: 13px; line-height: 1.5;">Seamless language switching between 🇯🇵 Japanese, 🇺🇸 English, and 🇪🇸 Spanish.</p>
+                </div>
+                <div class="changelog-card" style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 12px; padding: 20px;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">⚔️</div>
+                    <h4 style="color: #fff; font-size: 16px; margin-bottom: 8px;">Duel Engine Improvements</h4>
+                    <p style="color: #94a3b8; font-size: 13px; line-height: 1.5;">Optimized Arts damage calculation, Cheer placement, and smooth turn progression.</p>
+                </div>
+                <div class="changelog-card" style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(168, 85, 247, 0.2); border-radius: 12px; padding: 20px;">
+                    <div style="font-size: 24px; margin-bottom: 10px;">⚡</div>
+                    <h4 style="color: #fff; font-size: 16px; margin-bottom: 8px;">Performance & Stability</h4>
+                    <p style="color: #94a3b8; font-size: 13px; line-height: 1.5;">Lower RAM consumption and enhanced connection stability in multiplayer rooms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROADMAP SECTION -->
+    <section id="roadmap" class="section" style="padding: 60px 0; background: rgba(0, 0, 0, 0.2);">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="badge-tag" data-i18n="game_sec_roadmap_tag">ROADMAP</div>
+                <h2 class="section-title" data-i18n="game_sec_roadmap_title">🗺️ Update Roadmap</h2>
+                <p class="section-description" data-i18n="game_sec_roadmap_desc">
+                    Development roadmap from Closed Alpha v0.0.30 towards Open Beta release.
+                </p>
+            </div>
+
+            <div class="roadmap-timeline" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 30px;">
+                <div class="roadmap-step active-step" style="background: rgba(15, 23, 42, 0.8); border: 1px solid #38bdf8; border-radius: 14px; padding: 24px;">
+                    <span class="badge-tag" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8;">PHASE 1 · CURRENT</span>
+                    <h4 style="color: #fff; font-size: 18px; margin: 12px 0 8px;" data-i18n="game_phase1_title">🧪 Windows PC Testing & Testers</h4>
+                    <p style="color: #cbd5e1; font-size: 13px; line-height: 1.6;">Closed Alpha with limited tester slots in Discord for bug fixing and engine balance.</p>
+                </div>
+                <div class="roadmap-step" style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 24px;">
+                    <span class="badge-tag" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24;">PHASE 2 · COMING SOON</span>
+                    <h4 style="color: #fff; font-size: 18px; margin: 12px 0 8px;" data-i18n="game_phase2_title">📱 Android, 🐧 Linux & Spectator Mode</h4>
+                    <p style="color: #94a3b8; font-size: 13px; line-height: 1.6;">Mobile porting for Android, Linux executable, and spectator mode for matches.</p>
+                </div>
+                <div class="roadmap-step" style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 24px;">
+                    <span class="badge-tag" style="background: rgba(168, 85, 247, 0.15); color: #c084fc;">PHASE 3 · FUTURE</span>
+                    <h4 style="color: #fff; font-size: 18px; margin: 12px 0 8px;" data-i18n="game_phase3_title">🎉 Multi-Platform Launch</h4>
+                    <p style="color: #94a3b8; font-size: 13px; line-height: 1.6;">Public Open Beta release without access restrictions and automated community tournaments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DISCORD REQUEST ACCESS CALLOUT SECTION -->
+    <section id="solicitar" class="section" style="padding: 80px 0;">
+        <div class="container text-center">
+            <div class="discord-callout-box" style="background: linear-gradient(135deg, rgba(88, 101, 242, 0.25), rgba(15, 23, 42, 0.9)); border: 1px solid #5865F2; border-radius: 20px; padding: 48px 24px; max-width: 860px; margin: 0 auto; box-shadow: 0 0 40px rgba(88, 101, 242, 0.3);">
+                <div style="font-size: 48px; margin-bottom: 16px;">👾</div>
+                <div class="badge-tag" style="background: rgba(88, 101, 242, 0.3); color: #a5b4fc; margin-bottom: 12px;" data-i18n="game_discord_tag">💬 TESTER COMMUNITY & ALPHA REQUEST</div>
+                <h2 style="font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 16px;" data-i18n="game_discord_title">Join Discord & Request Your Access</h2>
+                <p style="font-size: 15px; color: #cbd5e1; max-width: 680px; margin: 0 auto 32px; line-height: 1.6;" data-i18n="game_discord_desc">
+                    Be part of our active tester group, share deck codes with members, organize multiplayer rooms, and stay tuned for the Open Beta announcement.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                    <a href="https://discord.gg/5kYCm94rXc" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-primary btn-glow" style="padding: 16px 36px; background: #5865F2; border-color: #5865F2; font-size: 16px;" data-i18n="game_btn_discord">
+                        <span>💬</span> Join Official Discord ↗
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- FOOTER -->
-    <footer class="footer mt-20">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <div class="logo-placeholder logo-sm">
-                    <span class="logo-icon">🎴</span>
-                    <span class="logo-text">Meta<span class="text-accent">Oshi</span></span>
-                </div>
-                <p class="footer-tagline">MetaOshi Hub · Unofficial Fan Platform for hololive Official Card Game.</p>
-            </div>
-
-            <div class="footer-disclaimer">
-                <p>
-                    <strong>Disclaimer:</strong> MetaOshi Hub is a non-profit fan project created for the hololive Official Card Game community. It is not affiliated with, endorsed by, or sponsored by COVER Corp. All character names and artwork belong to <strong>COVER Corp.</strong>
-                </p>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 MetaOshi Community. All rights reserved.</p>
-            </div>
+    <footer class="footer" style="padding: 40px 0; border-top: 1px solid rgba(255, 255, 255, 0.1); background: #090d16;">
+        <div class="container text-center">
+            <p style="font-size: 13px; color: #64748b; line-height: 1.6;">
+                <strong>HololiveDeckConstructor</strong> is an unofficial, non-profit fan project. hololive Official Card Game and its content are intellectual property of Cover Corp / Bushiroad Inc.
+            </p>
+            <p style="font-size: 12px; color: #475569; margin-top: 10px;">
+                © 2026 HololiveDeckConstructor Team · v0.0.30
+            </p>
         </div>
     </footer>
 
-    <!-- TOAST NOTIFICATION -->
-    <div id="toast" class="toast hidden">Deck Code Copied to Clipboard!</div>
-
-    <script src="i18n.js"></script>
-    <script src="deckcode.js"></script>
-    <script src="app.js"></script>
-    <script>
-        // TIER LIST FORMAT FILTERING SCRIPT
-        document.addEventListener('DOMContentLoaded', () => {
-            const formatBtns = document.querySelectorAll('.tier-format-btn');
-            const tierRows = document.querySelectorAll('.tier-row');
-
-            formatBtns.forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    const fmt = e.currentTarget.getAttribute('data-format');
-                    
-                    formatBtns.forEach(b => {
-                        b.classList.remove('active', 'btn-primary');
-                        b.classList.add('btn-glass');
-                    });
-                    
-                    e.currentTarget.classList.remove('btn-glass');
-                    e.currentTarget.classList.add('active', 'btn-primary');
-
-                    tierRows.forEach(row => {
-                        const rowFmt = row.getAttribute('data-format');
-                        if (fmt === 'all' || rowFmt === fmt) {
-                            row.style.display = 'table-row';
-                        } else {
-                            row.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
-    </script>
+    <script src="i18n.js?v=0.0.30"></script>
+    <script src="app.js?v=0.0.30"></script>
 </body>
 </html>
