@@ -536,7 +536,63 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 6. SEQUENTIAL BACKGROUND VIDEO LOOP ENGINE (3 Videos in Loop)
+    const bgPlaylist = [
+        'videos/bg1.mp4',
+        'videos/bg2.mp4',
+        'videos/bg3.mp4'
+    ];
+    let currentVideoIndex = 0;
+
+    function initBgVideoLoopEngine() {
+        let videoElem = document.getElementById('bgVideo');
+        if (!videoElem) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'video-bg-wrapper';
+            wrapper.innerHTML = `
+                <video id="bgVideo" autoplay muted playsinline class="video-bg-element"></video>
+                <div class="video-bg-overlay"></div>
+            `;
+            document.body.prepend(wrapper);
+            videoElem = document.getElementById('bgVideo');
+        }
+
+        if (!videoElem) return;
+
+        function playNextVideo() {
+            const nextSrc = bgPlaylist[currentVideoIndex];
+            currentVideoIndex = (currentVideoIndex + 1) % bgPlaylist.length;
+
+            videoElem.style.opacity = '0.3';
+            setTimeout(() => {
+                videoElem.src = nextSrc;
+                videoElem.load();
+                const playPromise = videoElem.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        videoElem.style.opacity = '1';
+                    }).catch(err => {
+                        console.log('Background video autoplay handled:', err);
+                        videoElem.style.opacity = '1';
+                    });
+                } else {
+                    videoElem.style.opacity = '1';
+                }
+            }, 300);
+        }
+
+        videoElem.addEventListener('ended', playNextVideo);
+        videoElem.addEventListener('error', (e) => {
+            console.warn('Background video load error, skipping:', e);
+            setTimeout(playNextVideo, 1000);
+        });
+
+        // Start initial video
+        playNextVideo();
+    }
+
     initIdolConcertEffects();
+    initBgVideoLoopEngine();
 });
 
 
