@@ -13,6 +13,104 @@ vieja, en castellano y en inglés. Es el texto que se copia a la web y al canal 
 
 ---
 
+## 0.0.30 — 2026-10-04
+
+### Español
+
+**AMIGOS**
+- Nuevo botón "+ Amigos" junto a tu cuadro de perfil: copia tu usuario (Nombre#1234), busca a alguien por su usuario y mándale una solicitud de amistad.
+- Las solicitudes se aceptan o se rechazan desde ese mismo panel; el botón dice cuántas tienes sin contestar.
+- En una partida en red, "Enviar solicitud de amistad" en el perfil del rival ya funciona.
+
+**MÚSICA**
+- Música de fondo dentro del juego: una lista que suena una detrás de otra en el menú y en partida.
+- Nuevo volumen de Música en Opciones, aparte del volumen general. Empieza bajo (25 %) para no tapar las voces.
+
+**PARTIDA**
+- La cheer de la Cheer Phase sale a la derecha del Cheer Deck (ya no cae encima del log).
+- Cuando cae uno de tus holomem, la cheer de Life sale a la vista sobre tu Life y la arrastras al holomem que quieras. Si cae una Buzz, salen dos, de una en una.
+- La cheer de Life del rival se ve volar de su Life a su holomem.
+- Antes de cada pregunta de un efecto se ve lo que ese efecto ya hizo.
+
+**IA RIVAL**
+- Arreglado: un holomem de la IA que atacaba una vez no volvía a atacar en toda la partida.
+
+**CONSTRUCTOR**
+- Importar mazos de Bushiroad DeckLog: pega su código (G9SME, 1U7LVJ...) o su enlace (también el de holocardgame-meta) en el recuadro de Importar. Si el mazo lleva cartas que el juego aún no tiene, te dice cuáles.
+
+**PERFIL**
+- El Perfil es ahora una pantalla, con su transición y su botón Volver, como "Contra IA".
+- El aviso de la pestaña Tarjeta ya no sale en las otras pestañas ni queda tapado por Cancelar.
+- La tarjeta enseña aparte las partidas en red y las de contra la IA.
+
+**MULTIJUGADOR**
+- Las partidas en red las apunta el servidor, no el juego: ya no se pueden inventar resultados.
+- Irse de una partida en red cuenta como derrota si no vuelves en un minuto (antes cortar la conexión era empate). Si se cae el servidor, no cuenta.
+
+**CARTAS**
+- Todo lo que se coge del archive se enseña, aunque solo haya una opción.
+- Si un efecto no se puede hacer, no pregunta nada: Koganei Niko (hSD11-005) preguntaba a quién mandar la cheer sin haber cheer. Arreglado también en hBP02-055, hBP02-090, hBP02-096, hBP05-023 y hBP05-084.
+- Friendly PC (hBP05-074) y Tokino Sora (hEB01-005) solo encuentran Debut con el Extra "You may include any number of this holomem".
+- La SP y la Oshi skill normal se pueden usar en el mismo turno (Hakos Baelz hBP06-005).
+- Hakos Baelz (hBP06-041) pide las 2 cartas a archivar de una vez; Chattino (hBP06-100) da 30 de HP con Raora, no 20.
+- Si un efecto salta pero no puede hacer nada, el log dice por qué.
+
+**SISTEMA DE PRUEBAS**
+- Nuevo botón "Dudoso" al lado de Pendiente: marca la carta con un "?" naranja y sigue preguntando.
+- El cuadro de pruebas también sale con los Gift y las SP que saltan solos (Koganei Niko al empezar la Performance, la SP de Isaki Riona).
+
+**SEGURIDAD**
+- El actualizador comprueba que el paquete descargado es el publicado antes de instalarlo.
+
+### English
+
+**FRIENDS**
+- New "+ Friends" button next to your profile box: copy your user (Name#1234), find someone by their user and send them a friend request.
+- Requests are accepted or rejected from the same panel; the button shows how many you have unanswered.
+- In an online match, "Send friend request" on your opponent's profile now works.
+
+**MUSIC**
+- Background music inside the game: a playlist that plays one track after another in the menu and during matches.
+- New Music volume in Options, separate from the master volume. It starts low (25 %) so it does not cover the voices.
+
+**MATCH**
+- The Cheer Phase cheer appears to the right of the Cheer Deck (it no longer covers the log).
+- When one of your holomem is downed, the life cheer appears over your life and you drag it onto the holomem you want. If a Buzz is downed, two come out, one at a time.
+- Your opponent's life cheer is shown flying from their life to their holomem.
+- Before each effect question you see what that effect already did.
+
+**OPPONENT AI**
+- Fixed: an AI holomem that attacked once never attacked again for the rest of the match.
+
+**DECK BUILDER**
+- Import decks from Bushiroad DeckLog: paste their code (G9SME, 1U7LVJ...) or link (the holocardgame-meta one too) in the Import box. If the deck has cards this game does not have yet, it tells you which.
+
+**PROFILE**
+- Profile is now a screen, with its transition and a Back button, like "Vs AI".
+- The Card tab hint no longer shows on the other tabs or gets covered by Cancel.
+- The profile card shows online matches and matches against the AI separately.
+
+**MULTIPLAYER**
+- Online matches are recorded by the server, not the game: results can no longer be made up.
+- Leaving an online match counts as a loss if you do not come back within a minute (cutting your connection used to be a draw). If the server goes down, it does not count.
+
+**CARDS**
+- Anything taken from the archive is always shown, even with a single option.
+- If an effect cannot be done, it asks nothing: Koganei Niko (hSD11-005) asked where to send the cheer with no cheer available. Also fixed on hBP02-055, hBP02-090, hBP02-096, hBP05-023 and hBP05-084.
+- Friendly PC (hBP05-074) and Tokino Sora (hEB01-005) only find Debuts with the Extra "You may include any number of this holomem".
+- The SP and the normal Oshi skill can be used in the same turn (Hakos Baelz hBP06-005).
+- Hakos Baelz (hBP06-041) asks for both cards to archive at once; Chattino (hBP06-100) gives 30 HP with Raora, not 20.
+- If an effect triggers but can do nothing, the log says why.
+
+**TESTING SYSTEM**
+- New "Doubtful" button next to Pending: marks the card with an orange "?" and keeps asking.
+- The testing box also shows for Gifts and SP skills that trigger on their own (Koganei Niko at the start of the Performance, Isaki Riona's SP).
+
+**SECURITY**
+- The updater checks the downloaded package is the published one before installing it.
+
+---
+
 ## 0.0.29 — 2026-10-02
 
 ### Español
