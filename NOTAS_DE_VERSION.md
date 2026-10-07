@@ -13,6 +13,74 @@ vieja, en castellano y en inglés. Es el texto que se copia a la web y al canal 
 
 ---
 
+## 0.0.31 — 2026-10-07
+
+### Español
+
+CARTAS Y REGLAS
+- Incorporados hBP07, hBP08 y hBP09, con actualizaciones de efectos y traducciones.
+- Correcciones de Kanata, Lui, Iroha, Okayu, Korone, Riona y Beef Bowl a partir de los reportes de Access.
+- Busquedas del deck permiten no elegir carta; revelacion de Cheers conserva su zona de origen.
+- Baton Pass se puede cancelar sin pagar ni cambiar de fase.
+- Mulligan: siempre siete cartas; penalizacion acumulada solo en la mano final, despues de colocar Center.
+
+PERFIL Y MENUS
+- Tema de Ina con marcos, botones, iconos y transicion de Takodachis.
+- Carta favorita independiente de la Oshi que selecciona el tema.
+- Buscadores en selecciones de cartas, Oshi, imagen de perfil, fondos y cosmeticos.
+- Edicion de presentacion y seleccion o copia de deck favorito.
+- Historial de partidas en red separado de las partidas contra IA.
+- Corregidos parpadeos del tema, contraste de Favoritos y marcos sobre las cartas.
+- Iniciar o cerrar sesion desde Opciones.
+
+CONSTRUCTOR
+- Importacion de mazos holoDelta en formato JSON, ademas de los formatos existentes.
+
+TESTER
+- Control manual de ambos lados desde la preparacion y cambio de perspectiva por turno.
+- Seleccion de mano inicial y movimientos entre zonas desde la interfaz.
+- Cheers se pueden colocar en holomem; la Oshi queda excluida de movimientos al deck o a la mano.
+- Opciones de restricciones para preparar situaciones de prueba.
+
+REPORTES
+- Correcciones de Access pendientes de confirmacion por los testers en esta build.
+- Los reportes historicos de IA, Life y desincronizacion siguen abiertos para reproduccion.
+- Para multijugador, ambos jugadores deben actualizar a 0.0.31.
+
+### English
+
+CARDS AND RULES
+- Added hBP07, hBP08 and hBP09, with effect and translation updates.
+- Access report fixes for Kanata, Lui, Iroha, Okayu, Korone, Riona and Beef Bowl.
+- Deck searches allow choosing no card; Cheer reveals preserve their source zone.
+- Baton Pass can be cancelled without paying or changing phase.
+- Mulligan always draws seven; accumulated penalty is applied only to the final hand, after placing Center.
+
+PROFILE AND MENUS
+- Ina theme with frames, buttons, icons and Takodachi transitions.
+- Favorite card is independent from the Oshi used to choose the theme.
+- Search bars for cards, Oshi, profile images, backgrounds and cosmetics.
+- Edit your presentation and select or copy your favorite deck.
+- Online match history excludes AI matches.
+- Fixed theme flashes, Favorites contrast and card frame overlays.
+- Sign in or sign out from Options.
+
+DECK BUILDER
+- Import holoDelta decks in JSON format alongside existing formats.
+
+TESTER
+- Manual control of both sides from setup, with perspective switching each turn.
+- Opening hand selection and zone movement controls.
+- Cheers can be attached to holomem; Oshi cannot be moved to deck or hand.
+- Restriction options for setting up test situations.
+
+REPORTS
+- Access fixes await tester confirmation in this build.
+- Historical AI, Life and desync reports remain open for reproduction.
+- Both players must update to 0.0.31 for multiplayer.
+
+---
+
 ## 0.0.30 — 2026-10-04
 
 ### Español
