@@ -13,9 +13,113 @@ vieja, en castellano y en inglés. Es el texto que se copia a la web y al canal 
 
 ---
 
+## 0.0.32 — 2026-10-08
+
+### Español
+
+**JUEGO ABIERTO**
+- Ya no hace falta código de acceso para jugar: cualquiera con el juego puede entrar.
+- El código de probador se escribe en Opciones y activa el modo probador y el cuadro de efectos.
+- Los reportes de fallos y de efectos se pueden mandar sin código, con tu cuenta.
+
+**META DECKS**
+- Nuevo botón en el inicio: las Oshi más jugadas en torneo, con su % de torneos ganados.
+- Al elegir una, sus 4 recetas de torneo más recientes con el puesto que consiguieron. Añadir la guarda en tus mazos; pulsar la carta abre la lista en el constructor.
+- El Tutorial pasa a un botón pequeño junto a Opciones.
+
+**AMIGOS**
+- Lista de amigos: botón "Amigos" junto a tu perfil. Al pasar el cursor, su cuadro y el resumen de su tarjeta; al pulsar, Ver perfil o Eliminar de la lista.
+
+**MULTIJUGADOR**
+- Buscar partida: con tu mazo elegido entras en la cola y el juego te empareja con otro jugador al azar. La partida va directa al piedra-papel-tijera; puedes cancelar la búsqueda.
+- Sala personalizada nueva: "Crear / unirse a sala personalizada" abre un menú con Crear sala y Unirse con código. En la sala se ve el marco y el mazo de cada jugador, y la partida empieza cuando los dos pulsan Listo.
+- Invitar: desde la sala, copia el código o invita a un amigo de tu lista; le sale un aviso en el menú con Unirse y Rechazar.
+- Irse de una sala antes de empezar ya no cuenta como derrota.
+- Al terminar una partida en red vuelves a la pantalla de Multijugador.
+
+**CUENTAS**
+- Tope de intentos al entrar: tras varias contraseñas incorrectas hay que esperar unos minutos.
+- Las sesiones caducan tras un mes sin jugar; el juego te pide entrar otra vez con tu nombre ya escrito.
+
+**PARTIDA**
+- Al pasar el cursor por un holomem del campo, a su lado sale su vida, sus buffs de Arts y de vida y sus cheers.
+- Arreglado: salir de una partida en red durante el mulligan daba un error.
+- La rendición del rival se ve al momento, tambien en tu turno.
+- Las cartas que revelas se le enseñan al rival antes de ir a tu mano.
+- La cheer de Life sale encima de tus cartas de Life y se arrastra al holomem, tambien si cae por un efecto.
+
+**CARTAS**
+- Arreglado: 85 Arts de hBP07-10 y de los mazos de inicio pegaban 0 de base, y CODE:81800 (hBP07-075) pegaba 81800 (ahora 70).
+- Arreglado: el texto de 5 Arts no se aplicaba (Korone hBP06-070 y 4 de los mazos de inicio hSD14-18).
+- Las cartas de hBP07-09 salen con su nombre en inglés.
+- Traducidas las preguntas de las cartas nuevas que salían en castellano.
+- Toda carta que dice "you may" te pregunta antes de aplicarse.
+- Las habilidades de mascotas y herramientas pegadas se activan desde el menú del holomem.
+- Hechos: el Ability Shift de hBP01-110 con Mumei, Oka-nyan con Okayu, y en 35P el rival decide si roba.
+
+**CONSTRUCTOR Y PERFIL**
+- Borrar un mazo ya no te devuelve a la primera página.
+- Tu perfil guardado en el servidor manda sobre lo de esta máquina.
+
+**RENDIMIENTO**
+- El juego ocupa unos 400 MB menos: ya no lleva copias repetidas de las ilustraciones.
+
+### English
+
+**OPEN GAME**
+- You no longer need an access code to play: anyone with the game can get in.
+- The tester code goes in Options and turns on tester mode and the effect check box.
+- Bug and effect reports can be sent without a code, with your account.
+
+**META DECKS**
+- New button on the home screen: the most played Oshi in tournaments, with their tournament win %.
+- Pick one to see its 4 most recent tournament recipes and the place they got. Add saves it to your decks; clicking the card opens the list in the deck builder.
+- The Tutorial moves to a small button next to Options.
+
+**FRIENDS**
+- Friends list: "Friends" button next to your profile. Hover to see their box and a card summary; click for View profile or Remove from list.
+
+**MULTIPLAYER**
+- Find match: with your deck chosen you join the queue and the game pairs you with a random player. The match goes straight to rock-paper-scissors; you can cancel the search.
+- New custom room: "Create / Join custom room" opens a menu with Create room and Join with a code. The room shows each player's frame and deck, and the match starts when both press Ready.
+- Invite: from the room, copy the code or invite a friend from your list; they get a notice in the menu with Join and Decline.
+- Leaving a room before the match starts no longer counts as a loss.
+- After an online match you go back to the Multiplayer screen.
+
+**ACCOUNTS**
+- Login attempt limit: after several wrong passwords you have to wait a few minutes.
+- Sessions expire after a month without playing; the game asks you to log in again with your name already filled in.
+
+**MATCH**
+- Hovering a holomem on the field shows its life, Arts and HP buffs and its cheers next to it.
+- Fixed: leaving an online match during the mulligan caused an error.
+- Your opponent's surrender shows right away, also during your turn.
+- Cards you reveal are shown to your opponent before going to your hand.
+- The Life cheer appears over your Life cards and you drag it to a holomem, also when it falls to an effect.
+
+**CARDS**
+- Fixed: 85 Arts from hBP07-10 and the starter decks dealt 0 base damage, and CODE:81800 (hBP07-075) dealt 81800 (now 70).
+- Fixed: the text of 5 Arts did not apply (Korone hBP06-070 and 4 from the hSD14-18 starter decks).
+- hBP07-09 cards now show their English names.
+- Translated the questions of the new cards that showed up in Spanish.
+- Every card that says "you may" asks you before it applies.
+- Abilities of attached mascots and tools are used from the holomem's menu.
+- Added: hBP01-110's Ability Shift with Mumei, Oka-nyan with Okayu, and with 35P your opponent chooses whether to draw.
+
+**DECK BUILDER AND PROFILE**
+- Deleting a deck no longer sends you back to the first page.
+- Your profile saved on the server wins over what this machine had.
+
+**PERFORMANCE**
+- The game is about 400 MB smaller: it no longer ships duplicate card art.
+
+---
+
 ## 0.0.31 — 2026-10-07
 
 ### Español
+
+- **Republicación 0.0.31:** corregidos los iconos de piedra, papel y tijeras en la build.
 
 CARTAS Y REGLAS
 - Incorporados hBP07, hBP08 y hBP09, con actualizaciones de efectos y traducciones.
@@ -48,6 +152,8 @@ REPORTES
 - Para multijugador, ambos jugadores deben actualizar a 0.0.31.
 
 ### English
+
+- **0.0.31 re-release:** fixed rock, paper and scissors icons in the compiled player.
 
 CARDS AND RULES
 - Added hBP07, hBP08 and hBP09, with effect and translation updates.
