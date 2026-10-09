@@ -7,10 +7,11 @@ if (window.location.pathname === '/' || window.location.pathname.endsWith('/inde
 
 document.addEventListener('DOMContentLoaded', () => {
     const WORKER_MANIFEST_URL = 'https://tcgholo-gate.josetoledo9708.workers.dev/v1/manifest';
-    const FALLBACK_DOWNLOAD_URL = 'https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-Setup-0.1.21.exe';
+    const FALLBACK_DOWNLOAD_URL = 'https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-0.0.32.3.zip';
 
     const mainDownloadBtn = document.getElementById('mainDownloadBtn');
     const navDownloadBtn = document.getElementById('navDownloadBtn');
+    const androidDownloadBtn = document.getElementById('androidDownloadBtn');
     const versionTag = document.getElementById('versionTag');
     const toast = document.getElementById('toast');
     const langSelect = document.getElementById('langSelect');
@@ -122,12 +123,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = await response.json();
             if (data && data.downloadUrl) {
+                // Open Alpha: el zip de Windows lo da el servidor; el APK de Android va al lado con el mismo nombre.
                 const downloadUrl = data.downloadUrl;
-                const version = data.latest || '0.1.21';
+                const androidUrl = downloadUrl.replace(/\.zip$/i, '.apk');
+                // Las versiones de emergencia (0.0.32.3) se ensenan como en el juego: 0.0.32.
+                const version = (data.latest || '').split('.').slice(0, 3).join('.');
 
                 if (mainDownloadBtn) mainDownloadBtn.href = downloadUrl;
                 if (navDownloadBtn) navDownloadBtn.href = downloadUrl;
-                if (versionTag) versionTag.textContent = `Versión ${version} · Instalador Oficial Windows`;
+                if (androidDownloadBtn && androidUrl !== downloadUrl) androidDownloadBtn.href = androidUrl;
+                if (versionTag && version) versionTag.textContent = `v${version} · Windows (.zip) · Android (.apk)`;
                 console.log('[OshiLive Web] Manifest cargado:', version, downloadUrl);
                 return;
             }
@@ -137,7 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (mainDownloadBtn) mainDownloadBtn.href = FALLBACK_DOWNLOAD_URL;
         if (navDownloadBtn) navDownloadBtn.href = FALLBACK_DOWNLOAD_URL;
-        if (versionTag) versionTag.textContent = 'Versión 0.1.21 · Instalador Oficial Windows';
     }
 
     fetchLatestManifest();
