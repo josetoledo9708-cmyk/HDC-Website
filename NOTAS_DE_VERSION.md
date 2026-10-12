@@ -13,6 +13,172 @@ vieja, en castellano y en inglés. Es el texto que se copia a la web y al canal 
 
 ---
 
+## 0.0.33 — 2026-10-11
+
+### Español
+
+ANIMACIONES DE PARTIDA
+- Dado con seis caras, caída sobre el tablero, rebotes, sombra de contacto y resultado orientado al jugador.
+- Mazos con grosor que disminuye al robar; nuevo barajado y movimientos al tope y al fondo.
+- Nueva banda de fases, carga de Arts, recorrido del ataque, impacto y número de daño.
+- Señales de Gift y Collab; acoplar y desacoplar cheers, mascotas, herramientas y fans.
+- Robo y revelaciones respetan el orden de los efectos sin reiniciar otras cartas. La carta robada aterriza directamente en la mano.
+
+INTERFAZ
+- Mano en abanico suave. Solo la carta bajo el cursor mantiene su brillo animado.
+- Halo verde más visible para las cartas que se pueden jugar. Los montones no se inclinan al pasar el cursor.
+- Nombres de cartas en azul en el log: puedes pulsarlos para abrir su vista previa grande.
+- Corregidos la vista previa vacía, las cartas de preparación encogidas y los robos múltiples que se apilaban antes de entrar en la mano.
+
+ANDROID
+- Textos un 20% mayores y botones con mayor área táctil.
+- La mano se reduce un 10% al interactuar con el campo y crece un 20% al seleccionarla.
+
+CORRECCIONES
+- Mikkorone 24 presenta dos robos, el dado y después su efecto adicional. Los robos normales no se revelan ni repiten su llegada a la mano.
+- La habilidad SP de Ouro Kronii conserva el turno adicional en la partida.
+- El actualizador cierra solo su propio proceso al instalar la nueva versión.
+- Se mantienen las mejoras de selección de efectos, búsqueda, revelación y reconexión.
+
+Siguen pendientes las texturas físicas de foil, el arte final de fases y la revisión en dispositivos Android reales.
+
+### English
+
+MATCH ANIMATIONS
+- Six-faced die falls onto the board with bounces, contact shadow and a result facing the player.
+- Deck thickness decreases as cards are drawn; new shuffle and top/bottom deck movements.
+- New phase ribbon, Arts charge, attack travel, impact and damage number.
+- Gift and Collab signals; attach/detach animations for cheers, mascots, tools and fans.
+- Draws and reveals follow effect order without restarting unrelated cards. Drawn cards land directly in the hand.
+
+INTERFACE
+- Gentle hand fan. Only the hovered card keeps its foil animation running.
+- Brighter green halo for playable cards. Piles no longer tilt on hover.
+- Blue card names in the log open their large preview when clicked.
+- Fixed blank previews, shrunken setup cards and effect draws piling up before entering the hand.
+
+ANDROID
+- Text is 20% larger and buttons have larger touch areas.
+- The hand shrinks 10% during field interaction and grows 20% when selected.
+
+FIXES
+- Mikkorone 24 presents two draws, the die and then its additional effect. Normal draws are not revealed or sent into the hand twice.
+- Ouro Kronii's SP skill now preserves the additional turn on the interactive board.
+- The updater closes only its own process when installing the new version.
+- Includes the recent effect-choice, search, reveal and reconnection improvements.
+
+Physical foil textures, final phase artwork and testing on real Android devices remain pending.
+
+---
+
+## 0.0.32.5 — 2026-10-10
+
+### Español
+
+**IDIOMAS**
+- El juego ya está en español y japonés, además de inglés. Se elige la primera vez que se abre y se cambia en Opciones.
+- En japonés, las cartas de los sets que solo existen en japonés (hBP07-hBP09 y otros) muestran su texto oficial.
+
+**ANDROID**
+- El juego se actualiza desde dentro: baja la versión nueva y abre el instalador de Android (pide una vez el permiso de instalar apps). Esta versión hay que instalarla a mano por última vez.
+- El juego lleva su icono en vez del de Unity, y los textos y botones son más grandes.
+- El modo probador cabe en la pantalla y se puede deslizar.
+
+**PANTALLA**
+- En pantallas más anchas o más estrechas que el juego, las bandas de los lados se rellenan con el fondo desenfocado.
+
+**PARTIDA**
+- Botón Cancelar mientras eliges el objetivo de un Arts: el Arts no se usa ni se cobra.
+- El cuadro de vida y buffs ya no tapa el menú de la carta, y las habilidades largas caben en el menú.
+- La animación de revelar cartas ya no sale dos veces.
+- La cheer de Life del rival sale con su dorso de cheer y llega boca arriba al holomem.
+- En red, si la conexión se corta un momento el juego vuelve a conectarse; antes podía dar derrota al instante.
+
+**CARTAS**
+- Los efectos que dan algo a "tu holomem con #etiqueta" o a "tu 〈nombre〉" dejan elegir a cuál cuando hay varios (24 cartas, por ejemplo hBP04-018 y hBP06-089).
+- Oshi Stage Skill que no hacían nada y ya funcionan: Ninomae Ina'nis (hBP08-006, Arts sin cheers), Todoroki Hajime (hBP09-002), Shirogane Noel (hBP09-003) y Kaela Kovalskia (hBP09-004). Sus textos estaban cruzados con la Oshi skill; también los de Tokoyami Towa (hBP09-005).
+- Ina y Hajime preguntan cuántas holo Power archivar en su Oshi skill.
+- Los efectos "cuando este holomem hace baton pass" saltan (antes miraban al que subía al Center).
+- Las versiones SR de Nekomata Okayu (hSD03-009) y Yuzuki Choco (hSD04-009) no traían sus Arts.
+- Corregidos textos en chino y nombres de habilidad en japonés en las traducciones.
+
+**CONSTRUCTOR**
+- La primera vez que entras te explica de dónde copiar códigos de mazo.
+
+**PROBADORES**
+- El cuadro de "¿funciona?" solo sale si lo activas: Opciones > Modo probador > "Preguntar si funcionan los efectos".
+
+### English
+
+**LANGUAGES**
+- The game is now in Spanish and Japanese as well as English. You pick it the first time you open the game and change it in Options.
+- In Japanese, cards from the Japan-only sets (hBP07-hBP09 and others) show their official text.
+
+**ANDROID**
+- The game updates from inside the app: it downloads the new version and opens the Android installer (it asks once for permission to install apps). This version has to be installed by hand one last time.
+- The game has its own icon instead of Unity's, and texts and buttons are bigger.
+- Tester mode fits on the screen and scrolls.
+
+**SCREEN**
+- On screens wider or narrower than the game, the side bars are filled with the blurred background.
+
+**MATCH**
+- Cancel button while picking the target of an Arts: the Arts is not used or paid.
+- The life and buffs box no longer covers the card menu, and long abilities fit in the menu.
+- The card reveal animation no longer plays twice.
+- Your opponent's Life cheer shows its cheer back and lands face up on the holomem.
+- Online, if the connection drops for a moment the game reconnects; before, it could count as a loss right away.
+
+**CARDS**
+- Effects that give something to "your holomem with #tag" or "your 〈name〉" let you choose which one when there are several (24 cards, for example hBP04-018 and hBP06-089).
+- Oshi Stage Skills that did nothing now work: Ninomae Ina'nis (hBP08-006, Arts without cheers), Todoroki Hajime (hBP09-002), Shirogane Noel (hBP09-003) and Kaela Kovalskia (hBP09-004). Their text was mixed up with the Oshi skill; Tokoyami Towa's (hBP09-005) too.
+- Ina and Hajime ask how many holo Power to archive for their Oshi skill.
+- "When this holomem uses baton pass" effects now trigger (they were looking at the holomem moving to the Center).
+- The SR versions of Nekomata Okayu (hSD03-009) and Yuzuki Choco (hSD04-009) were missing their Arts.
+- Fixed Chinese texts and Japanese ability names in the translations.
+
+**DECK BUILDER**
+- The first time you open it, it explains where to copy deck codes from.
+
+**TESTERS**
+- The "does it work?" box only shows if you turn it on: Options > Tester mode > "Ask whether effects work".
+
+### 日本語
+
+言語
+- 英語に加えて、スペイン語と日本語に対応しました。初回起動時に選び、設定で変更できます。
+- 日本語では、日本でのみ発売されているセット(hBP07〜hBP09など)のカードが公式テキストで表示されます。
+
+ANDROID
+- アプリ内でアップデートできるようになりました。新しいバージョンをダウンロードし、Androidのインストーラーを開きます(初回のみアプリのインストール許可が必要です)。今回のバージョンだけは手動でインストールしてください。
+- アイコンがUnityではなくゲーム独自のものになり、文字とボタンが大きくなりました。
+- テスターモードが画面に収まり、スクロールできるようになりました。
+
+画面
+- ゲームより横長または縦長の画面では、左右の余白がぼかした背景で埋まります。
+
+対戦
+- アーツの対象を選んでいる間は「キャンセル」ボタンが使えます。アーツは使用されず、コストも支払いません。
+- ライフとバフの表示がカードのメニューに重ならなくなり、長い能力もメニューに収まります。
+- カードを公開するアニメーションが二重に表示されなくなりました。
+- 相手のライフのエールはエールの裏面で表示され、表向きでホロメンに付きます。
+- オンライン対戦で接続が一瞬切れても再接続します。以前はすぐに敗北扱いになることがありました。
+
+カード
+- 「#タグを持つ自分のホロメン」や「自分の〈名前〉」に効果を与えるカードで、対象が複数いる場合に選べるようになりました(24枚。例:hBP04-018、hBP06-089)。
+- 何もしていなかった推しステージスキルが動作するようになりました:一伊那尓栖(hBP08-006)、轟はじめ(hBP09-002)、白銀ノエル(hBP09-003)、カエラ・コヴァルスキア(hBP09-004)。
+- 一伊那尓栖と轟はじめの推しスキルで、アーカイブするホロパワーの枚数を選べるようになりました。
+- 「このホロメンがバトンタッチした時」の効果が発動するようになりました。
+- 猫又おかゆ(hSD03-009)と癒月ちょこ(hSD04-009)のSR版にアーツがありませんでした。
+
+デッキ構築
+- 初めて開いたとき、デッキコードをどこからコピーできるか説明が表示されます。
+
+テスター
+- 「動作しますか?」の確認は、設定 > テスターモード > 「効果の動作を確認する」をオンにしたときだけ表示されます。
+
+---
+
 ## 0.0.32 — 2026-10-08
 
 ### Español
