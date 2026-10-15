@@ -13,6 +13,186 @@ vieja, en castellano y en inglés. Es el texto que se copia a la web y al canal 
 
 ---
 
+## 0.0.33.10 — 2026-10-15 — Publicación general / General release
+
+### Español
+
+- Multijugador: marco del selector de mazo tomado del tema de la Oshi seleccionada; sin Oshi o sin tema disponible, sin marco de sustitución.
+- Alineación de carta y marco conservada mediante coordenadas locales y los ajustes de apertura del tema.
+- Solo Android: log elevado y centrado sobre la división del campo, conservando ancho, alto y posición horizontal.
+- Incluye los ajustes acumulados de las pruebas anteriores: interfaz Android adaptable, cobertura completa de fondos y transiciones, perfiles circulares, etiquetas de botones, nombres y costes de habilidades Oshi y traducciones de vistas previas.
+
+Disponible para todos los dispositivos Windows y Android. Promoción de los mismos paquetes distribuidos durante la prueba privada.
+
+### English
+
+- Multiplayer: deck-selection frame follows the selected Oshi theme; no fallback frame without an Oshi or an available theme.
+- Preserved card/frame alignment using local coordinates and theme aperture adjustments.
+- Android only: raised the log to center it on the field division, retaining its width, height and horizontal position.
+- Includes the previous preview updates: responsive Android UI, full-screen backgrounds and transitions, circular profiles, button captions, Oshi skill names and costs, and card-preview translations.
+
+Available to all Windows and Android devices. Uses the same packages previously distributed in the private preview.
+
+---
+
+## 0.0.33.9 — 2026-10-14 — Prueba privada / Private preview
+
+### Español
+
+- Android: márgenes de etiquetas y alturas de opciones de cartas y sonidos ajustados al contenido de los botones.
+- Android: perfiles circulares protegidos contra el ensanchamiento de los controles táctiles.
+- Todas las plataformas: botones de habilidades Oshi con nombre y coste de holo Power, sin explicaciones adicionales; se conservan las restricciones de uso.
+- Multijugador Android y Windows: carta y marco del selector de mazo alineados en un rectángulo compartido, independiente del tema y del orden de carga.
+
+Prueba privada para los mismos tres códigos autorizados. Revisión visual pendiente en dispositivos físicos.
+
+### English
+
+- Android: adjusted caption margins and card-action and sound row heights to fit button content.
+- Android: protected circular player profiles from touch-control widening.
+- All platforms: Oshi skill buttons show the name and holo Power cost without additional explanations; usage restrictions remain intact.
+- Android and Windows multiplayer: aligned deck-selection card and frame using shared bounds, independent of theme and loading order.
+
+Private preview for the same three authorized codes. Visual review on physical devices is pending.
+
+---
+
+## 0.0.33.8 — 2026-10-14 — Prueba privada / Private preview
+
+### Español
+
+- Multijugador: marco de selección de mazo proporcionado, carta alineada detrás del marco y arte de sala ampliado y recortado dentro de su marco.
+- El oscurecimiento del tablero, los fondos de carga y las transiciones cubren toda la pantalla Android en teléfonos y tablets.
+- Cobertura corregida también en opciones, filtros, ordenación, ampliación de cartas, acceso, salas y búsqueda de rival.
+- Siguiente fase centrado; etiquetas ajustadas a sus botones y filas de sonidos más amplias y altas según su contenido.
+
+Prueba privada para ART4-WMPW-6HKZ, WVB5-BDBG-BBDR y 3YDF-DV67-YKP2.
+
+### English
+
+- Multiplayer: correctly proportioned deck-selection frame, card aligned behind it, and room artwork filling and cropping inside its frame.
+- Board dimming, loading backgrounds and transitions cover the full Android screen on phones and tablets.
+- Fixed backdrop coverage in settings, filters, sorting, card zoom, access, rooms and matchmaking.
+- Centered Next Phase; action captions fit their buttons and sound rows are wider and sized for their content.
+
+Private preview for ART4-WMPW-6HKZ, WVB5-BDBG-BBDR and 3YDF-DV67-YKP2.
+
+---
+
+## 0.0.33.7 — 2026-10-14 — Prueba privada / Private preview
+
+### Español
+
+- Distribución Android reajustada: log entre el borde y Life/holo Power; vista previa a la izquierda sin marco de fondo; perfiles circulares en los bordes; fase centrada sobre la división del campo.
+- Playmat y oscurecimiento cubren el viewport en distintas proporciones sin mover las zonas de juego.
+- Revisión global de botones, avisos y etiquetas largas; textos centrados y controles ampliados cuando hace falta.
+- La carta de selección de mazo conserva su marco y gana esquinas redondeadas y movimiento 3D; el botón de sala precarga la siguiente imagen para evitar huecos.
+- Auditoría de 2,683 campos de reglas visibles en la vista previa: traducción española completada para el catálogo.
+
+Prueba privada para ART4-WMPW-6HKZ, WVB5-BDBG-BBDR y 3YDF-DV67-YKP2.
+
+### English
+
+- Reworked Android layout: the log sits between the edge and Life/holo Power; the preview is flush left without a backing frame; player profiles stay circular at screen edges; phase controls align to the field divider.
+- Playmat and dimmer cover the viewport across screen ratios without moving gameplay zones.
+- Global review of buttons, notices and long labels; centered text and larger controls where needed.
+- Deck selection keeps its frame and gains rounded corners and gentle 3D motion; room art preloads the next image to avoid blank gaps.
+- Audited 2,683 rule fields shown in card previews; Spanish translations now cover the catalog.
+
+Private preview for ART4-WMPW-6HKZ, WVB5-BDBG-BBDR and 3YDF-DV67-YKP2.
+
+---
+
+## 0.0.33.6 — 2026-10-14 — Prueba privada / Private preview
+
+### Español
+
+- El botón de sala deja de cubrir la carta de Oshi con el fondo del tema.
+- La carta completa queda centrada, con esquinas redondeadas e inclinación 3D suave continua.
+- El rótulo y el movimiento se ajustan para que la carta no se recorte.
+
+Prueba privada para ART4-WMPW-6HKZ, WVB5-BDBG-BBDR y 3YDF-DV67-YKP2.
+
+### English
+
+- The room button no longer covers the Oshi card with its theme background.
+- The full card is centered, with rounded corners and continuous gentle 3D tilt.
+- The label and motion are fitted to keep the card from being cropped.
+
+Private preview for ART4-WMPW-6HKZ, WVB5-BDBG-BBDR and 3YDF-DV67-YKP2.
+
+---
+
+## 0.0.33.5 — 2026-10-14 — Prueba privada / Private preview
+
+### Español
+
+- Distribución Android adaptable a móviles y tablets: fondo, playmat y oscurecimiento cubren el viewport disponible.
+- Log junto al área segura izquierda; fase arriba a la derecha y vista previa debajo, con posiciones y tamaños ajustados a la pantalla.
+- Correcciones para reducir bandas laterales, espacio sobrante y superposición entre el log y la vista previa.
+
+Prueba privada para ART4-WMPW-6HKZ, WVB5-BDBG-BBDR y 3YDF-DV67-YKP2.
+
+### English
+
+- Responsive Android layout for phones and tablets: background, playmat and dimmer cover the available viewport.
+- The log sits by the left safe area; phase controls are at the upper right and the card preview below, sized and positioned for the screen.
+- Fixes reduce side bars, unused space and overlap between the log and card preview.
+
+Private preview for ART4-WMPW-6HKZ, WVB5-BDBG-BBDR and 3YDF-DV67-YKP2.
+
+---
+
+## 0.0.33.2 — 2026-10-14 — Prueba privada / Private preview
+
+### Español
+
+- Ajustes de interfaz para Android: fondos y playmat aprovechan mejor el ancho de pantalla.
+- Log y vista previa más amplios; textos y botones adaptados para lectura táctil.
+- La mano aumenta de tamaño al seleccionarla.
+- Pantalla completa sin bordes y selector de calidad de recursos para dispositivos con distinta capacidad.
+
+Prueba privada para ART4-WMPW-6HKZ, WVB5-BDBG-BBDR y 3YDF-DV67-YKP2.
+
+### English
+
+- Android interface updates: backgrounds and playmat make better use of screen width.
+- Wider game log and card preview; text and buttons adjusted for touch readability.
+- The hand grows when selecting cards.
+- Borderless fullscreen and an asset quality selector for devices with different capabilities.
+
+Private preview for ART4-WMPW-6HKZ, WVB5-BDBG-BBDR and 3YDF-DV67-YKP2.
+
+---
+
+## 0.0.33.1 — 2026-10-13 — Prueba privada / Private preview
+
+### Español
+
+- Cartas con volumen rígido, foil por rareza, arcoíris y texturas de microrelieve variadas.
+- Barrido diagonal de luz en la mano y acabados de cartas en los menús.
+- Marcos de perfil por Oshi y correcciones de navegación.
+- Marcas de efectos solo para probadores, separadas del botón de vista previa.
+- Preparación de recursos para reducir tirones al abrir menús.
+- Dado con geometría 3D y resultado frontal; playmats con movimiento suave.
+- Piedra, papel o tijera predeterminado con Pebble gris, Friend y tijeras inspiradas en Shiori; acabados pintados y secuencia animada.
+
+Se aplazan 18 cartas nuevas con efectos incompletos, conservando las de la 0.0.33. Candidata exclusiva para los tres códigos autorizados. La revisión en dispositivos físicos y multijugador queda pendiente; no es una publicación general.
+
+### English
+
+- Rigid card volume, rarity-based foil, rainbow reflections and varied embossed textures.
+- Diagonal light sweep on hand cards and card finishes throughout menus.
+- Oshi profile frames and navigation fixes.
+- Effect marks restricted to testers, separate from the preview button.
+- Resource preparation to reduce menu-opening hitches.
+- Die with 3D geometry and a front-facing result; gentle playmat movement.
+- Default rock, paper, scissors with gray Pebble, Friend and Shiori-inspired scissors; painted finishes and animated sequence.
+
+18 new cards with incomplete effects are deferred; the 0.0.33 cards remain available. Candidate restricted to the three authorized codes. Physical-device and multiplayer validation remains pending; this is not a public release.
+
+---
+
 ## 0.0.33 — 2026-10-11
 
 ### Español
