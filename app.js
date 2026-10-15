@@ -7,7 +7,9 @@ if (window.location.pathname === '/' || window.location.pathname.endsWith('/inde
 
 document.addEventListener('DOMContentLoaded', () => {
     const WORKER_MANIFEST_URL = 'https://tcgholo-gate.josetoledo9708.workers.dev/v1/manifest';
-    const FALLBACK_DOWNLOAD_URL = 'https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-0.0.32.3.zip';
+    const FALLBACK_VERSION = '0.0.33.10';
+    const FALLBACK_DOWNLOAD_URL = 'https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-0.0.33.10.zip';
+    const FALLBACK_ANDROID_URL = FALLBACK_DOWNLOAD_URL.replace(/\.zip$/i, '.apk');
 
     const mainDownloadBtn = document.getElementById('mainDownloadBtn');
     const navDownloadBtn = document.getElementById('navDownloadBtn');
@@ -126,8 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Open Alpha: el zip de Windows lo da el servidor; el APK de Android va al lado con el mismo nombre.
                 const downloadUrl = data.downloadUrl;
                 const androidUrl = downloadUrl.replace(/\.zip$/i, '.apk');
-                // Las versiones de emergencia (0.0.32.3) se ensenan como en el juego: 0.0.32.
-                const version = (data.latest || '').split('.').slice(0, 3).join('.');
+                const version = data.latest || FALLBACK_VERSION;
 
                 if (mainDownloadBtn) mainDownloadBtn.href = downloadUrl;
                 if (navDownloadBtn) navDownloadBtn.href = downloadUrl;
@@ -142,6 +143,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (mainDownloadBtn) mainDownloadBtn.href = FALLBACK_DOWNLOAD_URL;
         if (navDownloadBtn) navDownloadBtn.href = FALLBACK_DOWNLOAD_URL;
+        if (androidDownloadBtn) androidDownloadBtn.href = FALLBACK_ANDROID_URL;
+        if (versionTag) versionTag.textContent = `v${FALLBACK_VERSION} · Windows (.zip) · Android (.apk)`;
     }
 
     fetchLatestManifest();
