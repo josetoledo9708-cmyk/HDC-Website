@@ -47,7 +47,7 @@
                 <a href="https://discord.gg/5kYCm94rXc" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="background: #5865F2; color: #ffffff; border: none; padding: 8px 14px; border-radius: 8px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; text-decoration: none;">
                     <span>👾</span> Discord
                 </a>
-                <a href="https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-0.0.33.10.zip" id="navDownloadBtn" class="btn btn-sm btn-primary" data-i18n="game_nav_download">⬇ Download</a>
+                <a href="https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-0.0.33.12.zip" id="navDownloadBtn" class="btn btn-sm btn-primary" data-i18n="game_nav_download">⬇ Download</a>
             </div>
         </div>
     </header>
@@ -111,14 +111,14 @@
 
             <!-- CTA DOWNLOAD BUTTONS (OPEN ALPHA) -->
             <div id="descargar" class="cta-group justify-center" style="gap: 16px; display: flex; justify-content: center; flex-wrap: wrap;">
-                <a id="mainDownloadBtn" href="https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-0.0.33.10.zip" class="btn btn-lg btn-primary btn-glow" style="padding: 16px 32px; background: #38bdf8; border-color: #38bdf8; color: #090d16; font-weight: 800;">
+                <a id="mainDownloadBtn" href="https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-0.0.33.12.zip" class="btn btn-lg btn-primary btn-glow" style="padding: 16px 32px; background: #38bdf8; border-color: #38bdf8; color: #090d16; font-weight: 800;">
                     <span class="btn-icon">💻</span>
                     <div class="btn-text-group" style="text-align: left;">
                         <span class="btn-title" data-i18n="game_btn_download_win">Download for Windows</span>
                         <span class="btn-sub" data-i18n="game_btn_download_win_sub">Free · .zip — unzip it and open TCGHolo.exe</span>
                     </div>
                 </a>
-                <a id="androidDownloadBtn" href="https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-0.0.33.10.apk" class="btn btn-lg btn-primary btn-glow" style="padding: 16px 32px; background: #34d399; border-color: #34d399; color: #090d16; font-weight: 800;">
+                <a id="androidDownloadBtn" href="https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-0.0.33.12.apk" class="btn btn-lg btn-primary btn-glow" style="padding: 16px 32px; background: #34d399; border-color: #34d399; color: #090d16; font-weight: 800;">
                     <span class="btn-icon">📱</span>
                     <div class="btn-text-group" style="text-align: left;">
                         <span class="btn-title" data-i18n="game_btn_download_android">Download for Android</span>
@@ -126,7 +126,7 @@
                     </div>
                 </a>
             </div>
-            <p id="versionTag" style="margin-top: 14px; font-size: 13px; color: #94a3b8;">v0.0.33.10 · Windows (.zip) · Android (.apk)</p>
+            <p id="versionTag" style="margin-top: 14px; font-size: 13px; color: #94a3b8;">v0.0.33.12 · Windows (.zip) · Android (.apk)</p>
 
             <div class="hero-stats" style="margin-top: 40px;">
                 <div class="stat-card">
@@ -232,19 +232,41 @@
         <div class="container text-center">
             <div class="section-header">
                 <div class="badge-tag" data-i18n="game_sec_gallery_tag">SCREENSHOT GALLERY</div>
-                <h2 class="section-title" data-i18n="game_sec_gallery_title">Alpha v0.0.32 Client Gallery</h2>
+                <h2 class="section-title" data-i18n="game_sec_gallery_title">Client Gallery</h2>
                 <p class="section-description" data-i18n="game_sec_gallery_desc">
-                    In-game screenshots from the PC client Alpha build.
+                    Real client screenshots, with their version and platform identified.
                 </p>
             </div>
 
             <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px;">
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/gal_web_0_0_33_12_main.png" alt="HDC WebGL 0.0.33.12 — Suisei" class="gallery-img">
+                    </div>
+                    <div class="gallery-caption">
+                        <span class="gallery-tag">WebGL · 0.0.33.12 · 1280×720</span>
+                        <h4 data-i18n="game_gallery_current_main">Included Suisei theme</h4>
+                        <p data-i18n="game_gallery_current_demo">Captured in the current browser demo.</p>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-img-wrapper">
+                        <img src="images/gal_web_0_0_33_12_preview.png" alt="HDC WebGL 0.0.33.12 — Card preview" class="gallery-img">
+                    </div>
+                    <div class="gallery-caption">
+                        <span class="gallery-tag">WebGL · 0.0.33.12 · 1280×720</span>
+                        <h4 data-i18n="game_gallery_current_preview">Expanded card preview</h4>
+                        <p data-i18n="game_gallery_current_demo">Captured in the current browser demo.</p>
+                    </div>
+                </div>
+
                 
                 <div class="gallery-card">
                     <div class="gallery-img-wrapper">
                         <img src="images/gal_menu_principal.png" alt="Menú Principal HDC" class="gallery-img">
                     </div>
                     <div class="gallery-caption">
+                        <small data-i18n="game_gallery_archived">Screenshot from an earlier build</small>
                         <span class="gallery-tag">MAIN MENU</span>
                         <h4>Main Screen & Mode Selection</h4>
                         <p>Clean UI with direct access to VS AI, Multiplayer, and Deck Builder.</p>
@@ -256,6 +278,7 @@
                         <img src="images/gal_redraw_duelos.png" alt="Campo de Batalla HDC" class="gallery-img">
                     </div>
                     <div class="gallery-caption">
+                        <small data-i18n="game_gallery_archived">Screenshot from an earlier build</small>
                         <span class="gallery-tag">BATTLEFIELD</span>
                         <h4>Redraw & Real-Time Duels</h4>
                         <p>Initial hand redraw mulligan phase and interactive stage board.</p>
@@ -267,6 +290,7 @@
                         <img src="images/gal_oshi_favoritas.png" alt="Deck Builder HDC" class="gallery-img">
                     </div>
                     <div class="gallery-caption">
+                        <small data-i18n="game_gallery_archived">Screenshot from an earlier build</small>
                         <span class="gallery-tag">DECK BUILDER</span>
                         <h4>Oshi Choice & Favorite Cards</h4>
                         <p>Fast search by name or set code with translated card previews.</p>
@@ -278,6 +302,7 @@
                         <img src="images/gal_tarjeta_jugador.png" alt="Perfil HDC" class="gallery-img">
                     </div>
                     <div class="gallery-caption">
+                        <small data-i18n="game_gallery_archived">Screenshot from an earlier build</small>
                         <span class="gallery-tag">PLAYER PROFILE</span>
                         <h4>Card Profile & Oshi Customization</h4>
                         <p>Choose your Oshi avatar, decorative frames, and view win stats.</p>
@@ -289,6 +314,7 @@
                         <img src="images/gal_historial_victorias.png" alt="Historial HDC" class="gallery-img">
                     </div>
                     <div class="gallery-caption">
+                        <small data-i18n="game_gallery_archived">Screenshot from an earlier build</small>
                         <span class="gallery-tag">STATISTICS</span>
                         <h4>Match History & Win Rates</h4>
                         <p>Complete record of won games, global rank, and performance.</p>
@@ -300,6 +326,7 @@
                         <img src="images/gal_import_export.png" alt="Import Export HDC" class="gallery-img">
                     </div>
                     <div class="gallery-caption">
+                        <small data-i18n="game_gallery_archived">Screenshot from an earlier build</small>
                         <span class="gallery-tag">SYNCHRONIZATION</span>
                         <h4>Import & Export HDC1- Codes</h4>
                         <p>Load decks with Base64 code or export to the web in 1 click.</p>
@@ -426,6 +453,6 @@
     </footer>
 
     <script src="i18n.js?v=0.0.33"></script>
-    <script src="app.js?v=0.0.33.10"></script>
+    <script src="app.js?v=0.0.33.12"></script>
 </body>
 </html>

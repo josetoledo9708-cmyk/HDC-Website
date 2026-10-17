@@ -13,6 +13,28 @@ vieja, en castellano y en inglés. Es el texto que se copia a la web y al canal 
 
 ---
 
+## 0.0.33.12 — 2026-10-16 — Publicación general / General release
+
+### Español
+
+- Vistas previas con símbolos reales de energía, niveles, habilidades y EXTRA. EN y ES usan los assets EN; JA conserva los japoneses.
+- Vista ampliada de carta más legible e idéntica en partida y constructor. El panel compacto mantiene sus dimensiones. LIMITED aparece centrado, más grande y antes del efecto.
+- Soportes: las herramientas, mascotas y fans requieren soltarse sobre un holomem válido. Los demás soportes piden confirmación al soltarlos fuera de la zona de la mano; cancelar conserva la carta.
+- Suisei incluido como tema predeterminado, también fijo en la demo. Otros temas aprobados continúan como descargas opcionales.
+- Meta: selección de tres eventos grandes recientes, fuentes y cobertura visibles. Ocho listas verificadas de Exstreamer Final; listas de los otros dos eventos pendientes. No se calcula W/R con puestos finales.
+- Bastón de Nerissa: efecto adicional de 20 daños especiales al archivar por la habilidad del holomem equipado, con sus restricciones de posición y una vez por turno.
+
+### English
+
+- Card previews use authentic energy, level, ability and EXTRA symbols. EN and ES use English assets; JA retains Japanese assets.
+- Larger, readable expanded card preview shared by matches and deck builder. Compact panel dimensions preserved. LIMITED is centered and larger, above the effect.
+- Supports: tools, mascots and fans require a valid holomem drop target. Other supports ask for confirmation after a drop outside the hand area; cancelling keeps the card in hand.
+- Suisei included as the default theme and fixed in the demo. Other approved themes remain optional downloads.
+- Meta: three recent major events, visible sources and coverage. Eight verified Exstreamer Final lists; other event lists pending verification. Placements are not used as match W/R.
+- Nerissa's Staff: additional 20 special damage when archiving for its host's ability, with position and once-per-turn restrictions.
+
+---
+
 ## 0.0.33.10 — 2026-10-15 — Publicación general / General release
 
 ### Español

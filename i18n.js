@@ -68,8 +68,13 @@ const I18N_DATA = {
 
         // Gallery & Roadmap
         game_sec_gallery_tag: "SCREENSHOT GALLERY",
-        game_sec_gallery_title: "Alpha v0.0.32 Client Gallery",
-        game_sec_gallery_desc: "In-game screenshots from the PC client Alpha build.",
+        game_sec_gallery_title: "Client Gallery",
+        game_gallery_archived: "Screenshot from an earlier build",
+        game_gallery_current_main: "Included Suisei theme",
+        game_gallery_current_preview: "Expanded card preview",
+        game_gallery_current_demo: "Captured in the current browser demo.",
+
+        game_sec_gallery_desc: "Real client screenshots, with their version and platform identified.",
         game_sec_roadmap_tag: "ROADMAP",
         game_sec_roadmap_title: "🗺️ Update Roadmap",
         game_sec_roadmap_desc: "Development roadmap from Open Alpha v0.0.32 towards Open Beta release.",
@@ -171,8 +176,13 @@ const I18N_DATA = {
 
         // Gallery & Roadmap
         game_sec_gallery_tag: "GALERÍA DE CAPTURAS",
-        game_sec_gallery_title: "Galería del Cliente Alpha v0.0.32",
-        game_sec_gallery_desc: "Imágenes en ejecucion del cliente de PC en versión Alpha.",
+        game_sec_gallery_title: "Galería del cliente",
+        game_gallery_archived: "Captura de una versión anterior",
+        game_gallery_current_main: "Tema Suisei incluido",
+        game_gallery_current_preview: "Vista previa ampliada de cartas",
+        game_gallery_current_demo: "Captura de la demo actual en el navegador.",
+
+        game_sec_gallery_desc: "Capturas reales del cliente, con su versión y plataforma indicadas.",
         game_sec_roadmap_tag: "HOJA DE RUTA",
         game_sec_roadmap_title: "🗺️ Hoja de Ruta de Actualizaciones",
         game_sec_roadmap_desc: "Plan de desarrollo desde la Alpha Abierta v0.0.32 hacia el lanzamiento de la Beta Abierta.",
@@ -274,8 +284,13 @@ const I18N_DATA = {
 
         // Gallery & Roadmap
         game_sec_gallery_tag: "スクリーンショット",
-        game_sec_gallery_title: "α v0.0.32 クライアントギャラリー",
-        game_sec_gallery_desc: "PCクライアントα版のゲーム画面。",
+        game_sec_gallery_title: "クライアントギャラリー",
+        game_gallery_archived: "以前のバージョンの画面",
+        game_gallery_current_main: "同梱のすいせいテーマ",
+        game_gallery_current_preview: "拡大カードプレビュー",
+        game_gallery_current_demo: "現在のブラウザ体験版で撮影。",
+
+        game_sec_gallery_desc: "バージョンとプラットフォームを明記した実際のゲーム画面。",
         game_sec_roadmap_tag: "ロードマップ",
         game_sec_roadmap_title: "🗺️ アプデロードマップ",
         game_sec_roadmap_desc: "オープンα v0.0.32からオープンβ公開に向けた開発計画。",

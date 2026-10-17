@@ -1,6 +1,6 @@
 {
-  "version": "0.0.33.10",
-  "date": "2026-10-15",
-  "notes": "- Multijugador: marco del selector de mazo tomado del tema de la Oshi seleccionada; sin Oshi o sin tema disponible, sin marco de sustitución.\n- Alineación de carta y marco conservada mediante coordenadas locales y los ajustes de apertura del tema.\n- Solo Android: log elevado y centrado sobre la división del campo, conservando ancho, alto y posición horizontal.\n- Incluye los ajustes acumulados de las pruebas anteriores: interfaz Android adaptable, cobertura completa de fondos y transiciones, perfiles circulares, etiquetas de botones, nombres y costes de habilidades Oshi y traducciones de vistas previas.\n\nDisponible para todos los dispositivos Windows y Android. Promoción de los mismos paquetes distribuidos durante la prueba privada.",
-  "updatedAt": "2026-10-15T19:54:13.744874+00:00"
+  "version": "0.0.33.12",
+  "date": "2026-10-16",
+  "notes": "- Vistas previas con símbolos reales de energía, niveles, habilidades y EXTRA. EN y ES usan los assets EN; JA conserva los japoneses.\n- Vista ampliada de carta más legible e idéntica en partida y constructor. El panel compacto mantiene sus dimensiones. LIMITED aparece centrado, más grande y antes del efecto.\n- Soportes: las herramientas, mascotas y fans requieren soltarse sobre un holomem válido. Los demás soportes piden confirmación al soltarlos fuera de la zona de la mano; cancelar conserva la carta.\n- Suisei incluido como tema predeterminado, también fijo en la demo. Otros temas aprobados continúan como descargas opcionales.\n- Meta: selección de tres eventos grandes recientes, fuentes y cobertura visibles. Ocho listas verificadas de Exstreamer Final; listas de los otros dos eventos pendientes. No se calcula W/R con puestos finales.\n- Bastón de Nerissa: efecto adicional de 20 daños especiales al archivar por la habilidad del holomem equipado, con sus restricciones de posición y una vez por turno.",
+  "updatedAt": "2026-10-17T00:54:39.050837+00:00"
 }
