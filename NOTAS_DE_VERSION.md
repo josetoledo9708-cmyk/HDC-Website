@@ -1,4 +1,56 @@
-# HDC · Notas de versión / Patch notes
+# Notas de version
+
+## 0.0.34 — 2026-10-19 — Actualizacion general / General update
+
+### Espanol
+
+- Juego local offline desde la primera apertura: IA, constructor y contenido instalado sin conexion obligatoria.
+- Feedback de efectos guardado primero en el dispositivo; reintentos al reconectar y respaldo conservado tras la recepcion en Access.
+- Avisos amarillos de acciones pendientes durante un segundo, repetibles al intentar otra jugada; los mensajes de acciones completadas quedan en el log.
+- Aura de seleccion contrastada, rellena, difuminada y con extremos redondeados detras de los botones.
+- Log con procedencia de dano especial, modificadores, buffs y movimientos visibles, sin revelar cartas ocultas del rival.
+- Tester: buscador completo del constructor dentro del mazo y catalogo independiente para agregar cartas externas a la mano.
+- Bloom: controles de una vez por holomem y turno, y bloqueo sobre Debut recien colocado, respetando las excepciones expresas de cartas.
+- Correccion de Isaki Riona hBP06-016: la busqueda requiere simultaneamente Collab Effect y #FLOW GLOW.
+- Conceptos Collab, Gift, Bloom, holo Power, Stage, Life, Cheer y Cheer Deck conservados sin traducir en espanol.
+- Confirmaciones QA recuperadas del historial completo de Access; se mantienen los casos pendientes sin marcarlos como funcionales.
+- Piezas adicionales aprobadas de los temas personalizados; Suisei sigue incluido como tema predeterminado y fijo en la demo.
+
+- Meta Decks: refresco central diario y cache offline; tres eventos revisados, sin inventar W/R.
+
+Incluye los cambios anteriores de 0.0.33.12:
+- Vistas previas con símbolos reales de energía, niveles, habilidades y EXTRA. EN y ES usan los assets EN; JA conserva los japoneses.
+- Vista ampliada de carta más legible e idéntica en partida y constructor. El panel compacto mantiene sus dimensiones. LIMITED aparece centrado, más grande y antes del efecto.
+- Soportes: las herramientas, mascotas y fans requieren soltarse sobre un holomem válido. Los demás soportes piden confirmación al soltarlos fuera de la zona de la mano; cancelar conserva la carta.
+- Suisei incluido como tema predeterminado, también fijo en la demo. Otros temas aprobados continúan como descargas opcionales.
+- Meta: selección de tres eventos grandes recientes, fuentes y cobertura visibles. Ocho listas verificadas de Exstreamer Final; listas de los otros dos eventos pendientes. No se calcula W/R con puestos finales.
+- Bastón de Nerissa: efecto adicional de 20 daños especiales al archivar por la habilidad del holomem equipado, con sus restricciones de posición y una vez por turno.
+
+### English
+
+- Local offline play from first launch: AI matches, deck builder and installed content without a required initial connection.
+- Effect feedback is saved on the device before sending, retried after reconnecting and retained as a backup after Access receives it.
+- Pending-action reminders last one second and repeat on blocked attempts; completed actions remain in the log.
+- Contrasting, filled, soft selection aura with rounded ends behind buttons.
+- Log provenance for special damage, modifiers, buffs and visible card movements without revealing hidden opponent cards.
+- Tester: full deck-builder search within the deck and a separate catalogue for adding external cards to hand.
+- Bloom: per-holomem once-per-turn and newly placed Debut restrictions, respecting explicit card exceptions.
+- Isaki Riona hBP06-016 corrected: searches require both Collab Effect and #FLOW GLOW.
+- Spanish retains Collab, Gift, Bloom, holo Power, Stage, Life, Cheer and Cheer Deck terminology.
+- QA confirmations recovered from complete Access history; unresolved cases remain pending rather than being marked functional.
+- Additional approved custom-theme artwork; Suisei remains included by default and fixed in the demo.
+
+- Meta Decks: daily central refresh and offline caching; three reviewed events, no invented W/R.
+
+Includes the previous 0.0.33.12 changes:
+- Card previews use authentic energy, level, ability and EXTRA symbols. EN and ES use English assets; JA retains Japanese assets.
+- Larger, readable expanded card preview shared by matches and deck builder. Compact panel dimensions preserved. LIMITED is centered and larger, above the effect.
+- Supports: tools, mascots and fans require a valid holomem drop target. Other supports ask for confirmation after a drop outside the hand area; cancelling keeps the card in hand.
+- Suisei included as the default theme and fixed in the demo. Other approved themes remain optional downloads.
+- Meta: three recent major events, visible sources and coverage. Eight verified Exstreamer Final lists; other event lists pending verification. Placements are not used as match W/R.
+- Nerissa's Staff: additional 20 special damage when archiving for its host's ability, with position and once-per-turn restrictions.
+
+---
 
 Registro público de todas las actualizaciones de **HDC (Hololive Deck Constructor)**, de la más nueva a la más
 vieja, en castellano y en inglés. Es el texto que se copia a la web y al canal de actualizaciones de Discord.
