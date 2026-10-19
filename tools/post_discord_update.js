@@ -2,7 +2,7 @@
  * HololiveDeckConstructor - Publicador Automático de Actualizaciones en Discord (#updates)
  * 
  * Lee la versión más reciente del archivo "NOTAS_DE_VERSION.md",
- * la convierte en un anuncio Rich Embed y la envía por Webhook a Discord.
+ * convierte las notas en castellano e inglés en tarjetas Rich Embed y las envía por Webhook a Discord.
  * 
  * Uso:
  *   node tools/post_discord_update.js [URL_DEL_WEBHOOK]
@@ -32,7 +32,7 @@ function getWebhookUrl() {
     return null;
 }
 
-// 2. Analizar NOTAS_DE_VERSION.md para obtener la versión más reciente y sus notas en castellano
+// 2. Analizar NOTAS_DE_VERSION.md para obtener la versión más reciente y sus notas en castellano e inglés
 function parseLatestReleaseNotes() {
     if (!fs.existsSync(NOTAS_FILE)) {
         throw new Error(`No se encontró el archivo de notas de versión: ${NOTAS_FILE}`);
@@ -41,7 +41,7 @@ function parseLatestReleaseNotes() {
     const content = fs.readFileSync(NOTAS_FILE, 'utf8');
 
     // Buscar encabezado de versión: ## 0.0.29 — 2026-10-02
-    const versionRegex = /^##\s+([0-9]+\.[0-9]+\.[0-9]+)\s+—\s+([0-9]{4}-[0-9]{2}-[0-9]{2})/m;
+    const versionRegex = /^##\s+([0-9]+\.[0-9]+\.[0-9]+(?:\.[0-9]+)?)\s+—\s+([0-9]{4}-[0-9]{2}-[0-9]{2})/m;
     const match = content.match(versionRegex);
 
     if (!match) {
@@ -63,22 +63,31 @@ function parseLatestReleaseNotes() {
         block = content.slice(startIndex);
     }
 
-    // Extraer sección en Español
+    // Extraer sección en Español y en Inglés
     let esNotes = '';
-    const esMatch = block.match(/###\s+Español([\s\S]*?)(###\s+English|$)/i);
+    let enNotes = '';
+
+    const esMatch = block.match(/^###\s+Espa[ñn]ol\s*\n([\s\S]*?)(?=^###\s+|^---\s*$|(?![\s\S]))/im);
     if (esMatch && esMatch[1]) {
         esNotes = esMatch[1].trim();
-    } else {
-        esNotes = block.trim();
     }
 
-    return { version, date, notes: esNotes };
+    const enMatch = block.match(/^###\s+English\s*\n([\s\S]*?)(?=^###\s+|^---\s*$|(?![\s\S]))/im);
+    if (enMatch && enMatch[1]) {
+        enNotes = enMatch[1].trim();
+    }
+
+    if (!esNotes && !enNotes) {
+        throw new Error("La versión no contiene secciones Español/English publicables.");
+    }
+
+    return { version, date, notes_es: esNotes, notes_en: enNotes };
 }
 
 async function main() {
     try {
         console.log('📖 Leyendo la versión más reciente desde NOTAS_DE_VERSION.md...');
-        const { version, date, notes } = parseLatestReleaseNotes();
+        const { version, date, notes_es, notes_en } = parseLatestReleaseNotes();
 
         console.log(`📌 Versión detectada: v${version} (${date})`);
 
@@ -90,47 +99,55 @@ async function main() {
             process.exit(1);
         }
 
-        // Formatear notas para Discord (Límite de 4000 caracteres por Embed)
-        let formattedNotes = notes;
-        if (formattedNotes.length > 3800) {
-            formattedNotes = formattedNotes.substring(0, 3800) + '...\n*(Notas recortadas por límite de tamaño de Discord)*';
+        let formattedES = notes_es || 'Sin notas en español.';
+        if (formattedES.length > 3800) formattedES = formattedES.substring(0, 3800) + '...\n*(Notas recortadas)*';
+
+        let formattedEN = notes_en || 'No English patch notes available.';
+        if (formattedEN.length > 3800) formattedEN = formattedEN.substring(0, 3800) + '...\n*(Patch notes truncated)*';
+
+        const embeds = [
+            {
+                title: `🚀 HololiveDeckConstructor - Actualización v${version}`,
+                description: `¡Una nueva versión de HDC está disponible para todos en Open Alpha!\n\n${formattedES}`,
+                color: 3719224, // Color Cyan #38bdf8
+                fields: [
+                    { name: '🌐 Web Oficial', value: '[hdc-website-one.vercel.app/hdc#inicio](https://hdc-website-one.vercel.app/hdc#inicio)', inline: true },
+                    { name: '🔓 Versión', value: `Open Alpha v${version}`, inline: true },
+                    { name: '📅 Fecha', value: date, inline: true }
+                ],
+                footer: {
+                    text: 'HololiveDeckConstructor · Proyecto Fan Sin Ánimo de Lucro',
+                    icon_url: 'https://hdc-website-one.vercel.app/images/logo_hdc.png'
+                },
+                timestamp: new Date().toISOString()
+            }
+        ];
+
+        if (notes_en) {
+            embeds.push({
+                title: `🚀 HololiveDeckConstructor - Patch Notes v${version}`,
+                description: `A new version of HDC is available to everyone in Open Alpha!\n\n${formattedEN}`,
+                color: 10181046, // Purple #9b59b6
+                fields: [
+                    { name: '🌐 Official Website', value: '[hdc-website-one.vercel.app/hdc#inicio](https://hdc-website-one.vercel.app/hdc#inicio)', inline: true },
+                    { name: '🔓 Version', value: `Open Alpha v${version}`, inline: true },
+                    { name: '📅 Date', value: date, inline: true }
+                ],
+                footer: {
+                    text: 'HololiveDeckConstructor · Non-Profit Fan Project',
+                    icon_url: 'https://hdc-website-one.vercel.app/images/logo_hdc.png'
+                },
+                timestamp: new Date().toISOString()
+            });
         }
 
         const payload = {
             username: 'HDCUpdates',
-            avatar_url: 'https://hdc-website.vercel.app/images/logo_hdc.png',
-            embeds: [
-                {
-                    title: `🚀 HololiveDeckConstructor - Actualización v${version}`,
-                    description: `¡Una nueva versión del cliente para PC está disponible para los Alpha Testers!\n\n${formattedNotes}`,
-                    color: 3719224, // Color Cyan #38bdf8
-                    fields: [
-                        {
-                            name: '🌐 Web Oficial',
-                            value: '[hdc-website.vercel.app](https://hdc-website.vercel.app/)',
-                            inline: true
-                        },
-                        {
-                            name: '🔒 Versión',
-                            value: `Alpha Cerrada v${version}`,
-                            inline: true
-                        },
-                        {
-                            name: '📅 Fecha',
-                            value: date,
-                            inline: true
-                        }
-                    ],
-                    footer: {
-                        text: 'HololiveDeckConstructor · Proyecto Fan Sin Ánimo de Lucro',
-                        icon_url: 'https://hdc-website.vercel.app/images/logo_hdc.png'
-                    },
-                    timestamp: new Date().toISOString()
-                }
-            ]
+            avatar_url: 'https://hdc-website-one.vercel.app/images/logo_hdc.png',
+            embeds: embeds
         };
 
-        console.log(`📡 Publicando actualización v${version} en Discord (#updates)...`);
+        console.log(`📡 Publicando actualización v${version} en Discord (#updates) en Español e Inglés...`);
         const response = await fetch(webhookUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -138,7 +155,7 @@ async function main() {
         });
 
         if (response.ok || response.status === 204) {
-            console.log(`🎉 ¡Petición enviada con éxito! La versión v${version} fue publicada en #updates.`);
+            console.log(`🎉 ¡Petición enviada con éxito! La versión v${version} fue publicada en #updates en ambos idiomas.`);
         } else {
             const errText = await response.text();
             console.error(`❌ Error al enviar mensaje a Discord (HTTP ${response.status}):`, errText);

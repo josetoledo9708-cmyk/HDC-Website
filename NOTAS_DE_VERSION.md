@@ -2,7 +2,7 @@
 
 ## 0.0.34 — 2026-10-19 — Actualizacion general / General update
 
-### Espanol
+### Español
 
 - Juego local offline desde la primera apertura: IA, constructor y contenido instalado sin conexion obligatoria.
 - Feedback de efectos guardado primero en el dispositivo; reintentos al reconectar y respaldo conservado tras la recepcion en Access.
@@ -49,21 +49,6 @@ Includes the previous 0.0.33.12 changes:
 - Suisei included as the default theme and fixed in the demo. Other approved themes remain optional downloads.
 - Meta: three recent major events, visible sources and coverage. Eight verified Exstreamer Final lists; other event lists pending verification. Placements are not used as match W/R.
 - Nerissa's Staff: additional 20 special damage when archiving for its host's ability, with position and once-per-turn restrictions.
-
----
-
-Registro público de todas las actualizaciones de **HDC (Hololive Deck Constructor)**, de la más nueva a la más
-vieja, en castellano y en inglés. Es el texto que se copia a la web y al canal de actualizaciones de Discord.
-
-- **Fuente**: las notas que trae el juego (`Assets/StreamingAssets/PatchNotes/<versión>.<idioma>.txt`). Aquí van
-  con tildes y formato; si algo cambia antes de publicar, se cambia en los dos sitios.
-- **Cada versión nueva se añade arriba** el día que se publica.
-- **Formato pensado para Discord**: títulos en negrita y listas con guion, que Discord pinta igual que la web. Un
-  mensaje de Discord admite 2000 caracteres y la descripción de un embed 4096: las versiones grandes caben en un
-  embed, o se parten por secciones.
-- Las versiones anteriores a la 0.0.22 no tenían notas.
-
----
 
 ## 0.0.33.12 — 2026-10-16 — Publicación general / General release
 
