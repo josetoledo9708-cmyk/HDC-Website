@@ -1,10 +1,11 @@
 // MULTI-LANGUAGE TRANSLATION ENGINE (EN = Default/Primary, ES = Secondary, JA = Japanese)
 const I18N_DATA = {
     en: {
+        game_trailer_language: "Trailer version",
         game_nav_trailer: "Trailer",
         game_trailer_tag: "HDC IN ACTION",
         game_trailer_title: "Explore HDC in under two minutes",
-        game_trailer_desc: "Deck building, importing lists, guided learning and matches. Watch the trailer with English narration.",
+        game_trailer_desc: "Deck building, importing lists, guided learning and matches. English narration, with Spanish or English text and game interface.",
         game_trailer_fallback: "Watch the HDC trailer",
 
         // Navbar
@@ -122,10 +123,11 @@ const I18N_DATA = {
     },
 
     es: {
+        game_trailer_language: "Versión del tráiler",
         game_nav_trailer: "Tráiler",
         game_trailer_tag: "HDC EN ACCIÓN",
         game_trailer_title: "Descubre HDC en menos de dos minutos",
-        game_trailer_desc: "Construcción de mazos, importación de listas, aprendizaje guiado y partidas. Mira el tráiler con narración en inglés.",
+        game_trailer_desc: "Construcción de mazos, importación de listas, aprendizaje guiado y partidas. Narración en inglés, con textos e interfaz del juego en español o inglés.",
         game_trailer_fallback: "Ver el tráiler de HDC",
 
         // Navbar
@@ -243,10 +245,11 @@ const I18N_DATA = {
     },
 
     ja: {
+        game_trailer_language: "トレーラーの言語",
         game_nav_trailer: "トレーラー",
         game_trailer_tag: "HDCのプレイ映像",
         game_trailer_title: "2分でHDCを紹介",
-        game_trailer_desc: "デッキ構築、リストのインポート、チュートリアル、対戦を紹介。英語ナレーション付きのトレーラーをご覧ください。",
+        game_trailer_desc: "デッキ構築、リストのインポート、チュートリアル、対戦を紹介。英語ナレーション付き。テキストとゲーム画面は英語またはスペイン語を選べます。",
         game_trailer_fallback: "HDCのトレーラーを見る",
 
         // Navbar
