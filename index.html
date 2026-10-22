@@ -30,6 +30,7 @@
             </a>
             <nav class="nav-menu">
                 <a href="#inicio" class="nav-item active" data-i18n="game_nav_home">Home</a>
+                <a href="#trailer" class="nav-item" data-i18n="game_nav_trailer">Trailer</a>
                 <a href="#caracteristicas" class="nav-item" data-i18n="game_nav_features">Features</a>
                 <a href="#capturas" class="nav-item" data-i18n="game_nav_gallery">Gallery</a>
                 <a href="#roadmap" class="nav-item" data-i18n="game_nav_roadmap">Roadmap</a>
@@ -150,6 +151,21 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- Approved R4 promotional trailer, with the creator's narration -->
+    <section id="trailer" class="section" style="padding: 50px 0;">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="badge-tag" data-i18n="game_trailer_tag">HDC IN ACTION</div>
+                <h2 class="section-title" data-i18n="game_trailer_title">Explore HDC in under two minutes</h2>
+                <p class="section-description" data-i18n="game_trailer_desc">Deck building, importing lists, guided learning and matches. Watch the trailer with English narration.</p>
+            </div>
+            <video controls playsinline preload="none" poster="images/hdc-tools-trailer-r4.jpg" aria-label="HDC promotional trailer — English narration" style="display: block; width: 100%; max-width: 1100px; aspect-ratio: 16 / 9; height: auto; margin: 0 auto; border-radius: 16px; background: #090d16; border: 1px solid rgba(168, 85, 247, 0.35);">
+                <source src="videos/hdc-tools-trailer-en-r4.mp4" type="video/mp4">
+                <a href="videos/hdc-tools-trailer-en-r4.mp4" data-i18n="game_trailer_fallback">Watch the HDC trailer</a>
+            </video>
         </div>
     </section>
 
@@ -452,7 +468,7 @@
         </div>
     </footer>
 
-    <script src="i18n.js?v=0.0.34"></script>
+    <script src="i18n.js?v=trailer-r4"></script>
     <script src="app.js?v=0.0.34"></script>
 </body>
 </html>
