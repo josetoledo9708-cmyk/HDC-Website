@@ -1,5 +1,25 @@
 # Notas de versión
 
+## 0.0.35.4 — 2026-10-22 — Open Alpha
+
+### Español
+
+- Access muestra el total de jugadores conectados y el desglose entre testers y otros jugadores. Incluye invitados con conexión, cuentas sin duplicar y todas las secciones del juego; excluye bots. Señales cada 30 segundos y desconexión tras 90 segundos sin señal. Requiere un cliente actualizado.
+- Incorporado el Loading BGM de Ninomae Ina'nis utilizado en los vídeos. Windows y Android incluyen la pista completa en la lista musical; la demo incluye un extracto ligero. Respeta el volumen de música de Opciones.
+- La carta Oshi muestra un marcador SP después de consumir su SP Oshi Skill, para ambos jugadores. La marca permanece al cambiar de fase y repintar el campo; no bloquea la inspección.
+- Conservadas las correcciones de controles, selectores y guías de la actualización anterior.
+
+- Corregida una carrera al presentar dados: el efecto espera a que termine la presentación y se actualice el tablero antes de continuar, incluso si la animación supera el tiempo de espera inicial.
+
+### English
+
+- Access shows the total number of connected players, split into testers and other players. Includes connected guests and every game section, deduplicates accounts and excludes bots. Heartbeats every 30 seconds expire after 90 seconds without a signal. Requires an updated client.
+- Added the Ninomae Ina'nis Loading BGM used in the videos. Windows and Android include the full track in the music list; the browser demo includes a lightweight excerpt. Respects the music volume in Options.
+- The Oshi card displays an SP marker after its SP Oshi Skill is consumed, for both players. It persists across phases and board redraws without blocking card inspection.
+- Retains the control, selection and guide fixes from the previous update.
+
+- Fixed a dice presentation race: effects wait for the animation and board update before continuing, including animations longer than the initial timeout.
+
 ## 0.0.35.3 — 2026-10-22 — Open Alpha
 
 ### Español
