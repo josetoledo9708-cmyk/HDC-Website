@@ -1,4 +1,42 @@
-# Notas de version
+# Notas de versión
+
+## 0.0.35.2 — 2026-10-21 — Open Alpha
+
+### Español
+
+- Guías interactivas de primera visita: menú, biblioteca, creación de mazos y perfil; resaltado de controles, avance mediante acciones, Omitir y repetición desde Guías de HDC. Progreso local por cuenta y textos ES/EN/JA.
+- Constructor: marcas NEW para los productos recientes y NEXT para los aún no lanzados, con filtros y vista previa. Los lanzamientos simultáneos conservan juntos su marca NEW. Cartas reveladas con imagen y texto incorporadas al catálogo.
+- VS IA utiliza tus mazos guardados como rivales y refleja sus ediciones y eliminaciones. Editar un mazo desde VS IA o Multijugador regresa a la selección de origen.
+- La vista ampliada permite inspeccionar cartas equipadas. La selección de Cheer identifica su holomem de origen para controlar las transferencias.
+- Drawing Stream y efectos relacionados completan sus pasos de selección, revelación, asignación, recuperación y barajado. Las Support sin resolver registrado no consumen la carta ni el uso LIMITED.
+- Favorite PC valida Debut/Buzz de igual nombre y el Support #Buzz Merch; permite selecciones parciales válidas.
+- Matsurisu ofrece su decisión después de cada tirada aplicable y cambia ese resultado a 4 al archivar el Fan elegido.
+- Commander of Time y Fast Forward permiten elegir las cartas y objetivos válidos del Bloom. Los Bloom por efecto activan el Bloom Effect resultante cuando corresponde.
+- Revisados críticos contra todos los colores de holomem de doble color, no solo FUWAMOCO.
+- Correcciones de Gift y eventos de colocación/reset en Cecilia y Mococo; Harmony of Justice completa la secuencia de Cheer. Robocosan incluye la revelación al buscar Roboser.
+- Cute Stadium Jacket protege contra habilidades rivales, incluidas Oshi Skills, durante la Main Phase rival y con su condición Buzz.
+- Correcciones de búsqueda Buzz y nombres en Iroha, Zeta, Pekora y Noel; traducción de A Timeless Promise y Commander of Time ajustada al objetivo y a la pila indicados.
+- QA: las nuevas confirmaciones reales de Access se incorporan al juego; los casos pendientes conservan su estado.
+- Meta mantiene fuentes, cobertura y los tres eventos revisados por el servicio diario; W/R solo cuando existen resultados documentados.
+- Incluye los cambios acumulados de las candidatas 0.0.35 y 0.0.35.1 en esta única actualización pública.
+
+### English
+
+- Interactive first-visit guides for the menu, deck library, deck creation and player profile: highlighted controls, action-based progression, Skip and replay through HDC guides. Local per-account progress and ES/EN/JA text.
+- Deck builder: NEW labels for recent products and NEXT for unreleased products, with filters and previews. Simultaneous releases keep their NEW labels together. Revealed cards with available artwork and text added to the catalog.
+- VS AI uses your saved decks as opponents and reflects edits and deletions. Editing a deck from VS AI or Multiplayer returns to its original selection screen.
+- Expanded previews inspect attached cards. Cheer selection identifies its source holomem to make transfers clear.
+- Drawing Stream and related effects complete their selection, reveal, attachment, recovery and shuffle steps. Supports without a registered resolver retain their card and LIMITED allowance.
+- Favorite PC validates same-name Debut/Buzz selections and the #Buzz Merch Support, including valid partial selections.
+- Matsurisu offers a choice after each applicable die roll and changes that result to 4 when the selected Fan is archived.
+- Commander of Time and Fast Forward allow selection of valid Bloom cards and targets. Effect-driven Blooms trigger the resulting Bloom Effect when applicable.
+- Reviewed color advantages against every color of dual-color holomem, beyond FUWAMOCO.
+- Gift and placement/reset event fixes for Cecilia and Mococo; Harmony of Justice completes the Cheer sequence. Robocosan reveals searched Roboser cards.
+- Cute Stadium Jacket protects against opposing abilities, including Oshi Skills, during the opponent’s Main Phase, respecting its Buzz condition.
+- Buzz/name search fixes for Iroha, Zeta, Pekora and Noel; A Timeless Promise and Commander of Time translations clarify the selected target and source stack.
+- QA: actual new Access confirmations are included in the game, while unresolved cases retain their pending status.
+- Meta retains sources, coverage and the daily service’s three reviewed events; W/R is shown only from documented match results.
+- This single public update includes the accumulated changes from candidates 0.0.35 and 0.0.35.1.
 
 ## 0.0.34 — 2026-10-19 — Actualizacion general / General update
 

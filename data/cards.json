@@ -79665,5 +79665,1318 @@
       "unofficial": true,
       "ja_name": "ごきげんカレー"
     }
+  },
+  {
+    "card_number": "hSD20-001",
+    "id": 1002504,
+    "name": "Hyakuto Kyoko",
+    "color": "Red",
+    "card_type": "Oshi",
+    "life": 5,
+    "rarity": "OSR",
+    "bloom_level": null,
+    "hp": null,
+    "batonpass_cost": [],
+    "tags": [
+      "ASOBI★MAWARI-TAI!"
+    ],
+    "skills": [
+      {
+        "kind": "oshi_stage_skill",
+        "name": "Fiery Passion",
+        "cost": null,
+        "limit": null,
+        "text": "When your holomem collabs, if your center holomem is <Hyakuto Kyoko>, send the top card of your cheer deck to your collab holomem."
+      },
+      {
+        "kind": "oshi_skill",
+        "name": "Hero Cop On the Move!",
+        "cost": "-3",
+        "limit": "1/Turn",
+        "text": "[1/Turn] Deal 10 special damage to your opponent's [center holomem and collab holomem] other than Debut for each cheer on your stage."
+      }
+    ],
+    "arts": [],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD20-001.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD20-002",
+    "id": 1002505,
+    "name": "Hyakuto Kyoko",
+    "color": "Red",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": "Debut",
+    "hp": 130,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "#ASOBI★MAWARI-TAI!"
+    ],
+    "skills": [],
+    "arts": [
+      {
+        "name": "Can I turn that frown upside down?!",
+        "cost_symbols": [
+          "Red"
+        ],
+        "damage": 20,
+        "text": "[Center Position Only] If you have 2 or more cheers on your stage, this Arts gets +20."
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD20-002.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD20-003",
+    "id": 1002518,
+    "name": "Hyakuto Kyoko",
+    "color": "Red",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": "Debut",
+    "hp": 100,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "#ASOBI★MAWARI-TAI!"
+    ],
+    "skills": [
+      {
+        "kind": "skill",
+        "name": "Sparking Rhythm",
+        "cost": null,
+        "limit": null,
+        "text": "Arts Deals +30 damage if Collab with Sophia Sorashina."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Sparking Rhythm",
+        "cost_symbols": [
+          "Red"
+        ],
+        "damage": 30,
+        "text": "Arts Deals +30 damage if Collab with Sophia Sorashina."
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD20-003.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD20-004",
+    "id": 1002506,
+    "name": "Hyakuto Kyoko",
+    "color": "Red",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": "1st",
+    "hp": 180,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "#ASOBI★MAWARI-TAI!"
+    ],
+    "skills": [],
+    "arts": [
+      {
+        "name": "Ready to Get to Work!",
+        "cost_symbols": [
+          "Red",
+          "◇"
+        ],
+        "damage": 60,
+        "text": ""
+      },
+      {
+        "name": "Loud Enough, No Megaphone Needed",
+        "cost_symbols": [
+          "Red",
+          "◇",
+          "◇",
+          "◇"
+        ],
+        "damage": 140,
+        "text": ""
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD20-004.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD20-005",
+    "id": 1002507,
+    "name": "Hyakuto Kyoko",
+    "color": "Red",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "U",
+    "bloom_level": "1st",
+    "hp": 150,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "#ASOBI★MAWARI-TAI!"
+    ],
+    "skills": [
+      {
+        "kind": "bloom effect",
+        "name": "An Outstretched Hand",
+        "cost": null,
+        "limit": null,
+        "text": "Choose 1 holomem on your stage with #ASOBI★MAWARI-TAI!. During this turn, the chosen holomem gets Arts+20."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Acting Before Thinking",
+        "cost_symbols": [
+          "◇"
+        ],
+        "damage": 30,
+        "text": ""
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD20-005.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD20-006",
+    "id": 1002519,
+    "name": "Sophia Sorashina",
+    "color": "Blue",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": "Debut",
+    "hp": 90,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "#ASOBI★MAWARI-TAI!"
+    ],
+    "skills": [
+      {
+        "kind": "skill",
+        "name": "Harmonic Harmony",
+        "cost": null,
+        "limit": null,
+        "text": "When Collabed: Deal 80 damage. Switch with Back stage."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Harmonic Harmony",
+        "cost_symbols": [
+          "Blue"
+        ],
+        "damage": 80,
+        "text": "Switch with Back stage."
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD20-006.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD20-007",
+    "id": 1002520,
+    "name": "Sophia Sorashina",
+    "color": "Blue",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "U",
+    "bloom_level": "1st",
+    "hp": 140,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "#ASOBI★MAWARI-TAI!"
+    ],
+    "skills": [
+      {
+        "kind": "skill",
+        "name": "Starlight Echo",
+        "cost": null,
+        "limit": null,
+        "text": "Deal 120 damage to opponent Center and 30 damage to 1 Back holomem."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Starlight Echo",
+        "cost_symbols": [
+          "Blue",
+          "◇"
+        ],
+        "damage": 120,
+        "text": "Deal 30 damage to 1 Back holomem."
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD20-007.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD20-008",
+    "id": 1002508,
+    "name": "Sorashina Sopia",
+    "color": "Blue",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": "Debut",
+    "hp": 120,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "#ASOBI★MAWARI-TAI!"
+    ],
+    "skills": [
+      {
+        "kind": "gift",
+        "name": "My dreams are like the Big Bang!",
+        "cost": null,
+        "limit": null,
+        "text": "During your opponent's turn, if this holomem is downed, draw 1 card."
+      }
+    ],
+    "arts": [
+      {
+        "name": "I'm going to witness it all with my own eyes!",
+        "cost_symbols": [
+          "◇"
+        ],
+        "damage": 10,
+        "text": "Extra: You may include any number of this holomem in the deck"
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD20-008.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD20-009",
+    "id": 1002509,
+    "name": "Sorashina Sopia",
+    "color": "Blue",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "U",
+    "bloom_level": "1st",
+    "hp": 160,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "#ASOBI★MAWARI-TAI!"
+    ],
+    "skills": [
+      {
+        "kind": "bloom effect",
+        "name": "Exploration of Fun",
+        "cost": null,
+        "limit": null,
+        "text": "If your stage has 3 or more holomem with #ASOBI★MAWARI-TAI!, you may archive 1 cheer from this holomem: Draw 2 cards."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Boundless Intellectual Curiosity",
+        "cost_symbols": [
+          "◇"
+        ],
+        "damage": 30,
+        "text": ""
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD20-009.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD20-010",
+    "id": 1002521,
+    "name": "Manager-chan",
+    "color": "Colorless",
+    "card_type": "Support",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": null,
+    "hp": null,
+    "batonpass_cost": [],
+    "tags": [
+      "Support",
+      "Staff",
+      "LIMITED"
+    ],
+    "skills": [
+      {
+        "kind": "event",
+        "name": "Manager Support",
+        "cost": null,
+        "limit": "LIMITED",
+        "text": "LIMITED: Return your entire hand to the deck, shuffle, then draw 5 cards."
+      }
+    ],
+    "arts": [],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD20-010.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD20-012",
+    "id": 1002510,
+    "name": "ASOBI★MAWARI-TAI!",
+    "color": "Colorless",
+    "card_type": "Support",
+    "life": null,
+    "rarity": "U",
+    "bloom_level": null,
+    "hp": null,
+    "batonpass_cost": [],
+    "tags": [
+      "Support",
+      "Event",
+      "Limited"
+    ],
+    "skills": [
+      {
+        "kind": "event",
+        "name": "ASOBI★MAWARI-TAI!",
+        "cost": null,
+        "limit": "LIMITED",
+        "text": "LIMITED: Only one can be used per turn. This card can only be used if you have 6 or less cards in hand excluding this card. Look at the top 4 cards of your deck. Reveal any number of holomem with #ASOBI★MAWARI-TAI! from among them, and add the revealed holomem to hand. Return the remaining cards to the bottom of the deck in any order."
+      }
+    ],
+    "arts": [],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD20-012.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD20-013",
+    "id": 1002511,
+    "name": "Guruguru TIME!",
+    "color": "Colorless",
+    "card_type": "Support",
+    "life": null,
+    "rarity": "U",
+    "bloom_level": null,
+    "hp": null,
+    "batonpass_cost": [],
+    "tags": [
+      "Support",
+      "Event",
+      "Limited"
+    ],
+    "skills": [
+      {
+        "kind": "event",
+        "name": "Guruguru TIME!",
+        "cost": null,
+        "limit": "LIMITED",
+        "text": "LIMITED: Only one can be used per turn. This card can only be used if all holomem on your stage are holomem with #ASOBI★MAWARI-TAI!. Swap your opponent's center holomem with 1 of their back holomem. Play rock-paper-scissors with your opponent until there's a winner. If you won, draw 3 cards."
+      }
+    ],
+    "arts": [],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD20-013.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD21-001",
+    "id": 1002512,
+    "name": "Achichi Mela",
+    "color": "Purple",
+    "card_type": "Oshi",
+    "life": 5,
+    "rarity": "OSR",
+    "bloom_level": null,
+    "hp": null,
+    "batonpass_cost": [],
+    "tags": [
+      "ASOBI★MAWARI-TAI!"
+    ],
+    "skills": [
+      {
+        "kind": "oshi_stage_skill",
+        "name": "Salamander's Repayment",
+        "cost": null,
+        "limit": null,
+        "text": "When your holomem collabs, if your center holomem is <Achichi Mela>, draw 1 card and archive 1 card from your hand."
+      },
+      {
+        "kind": "oshi_skill",
+        "name": "A Blessing, Ya Hear!",
+        "cost": "-2",
+        "limit": "1/Turn",
+        "text": "[1/Turn] Choose 1 holomem on your stage. During this turn, the chosen holomem gets Arts+10 for each holomem with Gift in your archive. Additionally, if the chosen holomem is <Achichi Mela>, it requires -1 colorless for its Arts."
+      }
+    ],
+    "arts": [],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD21-001.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD21-002",
+    "id": 1002522,
+    "name": "Achichi Mela",
+    "color": "Purple",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": "Debut",
+    "hp": 90,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "FLOW GLOW"
+    ],
+    "skills": [
+      {
+        "kind": "skill",
+        "name": "Fiery Flame",
+        "cost": null,
+        "limit": null,
+        "text": "When played to Stage: Search deck for 1 Red Cheer and attach it to this holomem."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Fiery Flame",
+        "cost_symbols": [
+          "Purple"
+        ],
+        "damage": 20,
+        "text": ""
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD21-002.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD21-003",
+    "id": 1002523,
+    "name": "Achichi Mela",
+    "color": "Purple",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "U",
+    "bloom_level": "1st",
+    "hp": 130,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "FLOW GLOW"
+    ],
+    "skills": [
+      {
+        "kind": "skill",
+        "name": "Inferno Strike",
+        "cost": null,
+        "limit": null,
+        "text": "Arts Deals 90 damage if Achichi Mela has 2+ Cheers."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Inferno Strike",
+        "cost_symbols": [
+          "Purple",
+          "◇"
+        ],
+        "damage": 90,
+        "text": ""
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD21-003.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD21-004",
+    "id": 1002513,
+    "name": "Achichi Mela",
+    "color": "Purple",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": "1st",
+    "hp": 160,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "#ASOBI★MAWARI-TAI!"
+    ],
+    "skills": [
+      {
+        "kind": "gift",
+        "name": "Fire Safety in Place!",
+        "cost": null,
+        "limit": null,
+        "text": "This holomem takes -20 Arts damage."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Energetic Hard Worker",
+        "cost_symbols": [
+          "Purple"
+        ],
+        "damage": 30,
+        "text": "Draw 1 card, and archive 1 card from your hand."
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD21-004.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD21-005",
+    "id": 1002524,
+    "name": "Sophia Sorashina",
+    "color": "Blue",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": "Debut",
+    "hp": 80,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "FLOW GLOW"
+    ],
+    "skills": [
+      {
+        "kind": "skill",
+        "name": "Flame Fan",
+        "cost": null,
+        "limit": null,
+        "text": "When Collabed: Deal 20 damage to opponent Back holomem."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Flame Fan",
+        "cost_symbols": [
+          "Blue"
+        ],
+        "damage": 20,
+        "text": ""
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD21-005.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD21-006",
+    "id": 1002514,
+    "name": "Achichi Mela",
+    "color": "Purple",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "R",
+    "bloom_level": "1st",
+    "hp": 160,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "#ASOBI★MAWARI-TAI!"
+    ],
+    "skills": [
+      {
+        "kind": "gift",
+        "name": "Blessing Power",
+        "cost": null,
+        "limit": null,
+        "text": "If this holomem is downed, you may choose 1~2 cheers attached to this holomem, and reattach them divided as you choose to your other holomem."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Now Is the Time to Show My Firefighting Skills!",
+        "cost_symbols": [
+          "Purple",
+          "◇"
+        ],
+        "damage": 60,
+        "text": ""
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD21-006.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD21-007",
+    "id": 1002525,
+    "name": "Sophia Sorashina",
+    "color": "Blue",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "U",
+    "bloom_level": "1st",
+    "hp": 130,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "FLOW GLOW"
+    ],
+    "skills": [
+      {
+        "kind": "skill",
+        "name": "Blaze Nova",
+        "cost": null,
+        "limit": null,
+        "text": "Deal 130 damage to opponent Center holomem."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Blaze Nova",
+        "cost_symbols": [
+          "Blue",
+          "◇"
+        ],
+        "damage": 130,
+        "text": ""
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD21-007.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD21-008",
+    "id": 1002526,
+    "name": "Mela Mela Live!",
+    "color": "Colorless",
+    "card_type": "Support",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": null,
+    "hp": null,
+    "batonpass_cost": [],
+    "tags": [
+      "Support",
+      "Event",
+      "LIMITED"
+    ],
+    "skills": [
+      {
+        "kind": "event",
+        "name": "Mela Mela Live!",
+        "cost": null,
+        "limit": "LIMITED",
+        "text": "LIMITED: Look at the top 5 cards of your deck; attach 1 Red Cheer to your holomem, or add 1 Red holomem to hand."
+      }
+    ],
+    "arts": [],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD21-008.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD21-009",
+    "id": 1002527,
+    "name": "Flame Penlight",
+    "color": "Colorless",
+    "card_type": "Support",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": null,
+    "hp": null,
+    "batonpass_cost": [],
+    "tags": [
+      "Support",
+      "Tool"
+    ],
+    "skills": [
+      {
+        "kind": "item",
+        "name": "Flame Penlight",
+        "cost": null,
+        "limit": null,
+        "text": "The Red Holomem equipped with this card gets Arts +20 damage."
+      }
+    ],
+    "arts": [],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD21-009.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hSD21-010",
+    "id": 1002528,
+    "name": "Manager-chan",
+    "color": "Colorless",
+    "card_type": "Support",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": null,
+    "hp": null,
+    "batonpass_cost": [],
+    "tags": [
+      "Support",
+      "Staff",
+      "LIMITED"
+    ],
+    "skills": [
+      {
+        "kind": "event",
+        "name": "Manager Support",
+        "cost": null,
+        "limit": "LIMITED",
+        "text": "LIMITED: Return your entire hand to the deck, shuffle, then draw 5 cards."
+      }
+    ],
+    "arts": [],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hSD21-010.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hBP10-001",
+    "id": 1002529,
+    "name": "Ichijou Ririka & Juufuutei Raden",
+    "color": "Yellow",
+    "card_type": "Oshi",
+    "life": 5,
+    "rarity": "OSR",
+    "bloom_level": null,
+    "hp": null,
+    "batonpass_cost": [],
+    "tags": [
+      "ReGLOSS",
+      "#DEV_IS"
+    ],
+    "skills": [
+      {
+        "kind": "oshi_stage_skill",
+        "name": "Glory Echo",
+        "cost": null,
+        "limit": "1/Turn",
+        "text": "[1/Turn] Look at the top 3 cards of your Deck and add 1 ReGLOSS or Support to hand."
+      }
+    ],
+    "arts": [],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hBP10-001.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hBP10-002",
+    "id": 1002530,
+    "name": "Ichijou Ririka",
+    "color": "Yellow",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": "Debut",
+    "hp": 90,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "ReGLOSS",
+      "#DEV_IS"
+    ],
+    "skills": [
+      {
+        "kind": "skill",
+        "name": "CEO Greeting",
+        "cost": null,
+        "limit": null,
+        "text": "When played to Stage: Draw 1 card if a ReGLOSS holomem is on your Stage."
+      }
+    ],
+    "arts": [
+      {
+        "name": "CEO Greeting",
+        "cost_symbols": [
+          "Yellow"
+        ],
+        "damage": 20,
+        "text": ""
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hBP10-002.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hBP10-003",
+    "id": 1002515,
+    "name": "Aki Rosenthal",
+    "color": "Red",
+    "card_type": "Oshi",
+    "life": 5,
+    "rarity": "OSR",
+    "bloom_level": null,
+    "hp": null,
+    "batonpass_cost": [],
+    "tags": [
+      "1st Gen"
+    ],
+    "skills": [
+      {
+        "kind": "oshi_stage_skill",
+        "name": "The Strongest Tamer",
+        "cost": null,
+        "limit": "1/Turn",
+        "text": "[1/Turn] When your Red Holomem blooms, you may look at the top 3 cards of your Deck and add 1 Cheer or Support to hand."
+      }
+    ],
+    "arts": [],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hBP10-003.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hBP10-004",
+    "id": 1002531,
+    "name": "Ichijou Ririka",
+    "color": "Yellow",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "R",
+    "bloom_level": "1st",
+    "hp": 140,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "ReGLOSS",
+      "#DEV_IS"
+    ],
+    "skills": [
+      {
+        "kind": "skill",
+        "name": "Glory Showcase",
+        "cost": null,
+        "limit": null,
+        "text": "Arts Deals 140 damage to opponent Center holomem."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Glory Showcase",
+        "cost_symbols": [
+          "Yellow",
+          "◇"
+        ],
+        "damage": 140,
+        "text": ""
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hBP10-004.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hBP10-005",
+    "id": 1002532,
+    "name": "Juufuutei Raden",
+    "color": "Yellow",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": "Debut",
+    "hp": 90,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "ReGLOSS",
+      "#DEV_IS"
+    ],
+    "skills": [
+      {
+        "kind": "skill",
+        "name": "Rakugo Opening",
+        "cost": null,
+        "limit": null,
+        "text": "When played to Stage: Add 1 ReGLOSS Holomem from Archive to hand."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Rakugo Opening",
+        "cost_symbols": [
+          "Yellow"
+        ],
+        "damage": 20,
+        "text": ""
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hBP10-005.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hBP10-006",
+    "id": 1002516,
+    "name": "Suzuna Tsuzuri",
+    "color": "Yellow",
+    "card_type": "Oshi",
+    "life": 5,
+    "rarity": "OSR",
+    "bloom_level": null,
+    "hp": null,
+    "batonpass_cost": [],
+    "tags": [
+      "DEV_IS"
+    ],
+    "skills": [
+      {
+        "kind": "oshi_stage_skill",
+        "name": "A Courier's Job",
+        "cost": null,
+        "limit": "1/Turn",
+        "text": "[1/Turn] When your Yellow Holomem uses an Arts, you may attach 1 Yellow Cheer from your Archive to 1 of your Backstage Holomem."
+      }
+    ],
+    "arts": [],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hBP10-006.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hBP10-007",
+    "id": 1002517,
+    "name": "Shishiro Botan",
+    "color": "White",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": "Debut",
+    "hp": 120,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "#Gen 5"
+    ],
+    "skills": [],
+    "arts": [
+      {
+        "name": "One More Time!",
+        "cost_symbols": [
+          "White"
+        ],
+        "damage": 10,
+        "text": "[Center Position Only] [1/Turn] After using this Arts, you may use this Arts once more."
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hBP10-007.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hBP10-008",
+    "id": 1002533,
+    "name": "Todoroki Riona",
+    "color": "Red",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": "Debut",
+    "hp": 80,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "FLOW GLOW",
+      "#DEV_IS"
+    ],
+    "skills": [
+      {
+        "kind": "skill",
+        "name": "Baby Mode",
+        "cost": null,
+        "limit": null,
+        "text": "When Collabed: Deal 20 damage to opponent Center."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Baby Mode",
+        "cost_symbols": [
+          "Red"
+        ],
+        "damage": 20,
+        "text": ""
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hBP10-008.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hBP10-009",
+    "id": 1002534,
+    "name": "Todoroki Riona",
+    "color": "Red",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "U",
+    "bloom_level": "1st",
+    "hp": 130,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "FLOW GLOW",
+      "#DEV_IS"
+    ],
+    "skills": [
+      {
+        "kind": "skill",
+        "name": "Riona Roar",
+        "cost": null,
+        "limit": null,
+        "text": "Arts Deals 90 damage."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Riona Roar",
+        "cost_symbols": [
+          "Red",
+          "◇"
+        ],
+        "damage": 90,
+        "text": ""
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hBP10-009.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
+  },
+  {
+    "card_number": "hBP10-010",
+    "id": 1002535,
+    "name": "Hoto Shiori",
+    "color": "Blue",
+    "card_type": "holomem",
+    "life": null,
+    "rarity": "C",
+    "bloom_level": "Debut",
+    "hp": 80,
+    "batonpass_cost": [
+      "◇"
+    ],
+    "tags": [
+      "FLOW GLOW",
+      "#DEV_IS"
+    ],
+    "skills": [
+      {
+        "kind": "skill",
+        "name": "Vocal Practice",
+        "cost": null,
+        "limit": null,
+        "text": "When played to Stage: Draw 1 card."
+      }
+    ],
+    "arts": [
+      {
+        "name": "Vocal Practice",
+        "cost_symbols": [
+          "Blue"
+        ],
+        "damage": 20,
+        "text": ""
+      }
+    ],
+    "illustrator": "Official / Cover Corp",
+    "expansion": "Pre-Release Expansion",
+    "release_date": "2026",
+    "image_path": "images/hBP10-010.png",
+    "extra": {
+      "unofficial": true,
+      "prerelease": true
+    }
   }
 ]
