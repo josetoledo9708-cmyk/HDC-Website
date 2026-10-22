@@ -1,5 +1,29 @@
 # Notas de versión
 
+## 0.0.35.3 — 2026-10-22 — Open Alpha
+
+### Español
+
+- Corregido Siguiente fase después de Bloom, efectos al colocar holomem y habilidades activadas: los controles recuperan su estado al terminar la acción.
+- Corregida la selección del siguiente Arts: no se pierden ni se sobrescriben elecciones durante el ataque anterior. Los objetivos se aceptan únicamente en el paso de apuntar.
+- El cambio de fase no se queda solicitado por pulsaciones durante otra acción; Cancelar sigue disponible durante la elección de objetivo y Baton Pass.
+- Las selecciones de holomem caducadas se cierran y rechazan respuestas tardías. Las decisiones al agotarse el turno se resuelven por el protocolo compartido en Multijugador.
+- Unificado el bloqueo de acciones en control manual del rival y las protecciones de edición de cartas del modo tester durante ataques.
+- Limpieza de selectores, flechas, arrastre y corrutinas al cancelar o terminar una partida. Los fallos de una acción ya no dejan una espera silenciosa.
+- Las guías iniciales se pausan mientras están abiertas las notas de actualización y retoman el mismo paso al cerrarlas.
+- Incorporadas las confirmaciones reales de Access; los casos sin comprobar conservan su estado.
+
+### English
+
+- Fixed Next Phase after Bloom, holomem placement effects and activated abilities: controls return to their correct state when the action ends.
+- Fixed selection of the next Arts: choices are no longer lost or overwritten while the previous attack is resolving. Targets are accepted only during the targeting step.
+- Phase changes are no longer queued by clicks during another action; Cancel remains available while selecting an attack target or Baton Pass target.
+- Expired holomem selections close and reject late replies. Decisions when the turn expires are resolved through the shared Multiplayer protocol.
+- Unified action blocking for manual opponent control and tester card-editing protection during attacks.
+- Selectors, arrows, dragging and owned coroutines are cleaned up on cancellation or match end. Action failures no longer leave a silent wait.
+- First-visit guides pause while update notes are open and resume the same step when the notes close.
+- Included genuine Access confirmations; unverified cases keep their existing status.
+
 ## 0.0.35.2 — 2026-10-21 — Open Alpha
 
 ### Español

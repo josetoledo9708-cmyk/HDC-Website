@@ -7,9 +7,9 @@ if (window.location.pathname === '/' || window.location.pathname.endsWith('/inde
 
 document.addEventListener('DOMContentLoaded', () => {
     const WORKER_MANIFEST_URL = 'https://tcgholo-gate.josetoledo9708.workers.dev/v1/manifest';
-    const FALLBACK_VERSION = '0.0.35.2';
-    const FALLBACK_DOWNLOAD_URL = 'https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-Setup-0.0.35.2.exe';
-    const FALLBACK_ANDROID_URL = 'https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-0.0.35.2.apk';
+    const FALLBACK_VERSION = '0.0.35.3';
+    const FALLBACK_DOWNLOAD_URL = 'https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-Setup-0.0.35.3.exe';
+    const FALLBACK_ANDROID_URL = 'https://pub-b1cb36673f704b26af8611855b66768c.r2.dev/HDC-0.0.35.3.apk';
 
     const mainDownloadBtn = document.getElementById('mainDownloadBtn');
     const navDownloadBtn = document.getElementById('navDownloadBtn');
