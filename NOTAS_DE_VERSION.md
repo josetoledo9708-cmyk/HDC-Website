@@ -1,5 +1,51 @@
 # Notas de versión
 
+## 0.0.35.5 — 2026-10-23 — Open Alpha
+
+### Español
+
+- Las elecciones de Cheers del Stage permiten identificar y elegir primero el holomem de origen, después la Cheer y el destino o continuación. Revisadas transferencias, costes de Archive, colores y cantidades exactas.
+- Corregido el enlace de las Oshi Skills normal y SP de Juufuutei Raden hSD15-001 y Sakura Miko hSD16-001 con sus nombres del catálogo. La SP de Raden recupera un Event #Mushroom.
+- Implementada la habilidad adicional de Mori Calliope's Scythe hBP02-088: al acoplarla desde la mano a una Mori Calliope 1st o superior, archiva la carta superior del mazo.
+- Revisado el Collab de Fubuki hSD14-008 para acoplar una Mascot legal del Archive respetando sus restricciones y notificando sus eventos.
+- La Oshi hBP03-003 de Sakura Miko recupera 35P por nombre; su SP permite elegir y ordenar las cartas devueltas al fondo antes de robar hasta cinco.
+- Amazing PC excluye Buzz y anuncia la carta revelada después de elegir la Cheer para pagar su coste.
+- La marca de SP utilizada emplea el gráfico existente de SP Oshi Skill.
+- Actualizadas las confirmaciones de efectos con el historial completo de Access y las confirmaciones del jugador.
+
+- El tutorial guiado conserva su rival automático aunque el modo tester tenga desactivada la IA para otras partidas.
+
+- Corregidos el texto y el filtro de Creator PC hBP08-091: la primera parte coloca un Debut del mazo con el Extra que permite cualquier cantidad de copias; después baraja y conserva la colocación de un Debut del Archive.
+
+- Corregidos los filtros #ID Gen 1 de Moona: transferencias, bonus de Arts y Gift. Moon Singer comparte el límite de una vez por turno entre copias.
+- El Bloom de Moona hBP08-054 permite elegir de 1 a 3 destinatarios distintos. Su Arts pregunta antes de archivar tres Cheers para robar tres.
+- Bloom Stage permite repetir Bloom tanto sobre otra 1st compatible como hacia 2nd, respetando Life y las demás reglas.
+- Las Oshi Stage Skills pasivas ya no aparecen como botones ni consumen el uso de la habilidad normal.
+- Guruguru TIME! muestra Piedra/Papel/Tijeras y cada resultado, repite empates y roba tres solo al ganar. Hay 30 segundos para responder; la espera al rival se devuelve al reloj del turno.
+- La demo web utiliza los mazos oficiales de Achichi Mela y Hyakuto Kyoko como predeterminados.
+
+### English
+
+- Stage Cheer choices identify and select the source holomem first, then the physical Cheer and its destination or next effect step. Transfers, Archive costs, colors and exact counts have been reviewed.
+- Fixed normal and SP Oshi Skill matching for Juufuutei Raden hSD15-001 and Sakura Miko hSD16-001. Raden's SP recovers a #Mushroom Event.
+- Implemented Mori Calliope's Scythe hBP02-088's additional ability: attaching it from hand to a 1st-or-higher Mori Calliope archives the top card of your deck.
+- Updated Fubuki hSD14-008's Collab to attach a legal Mascot from Archive while respecting attachment restrictions and emitting its events.
+- Sakura Miko hBP03-003 recovers 35P by card name. Her SP lets you choose and order the cards returned to the bottom before drawing up to five.
+- Amazing PC excludes Buzz and reveals the searched card after you choose its Stage Cheer cost.
+- The used SP indicator uses the existing SP Oshi Skill graphic.
+- Updated effect confirmations from the full Access history and player confirmations.
+
+- The guided tutorial keeps its scripted opponent even when tester settings disable AI for other matches.
+
+- Corrected Creator PC hBP08-091 text and Deck filter: first place a Debut with the Extra allowing any number of copies, then shuffle and place a Debut from Archive.
+
+- Fixed Moona #ID Gen 1 filters for Cheer transfers, Arts bonuses and Gifts. Moon Singer now shares its once-per-turn limit across copies.
+- Moona hBP08-054 Bloom lets you choose 1–3 different recipients. Its Arts asks before archiving three Cheers to draw three.
+- Bloom Stage supports another compatible 1st as well as 2nd Bloom, preserving Life requirements and other rules.
+- Passive Oshi Stage Skills no longer appear as activation buttons or consume the normal skill use.
+- Guruguru TIME! displays Rock/Paper/Scissors and round results, repeats ties and draws three only on a win. Responses have a 30-second limit; opponent response time is refunded to the turn clock.
+- The web demo defaults to the official Achichi Mela and Hyakuto Kyoko decks.
+
 ## 0.0.35.4 — 2026-10-22 — Open Alpha
 
 ### Español
