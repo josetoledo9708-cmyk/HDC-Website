@@ -1,6 +1,6 @@
 {
-  "version": "0.0.35.6",
-  "date": "2026-10-23",
-  "notes": "HDC 0.0.35.6\n- Arte oficial sin SAMPLE para hSD20/hSD21 y la variante holoAN de esos mazos.\n- Piedra, papel o tijeras de efectos con la misma presentación y animaciones del inicio de partida, flotando sobre el campo. Conserva 30 segundos, repetición de empates y devolución del tiempo de espera al rival.\n- Nuevo marcador SP Oshi Skill con transparencia, aprobado por el jugador.\n- Corregida la identificación de Oshi Stage Skills en QA. Ambos efectos de Kyoko Oshi y Mela Oshi están confirmados; se incorporan también las confirmaciones recientes de Moona.\n",
-  "updatedAt": "2026-10-24T00:27:31.323784+00:00"
+  "version": "0.0.35.7",
+  "date": "2026-10-24",
+  "notes": "HDC 0.0.35.7 — 24 de octubre de 2026\n- Noel: ambas habilidades reaccionan al evento correspondiente. La SP pregunta tras el Down, cobra holo Power y reduce la pérdida antes de retirar Life.\n- Pekora hBP05-016: tira un dado por cada carta debajo de la activa.\n- AREA 15: elección de cantidad, destinatarios distintos y Cheer del Archive.\n- SP de Choco: selección de 1 a 4 eventos #Food. SP de Iofi: selección de los holomem que se revelan.\n- Tester local: edición de daño o daño con efectos, Bloom repetido y cambio de Center/Collab desde Stage, mano o mazo. Cheer devuelta a Cheer Deck.\n- Perfil: Listo/Cerrar guarda la selección; retirado el botón Guardar independiente.\n- IA: planificación de ataques, asignación de Cheer y orden de preparación mejorados. Sin promesa de una tasa de victorias concreta.\n- Ocultos los botones manuales de 13 habilidades exclusivas del turno rival con pregunta reactiva conservada.\n- Actualizadas las confirmaciones reales y los estados pendientes de efectos.\n",
+  "updatedAt": "2026-10-24T07:56:17.919690+00:00"
 }

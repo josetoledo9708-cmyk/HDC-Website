@@ -1,3 +1,33 @@
+# 0.0.35.7 — 2026-10-24
+
+## Español
+
+HDC 0.0.35.7 — 24 de octubre de 2026
+- Noel: ambas habilidades reaccionan al evento correspondiente. La SP pregunta tras el Down, cobra holo Power y reduce la pérdida antes de retirar Life.
+- Pekora hBP05-016: tira un dado por cada carta debajo de la activa.
+- AREA 15: elección de cantidad, destinatarios distintos y Cheer del Archive.
+- SP de Choco: selección de 1 a 4 eventos #Food. SP de Iofi: selección de los holomem que se revelan.
+- Tester local: edición de daño o daño con efectos, Bloom repetido y cambio de Center/Collab desde Stage, mano o mazo. Cheer devuelta a Cheer Deck.
+- Perfil: Listo/Cerrar guarda la selección; retirado el botón Guardar independiente.
+- IA: planificación de ataques, asignación de Cheer y orden de preparación mejorados. Sin promesa de una tasa de victorias concreta.
+- Ocultos los botones manuales de 13 habilidades exclusivas del turno rival con pregunta reactiva conservada.
+- Actualizadas las confirmaciones reales y los estados pendientes de efectos.
+
+## English
+
+HDC 0.0.35.7 — October 24, 2026
+- Noel: both skills react to their events. The SP asks after Down, pays holo Power, then reduces Life loss before any Life card is removed.
+- Pekora hBP05-016: rolls once for each card beneath the active card.
+- AREA 15: choose the number, distinct recipients and physical archive Cheer.
+- Choco SP: select 1 to 4 #Food events. Iofi SP: choose the holomem to reveal.
+- Local tester: edit damage counters or apply damage with effects, repeat Bloom, and change Center/Collab from Stage, hand or deck. Returned Cheer goes to Cheer Deck.
+- Profile: Done/Close saves the selection; removed the separate Save button.
+- AI: improved attack planning, Cheer assignment and preparation order. No claimed win-rate increase.
+- Hidden manual buttons for 13 opponent-turn-only skills while retaining their reactive confirmation.
+- Updated real player confirmations and pending effect statuses.
+
+---
+
 # Notas de versión
 
 ## 0.0.35.6 — 2026-10-23
