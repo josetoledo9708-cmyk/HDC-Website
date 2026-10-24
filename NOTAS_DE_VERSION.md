@@ -1,5 +1,23 @@
 # Notas de versión
 
+## 0.0.35.6 — 2026-10-23
+
+### Español
+
+HDC 0.0.35.6
+- Arte oficial sin SAMPLE para hSD20/hSD21 y la variante holoAN de esos mazos.
+- Piedra, papel o tijeras de efectos con la misma presentación y animaciones del inicio de partida, flotando sobre el campo. Conserva 30 segundos, repetición de empates y devolución del tiempo de espera al rival.
+- Nuevo marcador SP Oshi Skill con transparencia, aprobado por el jugador.
+- Corregida la identificación de Oshi Stage Skills en QA. Ambos efectos de Kyoko Oshi y Mela Oshi están confirmados; se incorporan también las confirmaciones recientes de Moona.
+
+### English
+
+HDC 0.0.35.6
+- Clean official artwork for hSD20/hSD21 and the holoAN printing used by those decks.
+- Card-effect rock, paper, scissors reuses the pre-match presentation and animations, floating over the field. Keeps the 30-second response window, tie repeats and opponent wait-time refund.
+- Player-approved transparent SP Oshi Skill marker.
+- Fixed QA identification of Oshi Stage Skills. Both effects of Kyoko Oshi and Mela Oshi are confirmed, alongside recent Moona confirmations.
+
 ## 0.0.35.5 — 2026-10-23 — Open Alpha
 
 ### Español
