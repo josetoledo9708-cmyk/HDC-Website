@@ -1,3 +1,35 @@
+# 0.0.35.8 — 2026-10-25
+
+## Español
+
+HDC 0.0.35.8 — 25 de octubre de 2026
+- Tutorial rehecho como una sola partida guiada: preparación, Spot, Collab, Bloom, Oshi, Baton Pass, LIMITED, Buzz y Arts con efecto. Recorrido confirmado por el jugador.
+- El Center vacío se completa durante End Phase, antes de iniciar el siguiente turno.
+- Replacement de Sora distingue holomem de origen, Cheer y destinatario. Sub PC permite elegir el apoyo y ordenar las cartas restantes al fondo.
+- SorAZ Sympathy muestra temporalmente su +50 al elegir objetivo cuando hay AZKi; el bono corresponde solo a ese Arts.
+- Aura azul de disponibilidad en colocación inicial, cartas jugables de la mano, Cheer pendiente, Collab, Baton Pass y botones de acciones/confirmación. Celeste más claro en la mano y hover verde.
+- El marcador SP aparece desde el inicio en las Oshi con SP disponible y desaparece al usarla. Las Oshi sin SP no llevan marcador.
+- Crear cuenta cierra el formulario y muestra «Cuenta creada y sesión iniciada». Las respuestas incompletas no se guardan como sesión válida.
+- Actualizadas las confirmaciones reales y los estados pendientes de efectos desde Access. Conservados el arte limpio y los mazos Mela/Kyoko de la demo.
+
+No incluye la copia de Arts de Elizabeth, ambos marcos Suisei ni todos los controles del aura global. Android físico sigue pendiente de validación.
+
+## English
+
+HDC 0.0.35.8 — October 25, 2026
+- Rebuilt the tutorial as one guided match covering setup, Spot, Collab, Bloom, Oshi, Baton Pass, LIMITED, Buzz and Arts effects. Walkthrough confirmed by the player.
+- Empty Center positions are filled during End Phase, before the next turn starts.
+- Sora's Replacement distinguishes the donor holomem, physical Cheer and recipient. Sub PC lets you choose the support and order the remaining cards on the bottom.
+- SorAZ Sympathy temporarily shows its +50 while selecting a target when AZKi is present; this bonus applies only to that Arts.
+- Blue availability aura for initial placement, playable hand cards, pending Cheer, Collab, Baton Pass and action/confirmation buttons. Brighter light blue in hand, with green hover.
+- The SP marker appears from the start on Oshi with an unused SP and disappears when used. Oshi without an SP have no marker.
+- Successful account creation closes the form and shows “Account created and signed in”. Incomplete replies are not saved as valid sessions.
+- Updated real player confirmations and pending effect statuses from Access. Preserved clean artwork and the Mela/Kyoko demo decks.
+
+Does not include Elizabeth's Arts-copy Gift, the two Suisei frames or every control covered by the global aura request. Physical Android validation remains pending.
+
+---
+
 # 0.0.35.7 — 2026-10-24
 
 ## Español

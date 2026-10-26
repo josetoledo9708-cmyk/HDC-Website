@@ -1,6 +1,6 @@
 {
-  "version": "0.0.35.6",
-  "date": "2026-10-23",
-  "notes": "HDC 0.0.35.6\n- Arte oficial sin SAMPLE para hSD20/hSD21 y la variante holoAN de esos mazos.\n- Piedra, papel o tijeras de efectos con la misma presentación y animaciones del inicio de partida, flotando sobre el campo. Conserva 30 segundos, repetición de empates y devolución del tiempo de espera al rival.\n- Nuevo marcador SP Oshi Skill con transparencia, aprobado por el jugador.\n- Corregida la identificación de Oshi Stage Skills en QA. Ambos efectos de Kyoko Oshi y Mela Oshi están confirmados; se incorporan también las confirmaciones recientes de Moona.",
-  "updatedAt": "2026-10-24T08:22:21.567497+00:00"
+  "version": "0.0.35.8",
+  "date": "2026-10-25",
+  "notes": "HDC 0.0.35.8 — 25 de octubre de 2026\n- Tutorial rehecho como una sola partida guiada: preparación, Spot, Collab, Bloom, Oshi, Baton Pass, LIMITED, Buzz y Arts con efecto. Recorrido confirmado por el jugador.\n- El Center vacío se completa durante End Phase, antes de iniciar el siguiente turno.\n- Replacement de Sora distingue holomem de origen, Cheer y destinatario. Sub PC permite elegir el apoyo y ordenar las cartas restantes al fondo.\n- SorAZ Sympathy muestra temporalmente su +50 al elegir objetivo cuando hay AZKi; el bono corresponde solo a ese Arts.\n- Aura azul de disponibilidad en colocación inicial, cartas jugables de la mano, Cheer pendiente, Collab, Baton Pass y botones de acciones/confirmación. Celeste más claro en la mano y hover verde.\n- El marcador SP aparece desde el inicio en las Oshi con SP disponible y desaparece al usarla. Las Oshi sin SP no llevan marcador.\n- Crear cuenta cierra el formulario y muestra «Cuenta creada y sesión iniciada». Las respuestas incompletas no se guardan como sesión válida.\n- Actualizadas las confirmaciones reales y los estados pendientes de efectos desde Access. Conservados el arte limpio y los mazos Mela/Kyoko de la demo.\n\nNo incluye la copia de Arts de Elizabeth, ambos marcos Suisei ni todos los controles del aura global. Android físico sigue pendiente de validación.\n",
+  "updatedAt": "2026-10-26T04:53:06.295128+00:00"
 }
