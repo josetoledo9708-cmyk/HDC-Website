@@ -1,3 +1,37 @@
+# 0.0.35.9 — 2026-10-27
+
+## Español
+
+HDC 0.0.35.9 — 27 de octubre de 2026
+- Cosméticos: vista ampliada con zoom y desplazamiento; playmats alineados para conservar la parte superior de la ilustración. Los dorsos se muestran en la vista previa de carta.
+- Sleeves independientes para el mazo principal y las Cheers, con opción de heredar la selección o conservar el dorso estándar.
+- Créditos por ilustración con iconos oficiales de redes y enlaces verificados disponibles. Xfolio usa su corazón y la web personal un globo, sin marcos. El catálogo de artistas y sleeves seguirá ampliándose.
+- Marcadores SP por talento y anuncios animados al activar la SP, usando el mismo diseño. Solo aparecen en Oshi con SP disponible y se retiran al usarla.
+- Vista previa de cartas adaptada a Android: más espacio para detalles, encabezado y textos medidos, desplazamiento del contenido y botón Reportar fallos bajo el perfil rival.
+- Menú principal con más cartas flotantes de la Oshi del tema, brillos, mayor opacidad y esquinas redondeadas.
+- Camino a la beta bajo Meta Decks: progreso de efectos comprobados, línea azul animada y estrella. Consulta el contador público y conserva un dato guardado identificado si no hay conexión.
+- Revisados los informes completos y confirmaciones de Access. La barra pública usa confirmaciones directas y excluye aprobaciones heredadas y reparaciones pendientes de prueba.
+
+Publicada para todos. Pruebas físicas Android pendientes. Los reportes nuevos de Okayu Oshi y Nene (Bloom/Arts/crítico, hBP07-083) siguen pendientes; esta versión no los declara reparados. La web y Access tienen publicaciones separadas del cliente.
+
+
+## English
+
+HDC 0.0.35.9 — October 27, 2026
+- Cosmetics: enlarged previews with zoom and panning; playmats preserve the top of the illustration. Card previews can show the selected reverse.
+- Independent sleeves for the main deck and Cheer cards, with inheritance and standard-back options.
+- Per-artwork credits with official social icons and available verified links. Xfolio uses its heart and personal websites use a globe, without frames. More artists and sleeves will be added.
+- Talent-specific SP markers and animated activation announcements use the same design. Markers only appear on Oshi with an available SP and disappear when used.
+- Android card details: more room, measured headers and text, scrollable content, and Report bugs below the opponent profile.
+- Main menu: more floating cards matching the theme Oshi, animated finishes, increased opacity and rounded corners.
+- Road to beta below Meta Decks: verified-effects progress with an animated blue line and star. Reads the public counter and labels its saved fallback when offline.
+- Reviewed complete Access reports and confirmations. Public progress counts direct confirmations, excluding inherited approvals and fixes awaiting testing.
+
+Available to everyone. Physical Android tests pending. New Okayu Oshi and Nene reports (Bloom/Arts/critical, hBP07-083) remain pending and are not claimed as fixed. Website and Access releases are separate from the game client.
+
+
+---
+
 # 0.0.35.8 — 2026-10-25
 
 ## Español

@@ -1,0 +1,53 @@
+# Cloudflare Pages: static hosting only, no Functions.
+/*
+  Access-Control-Allow-Origin: *
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+
+/images/*
+  Cache-Control: public, max-age=86400
+
+/images_ja/*
+  Cache-Control: public, max-age=86400
+
+/videos/*
+  Cache-Control: public, max-age=604800
+
+/demo/Build/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/demo/StreamingAssets/*
+  Cache-Control: public, max-age=86400
+
+/data/*
+  Cache-Control: public, max-age=60
+
+/*.js
+  Cache-Control: public, max-age=300
+
+/*.css
+  Cache-Control: public, max-age=300
+
+/*.html
+  Cache-Control: no-cache
+
+/
+  Cache-Control: no-cache
+
+/hdc
+  Cache-Control: no-cache
+
+/oshilive
+  Cache-Control: no-cache
+
+/builder
+  Cache-Control: no-cache
+
+/decks
+  Cache-Control: no-cache
+
+/metaoshi
+  Cache-Control: no-cache
+
+/demo/
+  Cache-Control: no-cache

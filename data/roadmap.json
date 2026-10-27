@@ -1,0 +1,287 @@
+[
+  {
+    "order": 1,
+    "id": "products",
+    "state": "planned",
+    "title": {
+      "es": "Productos de origen de las cartas",
+      "en": "Card product origins",
+      "ja": "カードの収録商品"
+    },
+    "description": {
+      "es": "Revisar y actualizar en qué productos aparece cada carta.",
+      "en": "Review and update the products containing each card.",
+      "ja": "各カードの収録商品を確認・更新します。"
+    }
+  },
+  {
+    "order": 2,
+    "id": "credits",
+    "state": "partial",
+    "title": {
+      "es": "Créditos y redes de artistas",
+      "en": "Artist credits and social links",
+      "ja": "イラストレーターとSNS"
+    },
+    "description": {
+      "es": "Iconos de redes y créditos preparados. Ampliar las atribuciones y enlaces verificados que todavía faltan.",
+      "en": "Credit and social icon interface prepared. Expand the remaining verified artist attributions and links.",
+      "ja": "クレジットとSNSアイコンを実装。確認済みの作者情報とリンクを追加します。"
+    }
+  },
+  {
+    "order": 3,
+    "id": "sp",
+    "state": "partial",
+    "title": {
+      "es": "Marcadores SP por talento",
+      "en": "Talent-specific SP markers",
+      "ja": "タレント別SPマーカー"
+    },
+    "description": {
+      "es": "Ampliar los marcadores SP por talento con el diseño de carril luminoso y su anuncio animado.",
+      "en": "Expand talent-specific SP markers with the glowing-track design and matching animated announcement.",
+      "ja": "光るトラックのデザインと連動するアニメーションで、タレント別SPマーカーを拡充します。"
+    }
+  },
+  {
+    "order": 4,
+    "id": "sounds",
+    "state": "planned",
+    "title": {
+      "es": "Sonidos básicos de juego",
+      "en": "Basic gameplay sounds",
+      "ja": "基本の効果音"
+    },
+    "description": {
+      "es": "Combate, robo, Cheer y otras acciones con controles de volumen.",
+      "en": "Combat, drawing, Cheer and other actions with volume controls.",
+      "ja": "戦闘、ドロー、エールなどの効果音と音量設定を追加します。"
+    }
+  },
+  {
+    "order": 5,
+    "id": "oshi-sounds",
+    "state": "planned",
+    "title": {
+      "es": "Sonidos de habilidades Oshi",
+      "en": "Oshi ability sounds",
+      "ja": "推しスキルの効果音"
+    },
+    "description": {
+      "es": "Sonidos asociados a cada habilidad sin duplicarse durante su resolución.",
+      "en": "Sounds tied to each ability without duplication during resolution.",
+      "ja": "各スキルに対応した効果音を重複せず再生します。"
+    }
+  },
+  {
+    "order": 6,
+    "id": "soundboard",
+    "state": "planned",
+    "title": {
+      "es": "Soundboard según la Oshi del tema",
+      "en": "Soundboard by theme Oshi",
+      "ja": "テーマの推し別サウンドボード"
+    },
+    "description": {
+      "es": "Más opciones para cada talento.",
+      "en": "More options for each talent.",
+      "ja": "各タレント向けの選択肢を追加します。"
+    }
+  },
+  {
+    "order": 7,
+    "id": "bgm",
+    "state": "planned",
+    "title": {
+      "es": "Música de fondo por Oshi",
+      "en": "Background music by Oshi",
+      "ja": "推し別BGM"
+    },
+    "description": {
+      "es": "Listas adaptadas al tema con pistas originales o autorizadas para su distribución.",
+      "en": "Theme-based playlists using original tracks or music authorized for distribution.",
+      "ja": "オリジナル曲または配信許可のある音源でテーマ別リストを作ります。"
+    }
+  },
+  {
+    "order": 8,
+    "id": "news",
+    "state": "planned",
+    "title": {
+      "es": "Novedades en el menú principal",
+      "en": "Main-menu news panel",
+      "ja": "メニューのお知らせ"
+    },
+    "description": {
+      "es": "Carrusel de eventos, productos y cartas reveladas con detalle y enlace de origen.",
+      "en": "Events, products and card reveals in a carousel with details and source links.",
+      "ja": "イベント、商品、公開カードを詳細と出典リンク付きで表示します。"
+    }
+  },
+  {
+    "order": 9,
+    "id": "streams",
+    "state": "planned",
+    "title": {
+      "es": "Transmisiones de torneos en Meta",
+      "en": "Tournament streams in Meta",
+      "ja": "Metaの大会配信"
+    },
+    "description": {
+      "es": "Acceso a torneos en directo y recientes desde el apartado Meta.",
+      "en": "Access live and recent tournaments from Meta.",
+      "ja": "Metaからライブ配信や最近の大会を見られるようにします。"
+    }
+  },
+  {
+    "order": 10,
+    "id": "presence",
+    "state": "planned",
+    "title": {
+      "es": "Amigos conectados",
+      "en": "Online friends",
+      "ja": "フレンドのオンライン状態"
+    },
+    "description": {
+      "es": "Mostrar disponibilidad y actualizar desconexiones y pausas.",
+      "en": "Show availability and update disconnections and pauses.",
+      "ja": "オンライン状態、切断、一時停止を反映します。"
+    }
+  },
+  {
+    "order": 11,
+    "id": "chat",
+    "state": "planned",
+    "title": {
+      "es": "Chat de texto en partida",
+      "en": "In-match text chat",
+      "ja": "対戦中のテキストチャット"
+    },
+    "description": {
+      "es": "Cuadro separado debajo del registro de acciones, con controles de usuario.",
+      "en": "Separate panel below the action log, with user controls.",
+      "ja": "行動ログの下に独立したチャット欄と操作設定を設けます。"
+    }
+  },
+  {
+    "order": 12,
+    "id": "messages",
+    "state": "planned",
+    "title": {
+      "es": "Mensajes privados entre amigos",
+      "en": "Private messages between friends",
+      "ja": "フレンド間の個別メッセージ"
+    },
+    "description": {
+      "es": "Mensajes, historial y permisos ligados a la amistad.",
+      "en": "Messages, history and permissions linked to friendship.",
+      "ja": "フレンド関係に基づく権限、履歴、メッセージを追加します。"
+    }
+  },
+  {
+    "order": 13,
+    "id": "ai",
+    "state": "planned",
+    "title": {
+      "es": "Mayor dificultad de IA",
+      "en": "Higher AI difficulty",
+      "ja": "AIの難易度向上"
+    },
+    "description": {
+      "es": "Ampliar la planificación existente y medir sus decisiones con partidas y escenarios reproducibles.",
+      "en": "Extend existing planning and evaluate decisions through matches and reproducible scenarios.",
+      "ja": "既存の思考を強化し、再現可能な対戦で判断を検証します。"
+    }
+  },
+  {
+    "order": 14,
+    "id": "challenges",
+    "state": "planned",
+    "title": {
+      "es": "Retos contra IA",
+      "en": "AI challenges",
+      "ja": "AIチャレンジ"
+    },
+    "description": {
+      "es": "Escenarios, objetivos y progreso verificable.",
+      "en": "Scenarios, objectives and verifiable progress.",
+      "ja": "シナリオ、目標、確認できる進捗を用意します。"
+    }
+  },
+  {
+    "order": 15,
+    "id": "google",
+    "state": "planned",
+    "title": {
+      "es": "Vincular cuenta con Google",
+      "en": "Link an account with Google",
+      "ja": "Googleアカウント連携"
+    },
+    "description": {
+      "es": "Vincular la cuenta HDC existente sin duplicar cuentas ni perder datos.",
+      "en": "Link an existing HDC account without duplication or data loss.",
+      "ja": "既存のHDCアカウントをデータを失わずに連携します。"
+    }
+  },
+  {
+    "order": 16,
+    "id": "spectator",
+    "state": "planned",
+    "title": {
+      "es": "Modo espectador",
+      "en": "Spectator mode",
+      "ja": "観戦モード"
+    },
+    "description": {
+      "es": "Ver partidas sincronizadas sin revelar cartas privadas.",
+      "en": "Watch synchronized matches without revealing private cards.",
+      "ja": "非公開のカードを隠したまま同期された対戦を観戦します。"
+    }
+  },
+  {
+    "order": 17,
+    "id": "full-web",
+    "state": "planned",
+    "title": {
+      "es": "Versión web completa",
+      "en": "Full web version",
+      "ja": "Web完全版"
+    },
+    "description": {
+      "es": "Sustituirá a la demo con cuentas, juego online, guardado y funciones completas compatibles con navegador.",
+      "en": "Replaces the demo with accounts, online play, saves and full browser-compatible features.",
+      "ja": "デモを置き換え、アカウント、オンライン、保存などをブラウザーに対応させます。"
+    }
+  },
+  {
+    "order": 18,
+    "id": "tournaments",
+    "state": "planned",
+    "title": {
+      "es": "Torneos automáticos de la comunidad",
+      "en": "Automated community tournaments",
+      "ja": "コミュニティ大会の自動運営"
+    },
+    "description": {
+      "es": "Inscripciones, emparejamientos, resultados y herramientas para organizadores.",
+      "en": "Registration, pairings, results and organizer tools.",
+      "ja": "参加登録、組み合わせ、結果、主催者用ツールを用意します。"
+    }
+  },
+  {
+    "order": 19,
+    "id": "beta",
+    "state": "planned",
+    "title": {
+      "es": "Beta",
+      "en": "Beta",
+      "ja": "ベータ版"
+    },
+    "description": {
+      "es": "La beta está vinculada al 100 % de efectos comprobados. Al completar la barra revelaremos una sorpresa.",
+      "en": "Beta is tied to 100% verified effects. Completing the bar will reveal a surprise.",
+      "ja": "効果の動作確認100%達成でベータ版へ。バー達成時にサプライズを公開します。"
+    }
+  }
+]

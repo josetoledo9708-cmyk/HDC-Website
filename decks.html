@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=0.0.30">
+    <link rel="stylesheet" href="roadmap.css">
+    <link rel="stylesheet" href="community.css?v=20261026">
 </head>
 <body class="metaoshi-page">
 
@@ -34,7 +36,6 @@
                 <a href="#capturas" class="nav-item" data-i18n="game_nav_gallery">Gallery</a>
                 <a href="#roadmap" class="nav-item" data-i18n="game_nav_roadmap">Roadmap</a>
                 <a href="#actualizacion" class="nav-item" data-i18n="game_nav_latest">v0.0.30</a>
-                <a href="https://discord.gg/5kYCm94rXc" target="_blank" rel="noopener noreferrer" class="nav-item" style="color: #5865F2; font-weight: 700;">💬 Discord</a>
             </nav>
             <div class="nav-actions">
                 <div class="lang-selector-wrapper">
@@ -48,6 +49,7 @@
                     <span>👾</span> Discord
                 </a>
                 <a href="#solicitar" id="navDownloadBtn" class="btn btn-sm btn-primary" data-i18n="game_nav_request">🔑 Request Access</a>
+                <a href="https://buymeacoffee.com/heyjoker" id="navSupportBtn" target="_blank" rel="noopener noreferrer" class="btn btn-sm" style="background: #ffdd00; color: #17120a; border: none;" data-i18n="game_nav_support">Apoyo</a>
             </div>
         </div>
     </header>
@@ -107,28 +109,6 @@
                         <span class="btn-sub" data-i18n="game_btn_request_sub">Limited Tester Slots in Discord</span>
                     </div>
                 </a>
-            </div>
-
-            <div class="hero-stats" style="margin-top: 40px;">
-                <div class="stat-card">
-                    <span class="stat-number" data-i18n="game_stat_langs">3 Languages</span>
-                    <span class="stat-label" data-i18n="game_stat_langs_sub">🇯🇵 JP · 🇺🇸 EN · 🇪🇸 ES</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-card">
-                    <span class="stat-number" data-i18n="game_stat_share">1-Click</span>
-                    <span class="stat-label" data-i18n="game_stat_share_sub">Share Deck Codes with Friends</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-card">
-                    <span class="stat-number" style="color: #fbbf24;" data-i18n="game_stat_testers">Limited</span>
-                    <span class="stat-label" data-i18n="game_stat_testers_sub">Alpha Tester Slots</span>
-                </div>
-                <div class="stat-divider"></div>
-                <div class="stat-card">
-                    <span class="stat-number" style="color: #c084fc;" data-i18n="game_stat_beta">Coming Soon</span>
-                    <span class="stat-label" data-i18n="game_stat_beta_sub">Global Open Beta</span>
-                </div>
             </div>
 
         </div>
@@ -321,37 +301,40 @@
             </div>
         </div>
     </section>
+    <section id="community-updates" class="community-updates" data-community-updates></section>
+
+    <section id="progreso" class="community-progress" data-community-progress></section>
 
     <!-- ROADMAP SECTION -->
-    <section id="roadmap" class="section" style="padding: 60px 0; background: rgba(0, 0, 0, 0.2);">
-        <div class="container">
-            <div class="section-header text-center">
-                <div class="badge-tag" data-i18n="game_sec_roadmap_tag">ROADMAP</div>
-                <h2 class="section-title" data-i18n="game_sec_roadmap_title">🗺️ Update Roadmap</h2>
-                <p class="section-description" data-i18n="game_sec_roadmap_desc">
-                    Development roadmap from Open Alpha v0.0.30 towards Open Beta release.
-                </p>
-            </div>
-
-            <div class="roadmap-timeline" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 30px;">
-                <div class="roadmap-step active-step" style="background: rgba(15, 23, 42, 0.8); border: 1px solid #38bdf8; border-radius: 14px; padding: 24px;">
-                    <span class="badge-tag" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8;">PHASE 1 · CURRENT</span>
-                    <h4 style="color: #fff; font-size: 18px; margin: 12px 0 8px;" data-i18n="game_phase1_title">🧪 Windows PC Testing & Testers</h4>
-                    <p style="color: #cbd5e1; font-size: 13px; line-height: 1.6;">Open Alpha available to everyone, with community feedback for bug fixing and game balance.</p>
-                </div>
-                <div class="roadmap-step" style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 24px;">
-                    <span class="badge-tag" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24;">PHASE 2 · COMING SOON</span>
-                    <h4 style="color: #fff; font-size: 18px; margin: 12px 0 8px;" data-i18n="game_phase2_title">📱 Android, 🐧 Linux & Spectator Mode</h4>
-                    <p style="color: #94a3b8; font-size: 13px; line-height: 1.6;">Mobile porting for Android, Linux executable, and spectator mode for matches.</p>
-                </div>
-                <div class="roadmap-step" style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 24px;">
-                    <span class="badge-tag" style="background: rgba(168, 85, 247, 0.15); color: #c084fc;">PHASE 3 · FUTURE</span>
-                    <h4 style="color: #fff; font-size: 18px; margin: 12px 0 8px;" data-i18n="game_phase3_title">🎉 Multi-Platform Launch</h4>
-                    <p style="color: #94a3b8; font-size: 13px; line-height: 1.6;">Public Open Beta release without access restrictions and automated community tournaments.</p>
-                </div>
-            </div>
-        </div>
+    <section id="roadmap" class="section roadmap-section">
+      <div class="container"><div class="section-header text-center">
+        <div class="badge-tag" data-i18n="game_sec_roadmap_tag">ROADMAP</div>
+        <h2 class="section-title" data-i18n="game_sec_roadmap_title">Roadmap</h2>
+        <p class="section-description" data-i18n="game_sec_roadmap_desc">Each step in order, without delivery dates. Open a milestone to see its scope and status. Locally prepared work may still await publication.</p>
+      </div><ol class="roadmap-timeline">
+<li class="roadmap-milestone" id="roadmap-products"><details><summary><span class="roadmap-number" aria-hidden="true">01</span><span class="roadmap-name" data-i18n="roadmap_products_title">Card product origins</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_products_desc">Review and update the products containing each card.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-credits"><details><summary><span class="roadmap-number" aria-hidden="true">02</span><span class="roadmap-name" data-i18n="roadmap_credits_title">Artist credits and social links</span><span class="roadmap-status partial" data-i18n="roadmap_status_partial">partial</span></summary><p data-i18n="roadmap_credits_desc">Credit and social icon interface prepared. Expand the remaining verified artist attributions and links.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-sp"><details><summary><span class="roadmap-number" aria-hidden="true">03</span><span class="roadmap-name" data-i18n="roadmap_sp_title">Talent-specific SP markers</span><span class="roadmap-status partial" data-i18n="roadmap_status_partial">partial</span></summary><p data-i18n="roadmap_sp_desc">Expand talent-specific SP markers with the glowing-track design and matching animated announcement.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-sounds"><details><summary><span class="roadmap-number" aria-hidden="true">04</span><span class="roadmap-name" data-i18n="roadmap_sounds_title">Basic gameplay sounds</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_sounds_desc">Combat, drawing, Cheer and other actions with volume controls.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-oshi-sounds"><details><summary><span class="roadmap-number" aria-hidden="true">05</span><span class="roadmap-name" data-i18n="roadmap_oshi-sounds_title">Oshi ability sounds</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_oshi-sounds_desc">Sounds tied to each ability without duplication during resolution.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-soundboard"><details><summary><span class="roadmap-number" aria-hidden="true">06</span><span class="roadmap-name" data-i18n="roadmap_soundboard_title">Soundboard by theme Oshi</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_soundboard_desc">More options for each talent.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-bgm"><details><summary><span class="roadmap-number" aria-hidden="true">07</span><span class="roadmap-name" data-i18n="roadmap_bgm_title">Background music by Oshi</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_bgm_desc">Theme-based playlists using original tracks or music authorized for distribution.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-news"><details><summary><span class="roadmap-number" aria-hidden="true">08</span><span class="roadmap-name" data-i18n="roadmap_news_title">Main-menu news panel</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_news_desc">Events, products and card reveals in a carousel with details and source links.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-streams"><details><summary><span class="roadmap-number" aria-hidden="true">09</span><span class="roadmap-name" data-i18n="roadmap_streams_title">Tournament streams in Meta</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_streams_desc">Access live and recent tournaments from Meta.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-presence"><details><summary><span class="roadmap-number" aria-hidden="true">10</span><span class="roadmap-name" data-i18n="roadmap_presence_title">Online friends</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_presence_desc">Show availability and update disconnections and pauses.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-chat"><details><summary><span class="roadmap-number" aria-hidden="true">11</span><span class="roadmap-name" data-i18n="roadmap_chat_title">In-match text chat</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_chat_desc">Separate panel below the action log, with user controls.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-messages"><details><summary><span class="roadmap-number" aria-hidden="true">12</span><span class="roadmap-name" data-i18n="roadmap_messages_title">Private messages between friends</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_messages_desc">Messages, history and permissions linked to friendship.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-ai"><details><summary><span class="roadmap-number" aria-hidden="true">13</span><span class="roadmap-name" data-i18n="roadmap_ai_title">Higher AI difficulty</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_ai_desc">Extend existing planning and evaluate decisions through matches and reproducible scenarios.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-challenges"><details><summary><span class="roadmap-number" aria-hidden="true">14</span><span class="roadmap-name" data-i18n="roadmap_challenges_title">AI challenges</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_challenges_desc">Scenarios, objectives and verifiable progress.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-google"><details><summary><span class="roadmap-number" aria-hidden="true">15</span><span class="roadmap-name" data-i18n="roadmap_google_title">Link an account with Google</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_google_desc">Link an existing HDC account without duplication or data loss.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-spectator"><details><summary><span class="roadmap-number" aria-hidden="true">16</span><span class="roadmap-name" data-i18n="roadmap_spectator_title">Spectator mode</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_spectator_desc">Watch synchronized matches without revealing private cards.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-full-web"><details><summary><span class="roadmap-number" aria-hidden="true">17</span><span class="roadmap-name" data-i18n="roadmap_full-web_title">Full web version</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_full-web_desc">Replaces the demo with accounts, online play, saves and full browser-compatible features.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-tournaments"><details><summary><span class="roadmap-number" aria-hidden="true">18</span><span class="roadmap-name" data-i18n="roadmap_tournaments_title">Automated community tournaments</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_tournaments_desc">Registration, pairings, results and organizer tools.</p></details></li>
+<li class="roadmap-milestone" id="roadmap-beta"><details><summary><span class="roadmap-number" aria-hidden="true">19</span><span class="roadmap-name" data-i18n="roadmap_beta_title">Beta</span><span class="roadmap-status planned" data-i18n="roadmap_status_planned">planned</span></summary><p data-i18n="roadmap_beta_desc">Beta is tied to 100% verified effects. Completing the bar will reveal a surprise.</p></details></li>
+</ol></div>
     </section>
+
+
 
     <!-- DISCORD REQUEST ACCESS & CREATOR SUPPORT SECTION -->
     <section id="solicitar" class="section" style="padding: 80px 0;">
@@ -408,5 +391,6 @@
 
     <script src="i18n.js?v=0.0.30"></script>
     <script src="app.js?v=0.0.30"></script>
+    <script src="community.js?v=20261026"></script>
 </body>
 </html>

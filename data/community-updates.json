@@ -1,0 +1,160 @@
+{
+  "schema": 1,
+  "releases": [
+    {
+      "version": "0.0.35.9",
+      "items": [
+        {
+          "id": "cosmetics",
+          "title": {
+            "es": "Cosméticos y vista ampliada",
+            "en": "Cosmetics and enlarged previews",
+            "ja": "コスメと拡大表示"
+          },
+          "description": {
+            "es": "Zoom y desplazamiento de playmats/sleeves, ajuste superior del playmat en el campo, vista del reverso y elección independiente de sleeves para cartas y Cheers. Ampliación del catálogo y enlaces de artistas todavía en curso.",
+            "en": "Zoom and pan for playmats/sleeves, top-aligned field playmats, card reverse preview and separate sleeves for cards and Cheers. Catalog expansion and artist links remain in progress.",
+            "ja": "プレイマット・スリーブの拡大と移動、盤面上端の配置、裏面表示、カードとエールの個別スリーブ。カタログと作者リンクは拡充中です。"
+          },
+          "status": "released"
+        },
+        {
+          "id": "sp-talents",
+          "title": {
+            "es": "Marcadores y anuncios SP por talento",
+            "en": "Talent-specific SP markers and announcements",
+            "ja": "タレント別SPマーカーと使用演出"
+          },
+          "description": {
+            "es": "20 diseños para 19 identidades, incluida Hajime, con texto inglés/japonés y el mismo arte en el marcador y el anuncio animado. Las Oshi sin SP conservan ausencia de marcador. Android físico pendiente.",
+            "en": "20 designs for 19 identities, including Hajime, with English/Japanese labels and matching marker/animated announcement artwork. Oshi without SP remain unmarked. Physical Android verification pending.",
+            "ja": "はじめを含む19名に20デザイン。英語・日本語に対応し、マーカーと使用演出に同じ画像を使用。SPのない推しには表示しません。Android実機確認は未完了です。"
+          },
+          "status": "released"
+        },
+        {
+          "id": "android-preview",
+          "title": {
+            "es": "Ficha de carta en Android",
+            "en": "Android card information panel",
+            "ja": "Androidのカード詳細欄"
+          },
+          "description": {
+            "es": "Detalles más amplios; ajuste de nivel, nombre y HP para evitar solapamientos, con desplazamiento de efectos largos. Reportar fallos se mueve debajo del perfil rival. Revisión final pendiente en la build Android.",
+            "en": "Larger details panel with corrected level, name and HP layout and scrolling for long effects. Report bugs moves below the opponent profile. Final Android-build review pending.",
+            "ja": "詳細欄を拡大し、レベル・名前・HPの重なりを調整。長い効果はスクロール可能。報告ボタンを相手プロフィール下へ移動。Androidビルドの最終確認待ちです。"
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": []
+        },
+        {
+          "id": "floating-menu",
+          "title": {
+            "es": "Cartas flotantes según la Oshi del tema",
+            "en": "Floating cards matched to the theme Oshi",
+            "ja": "テーマの推しに合わせた浮遊カード"
+          },
+          "description": {
+            "es": "12 cartas en PC y 8 en Android, con acabados brillantes, mayor opacidad y esquinas redondeadas. Se mantienen detrás de los controles y cambian con el tema. Confirmado visualmente por el usuario en Unity; rendimiento Android físico pendiente.",
+            "en": "12 cards on PC and 8 on Android, with animated finishes, higher opacity and rounded corners. They remain behind controls and change with the theme. Visually confirmed in Unity; physical Android performance pending.",
+            "ja": "PCで12枚、Androidで8枚。輝き、高い不透明度、丸い角で表示し、操作部の背面に配置。テーマ変更に追従します。Unity表示は確認済み、Android実機性能は未確認です。"
+          },
+          "status": "released"
+        },
+        {
+          "id": "beta-progress",
+          "title": {
+            "es": "Camino a la beta",
+            "en": "Road to beta",
+            "ja": "ベータへの道"
+          },
+          "description": {
+            "es": "Barra bajo Meta Decks con progreso real de efectos confirmados, línea azul animada y estrella. Consulta el contador público y señala cuándo muestra un dato guardado.",
+            "en": "A bar below Meta Decks shows confirmed-effects progress with an animated blue line and star. It reads the public counter and labels saved offline data.",
+            "ja": "Meta Decksの下に確認済み効果の進捗を青いラインと星で表示。公開カウンターに接続し、オフラインの保存値を明示します。"
+          }
+        }
+      ],
+      "date": "2026-10-27"
+    },
+    {
+      "version": "0.0.35.8",
+      "items": [
+        {
+          "id": "tutorial-cheer",
+          "title": {
+            "es": "Tutorial: asignación de Cheer y recorrido completo",
+            "en": "Tutorial: Cheer attachment and complete walkthrough",
+            "ja": "チュートリアル：エール付与と一連の対戦"
+          },
+          "description": {
+            "es": "Corregido el bloqueo al asignar Cheer y reconstruida la partida guiada: preparación, Spot, Bloom, Buzz, Collab, Replacement, Baton Pass y Arts. Confirmado por el jugador en Unity. El Center vacío se completa en End Phase, antes de Reset.",
+            "en": "Fixed the Cheer attachment blocker and rebuilt the guided match: setup, Spot, Bloom, Buzz, Collab, Replacement, Baton Pass and Arts. Player-confirmed in Unity. An empty Center is filled in End Phase, before Reset.",
+            "ja": "エール付与の進行停止を修正。準備、Spot、Bloom、Buzz、Collab、Replacement、バトンタッチ、アーツを含む対戦を再構築し、Unityでユーザー確認済み。空のセンターはリセット前のエンドフェイズで補充します。"
+          },
+          "status": "reviewed",
+          "reported": true,
+          "reporters": [],
+          "reportCount": 2,
+          "source": {
+            "release": "0.0.35.8",
+            "bugIds": [
+              54,
+              55
+            ]
+          }
+        },
+        {
+          "id": "account-created",
+          "title": {
+            "es": "Creación de cuenta: confirmación de sesión",
+            "en": "Account creation: sign-in confirmation",
+            "ja": "アカウント作成とログイン確認"
+          },
+          "description": {
+            "es": "Cuando el registro termina correctamente, el formulario se cierra y aparece la confirmación de cuenta creada y sesión iniciada. Si falla, el formulario conserva sus datos. El caso reportado sigue pendiente de confirmación del usuario.",
+            "en": "Successful registration closes the form and confirms that the account was created and signed in. On failure, the form keeps its fields. Player confirmation of the reported case is still pending.",
+            "ja": "登録成功時にフォームを閉じ、作成とログインの完了を通知。失敗時は入力を保持します。報告された事例のユーザー確認は未完了です。"
+          },
+          "status": "pending",
+          "reported": true,
+          "reporters": [],
+          "reportCount": 1,
+          "source": {
+            "release": "0.0.35.8",
+            "bugIds": [
+              61
+            ]
+          }
+        },
+        {
+          "id": "ordered-choices",
+          "title": {
+            "es": "Selecciones claras en Replacement y Sub PC",
+            "en": "Clear choices in Replacement and Sub PC",
+            "ja": "ReplacementとSub PCの選択"
+          },
+          "description": {
+            "es": "Replacement separa el holomem de origen, la Cheer y su destinatario. Sub PC permite seleccionar el apoyo y ordenar las cartas restantes. SorAZ Sympathy muestra el +50 temporal únicamente en el Arts que lo obtiene y requiere AZKi.",
+            "en": "Replacement separates the source holomem, Cheer and recipient. Sub PC allows choosing the support and ordering remaining cards. SorAZ Sympathy shows temporary +50 only for the relevant Arts and requires AZKi.",
+            "ja": "Replacementでは移動元、エール、移動先を分けて選択。Sub PCではサポートと残りの順序を選べます。SorAZ SympathyはAZKiを必要とし、対象アーツにのみ一時的な+50を表示します。"
+          }
+        },
+        {
+          "id": "availability",
+          "title": {
+            "es": "Auras de acciones disponibles y marcador SP",
+            "en": "Available-action auras and SP marker",
+            "ja": "操作可能なカードのオーラとSPマーカー"
+          },
+          "description": {
+            "es": "Auras azules en cartas jugables, Cheer pendiente, Collab, Baton Pass y botones habilitados. El marcador SP aparece desde el inicio solo en Oshi con SP y desaparece al utilizarla.",
+            "en": "Blue auras identify playable cards, pending Cheer, Collab, Baton Pass and enabled action buttons. The SP marker appears from the start only on Oshi with an SP and disappears when it is used.",
+            "ja": "使用可能なカード、未付与エール、Collab、バトンタッチ、操作ボタンを青く表示。SPを持つ推しにのみ最初からマーカーが表示され、使用時に消えます。"
+          }
+        }
+      ]
+    }
+  ]
+}
