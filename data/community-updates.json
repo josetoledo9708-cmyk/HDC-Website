@@ -2,6 +2,259 @@
   "schema": 1,
   "releases": [
     {
+      "version": "0.0.36",
+      "items": [
+        {
+          "id": "rules",
+          "title": {
+            "es": "Reglas y turnos",
+            "en": "Rules and turns",
+            "ja": "Rules and turns"
+          },
+          "description": {
+            "es": "Reset, Down/reemplazos y texto de Arts antes del daño. Mulligan, Bloom y condiciones de activación revisados. Turnos de 8 minutos.",
+            "en": "Reset, Down/replacements and Arts text before damage. Mulligan, Bloom and activation conditions reviewed. Eight-minute turns.",
+            "ja": "Reset, Down/replacements and Arts text before damage. Mulligan, Bloom and activation conditions reviewed. Eight-minute turns."
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": []
+        },
+        {
+          "id": "azki-cheer",
+          "title": {
+            "es": "AZKi hBP01-046 y Cheers",
+            "en": "AZKi hBP01-046 and Cheers",
+            "ja": "AZKi hBP01-046 and Cheers"
+          },
+          "description": {
+            "es": "Cantidad 1–3, selección parcial por origen y destinatarios propios, incluida AZKi. Color/número e instrucciones persistentes; revelar Cheer antes del destino.",
+            "en": "Choose 1–3, partial donor selections and friendly recipients, including AZKi. Persistent color/number prompts; reveal Cheer before choosing its recipient.",
+            "ja": "Choose 1–3, partial donor selections and friendly recipients, including AZKi. Persistent color/number prompts; reveal Cheer before choosing its recipient."
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": []
+        },
+        {
+          "id": "elizabeth",
+          "title": {
+            "es": "Elizabeth hBP07-048",
+            "en": "Elizabeth hBP07-048",
+            "ja": "Elizabeth hBP07-048"
+          },
+          "description": {
+            "es": "Elegir copia en Main/Performance cada turno. Vista del donante, reglas, nombres numerados y Cancelar; conserva costes y efectos.",
+            "en": "Choose a copy in Main/Performance each turn. Donor preview, rules, numbered names and Cancel; retains costs and effects.",
+            "ja": "Choose a copy in Main/Performance each turn. Donor preview, rules, numbered names and Cancel; retains costs and effects."
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": []
+        },
+        {
+          "id": "colors",
+          "title": {
+            "es": "hBP08-003 y Fans",
+            "en": "hBP08-003 and Fans",
+            "ja": "hBP08-003 and Fans"
+          },
+          "description": {
+            "es": "Rojo también cuenta como azul sin duplicar una carta al pagar. Revisados Roboser y Troupe Member para Arts.",
+            "en": "Red also counts as blue without using one card twice for payment. Roboser and Troupe Member Arts handling reviewed.",
+            "ja": "Red also counts as blue without using one card twice for payment. Roboser and Troupe Member Arts handling reviewed."
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": []
+        },
+        {
+          "id": "zeta",
+          "title": {
+            "es": "Zeta Buzz hBP01-027",
+            "en": "Zeta Buzz hBP01-027",
+            "ja": "Zeta Buzz hBP01-027"
+          },
+          "description": {
+            "es": "Protección opcional desde Collab para holomem propios, con dado y límite por turno.",
+            "en": "Optional protection from Collab for friendly holomem, with die roll and once-per-turn limit.",
+            "ja": "Optional protection from Collab for friendly holomem, with die roll and once-per-turn limit."
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": [
+            "juny"
+          ]
+        },
+        {
+          "id": "criminals",
+          "title": {
+            "es": "Group of Criminals hSD12-015",
+            "en": "Group of Criminals hSD12-015",
+            "ja": "Group of Criminals hSD12-015"
+          },
+          "description": {
+            "es": "Límite compartido entre copias por turno y selección de destinatario de Cheer.",
+            "en": "Shared once-per-turn limit across copies and Cheer recipient selection.",
+            "ja": "Shared once-per-turn limit across copies and Cheer recipient selection."
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": [
+            "juny"
+          ]
+        },
+        {
+          "id": "riona",
+          "title": {
+            "es": "Riona hBP06-020",
+            "en": "Riona hBP06-020",
+            "ja": "Riona hBP06-020"
+          },
+          "description": {
+            "es": "Pregunta antes de archivar las dos cartas para su Gift opcional.",
+            "en": "Asks before archiving two cards for its optional Gift.",
+            "ja": "Asks before archiving two cards for its optional Gift."
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": []
+        },
+        {
+          "id": "reine",
+          "title": {
+            "es": "Reine hBP02-021",
+            "en": "Reine hBP02-021",
+            "ja": "Reine hBP02-021"
+          },
+          "description": {
+            "es": "Permite elegir el holomem propio al que curar con su Bloom.",
+            "en": "Choose the friendly holomem healed by its Bloom.",
+            "ja": "Choose the friendly holomem healed by its Bloom."
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": []
+        },
+        {
+          "id": "watame",
+          "title": {
+            "es": "Watame hBP03-071",
+            "en": "Watame hBP03-071",
+            "ja": "Watame hBP03-071"
+          },
+          "description": {
+            "es": "Piedra, papel o tijeras interactivo, repetición de empates y resultado aplicado antes del daño.",
+            "en": "Interactive rock-paper-scissors, repeated ties and result applied before damage.",
+            "ja": "Interactive rock-paper-scissors, repeated ties and result applied before damage."
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": [
+            "Silva Ruby"
+          ]
+        },
+        {
+          "id": "azki-oshi",
+          "title": {
+            "es": "AZKi hBP07-006 y hBP07-064",
+            "en": "AZKi hBP07-006 and hBP07-064",
+            "ja": "AZKi hBP07-006 and hBP07-064"
+          },
+          "description": {
+            "es": "Condición de Down en el turno rival anterior y reconocimiento de Pioneer/Pioneers.",
+            "en": "Checks Down in the previous opposing turn and recognizes Pioneer/Pioneers.",
+            "ja": "Checks Down in the previous opposing turn and recognizes Pioneer/Pioneers."
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": [
+            "Silva Ruby"
+          ]
+        },
+        {
+          "id": "nerissa",
+          "title": {
+            "es": "Nerissa hBP09-076",
+            "en": "Nerissa hBP09-076",
+            "ja": "Nerissa hBP09-076"
+          },
+          "description": {
+            "es": "Bloom opcional, elección de 1–3 holo Power y bono por carta. Recuperación de Arts condicionada al Down.",
+            "en": "Optional Bloom, choice of 1–3 holo Power and per-card bonus. Arts recovery requires a Down.",
+            "ja": "Optional Bloom, choice of 1–3 holo Power and per-card bonus. Arts recovery requires a Down."
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": [
+            "juny"
+          ]
+        },
+        {
+          "id": "nene",
+          "title": {
+            "es": "Nene hBP07-081",
+            "en": "Nene hBP07-081",
+            "ja": "Nene hBP07-081"
+          },
+          "description": {
+            "es": "Daño de Arts a ambos objetivos legales y cálculo independiente de crítico/reemplazos.",
+            "en": "Arts damage to both legal targets with independent critical/replacement handling.",
+            "ja": "Arts damage to both legal targets with independent critical/replacement handling."
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": []
+        },
+        {
+          "id": "haachama",
+          "title": {
+            "es": "Haachama hBP07-040 y pilas",
+            "en": "Haachama hBP07-040 and stacks",
+            "ja": "Haachama hBP07-040 and stacks"
+          },
+          "description": {
+            "es": "Salida del Stage y adjuntos ordenados; protección frente a consultas de pilas vacías y procedencia de efectos.",
+            "en": "Ordered Stage departure/attachments; guards against empty-stack access and effect-source lifetime errors.",
+            "ja": "Ordered Stage departure/attachments; guards against empty-stack access and effect-source lifetime errors."
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": []
+        },
+        {
+          "id": "interface",
+          "title": {
+            "es": "Perfil, tester e idioma",
+            "en": "Profile, tester and language",
+            "ja": "Profile, tester and language"
+          },
+          "description": {
+            "es": "Listo/Cerrar guarda; encuadre de avatar, herramientas de tester, estados QA en mazos e IA. JP pausado; ajustes de Español.",
+            "en": "Done/Close saves; avatar framing, tester tools, deck QA status and AI. JP paused; Spanish text fixes.",
+            "ja": "Done/Close saves; avatar framing, tester tools, deck QA status and AI. JP paused; Spanish text fixes."
+          },
+          "status": "released",
+          "reported": true,
+          "reporters": []
+        },
+        {
+          "id": "verification",
+          "title": {
+            "es": "Estado de comprobación",
+            "en": "Verification status",
+            "ja": "Verification status"
+          },
+          "description": {
+            "es": "Pruebas automáticas superadas. Las reparaciones siguen por probar en partida; Android físico y online pareado pendientes. Towa y reportes sin identificar siguen en seguimiento.",
+            "en": "Automated checks passed. Repairs still await in-match confirmation; physical Android and paired online tests pending. Towa and unidentified reports remain tracked.",
+            "ja": "Automated checks passed. Repairs still await in-match confirmation; physical Android and paired online tests pending. Towa and unidentified reports remain tracked."
+          },
+          "status": "released"
+        }
+      ]
+    },
+    {
       "version": "0.0.35.9",
       "items": [
         {

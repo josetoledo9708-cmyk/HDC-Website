@@ -1,15 +1,15 @@
 {
   "schema": 1,
-  "confirmed": 414,
+  "confirmed": 523,
   "total": 1740,
-  "percent": 23.8,
+  "percent": 30.1,
   "states": {
-    "confirmed": 414,
-    "unverified": 1290,
-    "repaired_unverified": 30,
-    "needs_review": 6
+    "confirmed": 523,
+    "unverified": 1176,
+    "repaired_unverified": 24,
+    "needs_review": 17
   },
-  "updatedAt": "2026-10-27T06:40:45.887Z",
+  "updatedAt": "2026-10-28T14:33:27.709Z",
   "catalogSha256": "23804bb44f5e688eec4a850d3c8072fe22a1eb04b94e186347431f45981d8cd0",
   "countingPolicy": "direct-confirmations-v1",
   "catalogScope": "currently-playable-text-effects",

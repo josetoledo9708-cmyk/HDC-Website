@@ -1,3 +1,37 @@
+# 0.0.36 — 2026-10-28
+
+## Español
+
+HDC 0.0.36 — 28 de octubre de 2026
+- Reglas de partida: revisados Reset, reemplazos, Down, efectos de Arts antes del daño, mulligan y condiciones de Bloom/activación.
+- Turnos de ocho minutos. Mejora de planificación de la IA y herramientas de tester para preparar escenarios.
+- Cheers: selección de cantidad, origen y destino; AZKi permite redistribuir entre tus holomem, incluida ella misma. Instrucciones persistentes con color y número de Cheer, y revelación antes de elegir destinatario.
+- hBP08-003 reconoce las Cheers rojas también como azules sin pagar dos veces con una misma carta.
+- Elizabeth hBP07-048: copia de Arts en Main/Performance, nueva elección cada turno, vista del donante y sus reglas, nombres numerados y Cancelar.
+- Reparaciones en Zeta Buzz, Group of Criminals, Reine, Riona, Watame, AZKi, Nerissa, Nene y Haachama; protección frente a consultas de pilas vacías. Roboser y otros efectos pendientes revisados.
+- Perfil: Listo/Cerrar guarda los cambios y ajuste del encuadre de avatar. Mejoras en selección, vistas previas y estados QA en listas de mazos.
+- Idioma japonés desactivado temporalmente; Español/English disponibles. Ajustes de textos en español.
+- Confirmaciones y estados pendientes actualizados desde Access; las reparaciones sin comprobación en partida siguen pendientes.
+
+Gracias a quienes enviaron reportes y capturas desde el juego y la comunidad. Publicación general autorizada sin revisión manual previa. Pruebas físicas Android y sesión online pareada pendientes. Towa y reportes sin identificación suficiente continúan en seguimiento.
+
+## English
+
+HDC 0.0.36 — October 28, 2026
+- Match rules: reviewed Reset, replacements, Down timing, Arts text before damage, mulligan and Bloom/activation conditions.
+- Eight-minute turns. Improved AI planning and tester tools for preparing scenarios.
+- Cheers: choose count, donors and recipients; AZKi can redistribute among your holomem, including herself. Persistent guidance identifies each Cheer's color and number; reveal before choosing a recipient.
+- hBP08-003 treats red Cheers as blue too, without counting one physical card twice when paying costs.
+- Elizabeth hBP07-048: choose copied Arts in Main/Performance, change the selection each turn, read the donor and its rules, numbered Arts names and Cancel.
+- Repairs for Zeta Buzz, Group of Criminals, Reine, Riona, Watame, AZKi, Nerissa, Nene and Haachama; guards against empty-stack queries. Roboser and other pending effects reviewed.
+- Profile: Done/Close saves changes and avatar framing controls. Selection, card preview and developer deck-list QA improvements.
+- Japanese temporarily disabled; English/Spanish remain available. Spanish wording adjustments.
+- Access confirmations and pending states refreshed; repairs awaiting in-match validation remain pending.
+
+Thanks to everyone who submitted reports and screenshots in-game and through the community. General publication authorized without a manual review. Physical Android and paired online validation remain pending. Towa and reports without sufficient identification remain tracked.
+
+---
+
 # 0.0.35.9 — 2026-10-27
 
 ## Español
